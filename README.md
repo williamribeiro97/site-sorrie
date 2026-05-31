@@ -1,146 +1,92 @@
-# SORRIE+ Odontologia — Site institucional
+# SORRIE+ Odontologia Especializada
 
-Site estático (HTML, CSS e JavaScript puros, sem dependências de build) da clínica
-**SORRIE+ Odontologia Especializada** — Enseada do Suá, Vitória-ES.
-Foco em conversão de leads, performance no mobile e SEO local.
+Site institucional da **SORRIE+ Odontologia Especializada** — Vitória-ES.
+Referência em alinhadores invisíveis (ClearCorrect e Invisalign®) com clareamento incluso.
+
+🔗 **No ar:** [sorriemais.com](https://sorriemais.com)
 
 ---
 
-## 📁 Estrutura do projeto
+## Sobre o projeto
+
+Site estático de página única (landing page), construído em **HTML, CSS e JavaScript puros** — sem frameworks ou dependências de build. A prioridade foi desempenho, SEO local e uma experiência elegante no celular, onde está a maior parte do público.
+
+### Destaques
+
+- **Performance:** sem bibliotecas externas; imagens otimizadas e vídeos comprimidos.
+- **Responsivo:** pensado primeiro para o mobile (barra de ações fixa, menu próprio, toques).
+- **SEO local:** dados estruturados (JSON-LD) de clínica odontológica e de perguntas frequentes, metatags sociais, sitemap e robots.
+- **Acessível:** navegação por teclado, textos alternativos e bom contraste.
+
+---
+
+## Estrutura
 
 ```
 site-sorrie/
-├── index.html              # Página principal
-├── 404.html                # Página de erro
-├── robots.txt              # Instruções para buscadores
-├── sitemap.xml             # Mapa do site (SEO)
-├── site.webmanifest        # Metadados PWA / ícone
-├── .gitignore
+├── index.html            Página principal
+├── 404.html              Página de erro
+├── robots.txt            Orientações para buscadores
+├── sitemap.xml           Mapa do site
+├── site.webmanifest      Manifesto (ícones / nome do app)
+├── CNAME                 Domínio próprio (GitHub Pages)
 ├── assets/
-│   ├── css/styles.css      # Todo o design (sistema de cores, layout, mobile)
-│   └── js/main.js          # Interações (menu, slider, vídeo, formulário, reveal)
-├── logos/                  # logo.svg (usado no site), logo_180/512/1024.png
-├── hero/                   # hero_reception_1920x960.jpg
-├── clinica/                # consultorio_1, consultorio_2, fachada_edificio
-├── antes-depois/           # antes_apos_1, antes_apos_2 (slider de resultados)
-├── equipe/                 # equipe_grupo
-└── videos/                 # tour_clinica.mp4, promessa_valor.mp4 + capas (_poster.jpg)
+│   ├── css/styles.css    Estilos
+│   └── js/main.js        Interações (menu, slider, FAQ, reveal…)
+├── logos/                Logomarcas e selos de parceiros
+├── hero/                 Imagem principal
+├── clinica/              Fotos da clínica
+├── antes-depois/         Resultados
+├── equipe/               Fotos da equipe
+└── videos/               Vídeos + capas
 ```
-
-> ✅ As imagens já foram **otimizadas** (de ~12,7 MB para ~1,8 MB, sem perda visível)
-> e os vídeos **comprimidos** para a web. Os arquivos `_poster.jpg` são as capas
-> dos vídeos (não apague). Guarde suas imagens originais em um backup separado.
 
 ---
 
-## ✅ O que você PRECISA ajustar antes de publicar
+## Como editar
 
-Procure e substitua em **todos os arquivos**:
+Por ser um site estático, basta abrir os arquivos e editar:
 
-| Placeholder | Substituir por |
-|---|---|
-| `www.SEU-DOMINIO.com.br` | Seu domínio real (ex.: `sorriemais.com.br`) |
-| `SEU-INSTAGRAM` | Usuário do Instagram da clínica |
-| `Dr(a). [Nome] CRO-ES [nº]` | Responsável técnico e nº do CRO (exigência do CFO) |
-| `CNPJ 00.000.000/0001-00` | CNPJ real da clínica |
+- **Textos e seções:** `index.html`
+- **Cores, espaçamentos, tipografia:** `assets/css/styles.css`
+- **Comportamentos (menu, slider, perguntas):** `assets/js/main.js`
 
-Dica (terminal, dentro da pasta):
-```bash
-grep -rl "SEU-DOMINIO" . --include="*.html" --include="*.xml" --include="*.txt"
-```
-
-### Conferir os dados da clínica
-Os horários e o endereço foram atualizados conforme o **Perfil do Google**:
-- Seg–Sex: 9h–20h · Sáb: 8h–14h · Dom: fechado
-- R. José Alexandre Buaiz — Ed. London Office Tower, Sala 901, Enseada do Suá
-
-Se algum dado estiver diferente, ajuste no `index.html` **e** no Google Business
-(eles precisam ser idênticos para o SEO local funcionar bem).
-
----
-
-## 💻 Pré-visualizar no seu computador
-
-Não precisa instalar nada. Abra o `index.html` no navegador, ou rode um servidor local:
+Para visualizar localmente, abra o `index.html` direto no navegador (duplo clique) ou rode um servidor simples:
 
 ```bash
-# Python (já vem no Mac/Linux)
 python3 -m http.server 8000
-# depois acesse http://localhost:8000
+# acesse http://localhost:8000
 ```
 
 ---
 
-## 🔧 Git — versionar o projeto
+## Publicação
 
-```bash
-cd sorriemais
+Hospedado no **GitHub Pages** com domínio próprio.
 
-git init
-git add .
-git commit -m "Site SORRIE+ v2 — redesign, mobile e SEO"
-git branch -M main
-```
+1. As alterações vão para o branch `main`.
+2. O GitHub Pages publica automaticamente em poucos minutos.
+3. O domínio `sorriemais.com` aponta para o GitHub via DNS (registros A + CNAME `www`).
 
-Crie um repositório vazio no GitHub (pelo site, em github.com/new — **sem** README).
-Depois conecte e envie:
-
-```bash
-git remote add origin https://github.com/SEU-USUARIO/sorriemais.git
-git push -u origin main
-```
-
-A cada alteração:
-```bash
-git add .
-git commit -m "descreva a mudança"
-git push
-```
+> O e-mail profissional (`@sorriemais.com`) usa Google Workspace — os registros MX/TXT do domínio **não devem ser alterados**.
 
 ---
 
-## 🚀 Deploy — 3 opções (escolha uma)
+## Identidade da marca
 
-### Opção A — GitHub Pages (grátis, mais simples)
-1. No repositório → **Settings → Pages**
-2. Em *Source*, selecione branch `main` / pasta `/root` → **Save**
-3. Em ~1 min o site sai em `https://SEU-USUARIO.github.io/sorriemais/`
-4. Para domínio próprio: em *Pages → Custom domain* informe seu domínio e
-   aponte o DNS conforme as instruções do GitHub.
-
-### Opção B — Netlify (grátis, deploy automático + HTTPS)
-1. Acesse app.netlify.com → *Add new site → Import from Git*
-2. Conecte seu GitHub e escolha o repositório
-3. Build command: *(deixe vazio)* · Publish directory: `/`
-4. Cada `git push` publica sozinho. Domínio próprio em *Domain settings*.
-
-### Opção C — Vercel (grátis)
-1. Acesse vercel.com → *Add New → Project* → importe o repositório
-2. Framework: *Other* · sem build command
-3. Deploy. Domínio próprio em *Settings → Domains*.
-
-> Em todas as opções o HTTPS é automático. Por segurança, **a criação de contas e a
-> autenticação devem ser feitas por você** — nunca compartilhe senhas.
+- **Tipografia do site:** Fraunces (títulos) e Hanken Grotesk (texto).
+- **Logomarca:** "SORRIE" na fonte original da marca; versão escura no topo e versão clara (ícone + nome) no rodapé.
+- **Cores:** tons de teal e creme, com base escura para contraste.
 
 ---
 
-## 🔎 Checklist de SEO pós-deploy
+## Dados da clínica
 
-- [ ] Substituir todos os placeholders (tabela acima)
-- [ ] Confirmar que `sitemap.xml` e `robots.txt` abrem no navegador
-- [ ] Cadastrar o site no **Google Search Console** e enviar o `sitemap.xml`
-- [ ] Conferir que o **Perfil do Google** tem o mesmo nome, endereço, telefone e
-      horários do site (consistência NAP)
-- [ ] Adicionar o link do site no Perfil do Google e no Instagram
-- [ ] Testar os dados estruturados em `search.google.com/test/rich-results`
-- [ ] Rodar o **PageSpeed Insights** (mobile) em `pagespeed.web.dev`
-- [ ] Trocar a imagem `og:` por uma arte 1200×630 específica para compartilhamento (opcional)
+- **Razão social:** WK Serviços LTDA — CNPJ 59.262.418/0001-10
+- **Responsável Técnica:** Dra. Karine Marinho Ribeiro — CRO-ES 10983 · EPAO 3015
+- **Endereço:** R. José Alexandre Buaiz, 160 — Ed. London Office Tower, Sala 901, Enseada do Suá, Vitória-ES · CEP 29.050-545
+- **Contato:** (27) 99989-3314 · [Instagram @sorriemais.vix](https://www.instagram.com/sorriemais.vix)
 
 ---
 
-## 🧩 Manutenção rápida
-
-- **Textos, telefones, horários:** edite o `index.html` (está comentado por seções).
-- **Cores e espaçamentos:** edite as variáveis no topo de `assets/css/styles.css`.
-- **Avaliações:** atualize os 3 cards na seção `AVALIAÇÕES` quando tiver novos depoimentos.
-- **Antes/depois:** troque as imagens em `antes-depois/` mantendo os nomes.
+<sub>© SORRIE+ Odontologia Especializada. Todos os direitos reservados.</sub>
