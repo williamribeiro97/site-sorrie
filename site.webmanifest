@@ -1,0 +1,12 @@
+{
+  "name": "SORRIE+ Odontologia Especializada",
+  "short_name": "SORRIE+",
+  "description": "Alinhadores invisíveis com clareamento incluso em Vitória-ES.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf6",
+  "theme_color": "#0d8a85",
+  "icons": [
+    { "src": "logos/logo_180.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
