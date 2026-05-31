@@ -91,8 +91,8 @@ section{scroll-margin-top:78px}
 .btn-primary:hover{background:var(--teal-deep);transform:translateY(-2px);box-shadow:0 10px 26px rgba(13,138,133,.34)}
 .btn-ghost{background:var(--white);color:var(--ink);border:1.5px solid var(--line-strong)}
 .btn-ghost:hover{border-color:var(--teal);color:var(--teal-deep);transform:translateY(-2px)}
-.btn-wa{background:#1faf57;color:#fff;box-shadow:0 6px 18px rgba(31,175,87,.26)}
-.btn-wa:hover{background:#198c46;transform:translateY(-2px)}
+.btn-wa{background:var(--ink);color:#fff;box-shadow:0 6px 18px rgba(20,32,31,.22)}
+.btn-wa:hover{background:#0c1413;transform:translateY(-2px)}
 .btn-block{width:100%}
 
 /* ============================================================
@@ -393,13 +393,13 @@ section{scroll-margin-top:78px}
 .mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
   font-weight:700;font-size:.92rem;padding:14px;border-radius:14px;min-height:50px}
 .mbar .call{background:var(--white);border:1.5px solid var(--line-strong);color:var(--ink)}
-.mbar .wa{background:#1faf57;color:#fff}
+.mbar .wa{background:var(--ink);color:#fff}
 .mbar svg{width:19px;height:19px}
 
 /* floating WA button hidden on mobile (mbar covers it) */
 .fab{
   position:fixed;bottom:24px;right:24px;z-index:50;
-  width:56px;height:56px;border-radius:50%;background:#1faf57;color:#fff;
+  width:56px;height:56px;border-radius:50%;background:var(--ink);color:#fff;
   display:none;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);
   transition:transform .25s var(--ease)
 }
@@ -445,7 +445,7 @@ section{scroll-margin-top:78px}
   .drawer{display:none}
   .nav-phone{display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:600;color:var(--ink-soft)}
   .nav-phone:hover{color:var(--teal-deep)}
-  .nav-phone svg{width:17px;height:17px;color:#1faf57}
+  .nav-phone svg{width:17px;height:17px;color:var(--teal)}
   .hero-inner{padding:66px 0 80px}
   .hero .lead{font-size:1.16rem}
   .feature-grid{grid-template-columns:1fr 1fr}
@@ -487,3 +487,7 @@ section{scroll-margin-top:78px}
 @media (min-width:768px){
   .vids{grid-template-columns:repeat(2,1fr);max-width:720px;margin:0 auto}
 }
+
+/* Instagram link no rodapé */
+.ig-link{display:inline-flex;align-items:center;gap:7px}
+.ig-link svg{width:17px;height:17px}
