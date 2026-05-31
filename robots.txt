@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.SEU-DOMINIO.com.br/sitemap.xml
+Sitemap: https://sorriemais.com/sitemap.xml
