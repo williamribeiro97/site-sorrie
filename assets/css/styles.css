@@ -72,7 +72,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:550;line-height:1.08;letter
 .serif-em{font-style:italic;font-weight:500}
 
 /* ---------- Layout helpers ---------- */
-.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 30px}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 40px}
 .section{padding:68px 0}
 section{scroll-margin-top:78px}
 .center{text-align:center}
@@ -387,7 +387,7 @@ section{scroll-margin-top:78px}
    ============================================================ */
 .mbar{
   position:fixed;left:0;right:0;bottom:0;z-index:70;
-  display:flex;gap:10px;padding:11px 14px calc(11px + env(safe-area-inset-bottom));
+  display:flex;gap:10px;padding:11px 18px calc(11px + env(safe-area-inset-bottom));
   background:rgba(251,250,246,.92);backdrop-filter:blur(14px);
   border-top:1px solid var(--line);box-shadow:0 -6px 24px rgba(20,32,31,.07)
 }
