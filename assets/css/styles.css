@@ -100,13 +100,20 @@ section{scroll-margin-top:78px}
    ============================================================ */
 .nav{
   position:sticky;top:0;z-index:60;
+  border-bottom:1px solid transparent;
+  transition:border-color .3s,box-shadow .3s;
+}
+/* Vidro fosco no ::before para o .nav NÃO virar containing block de filhos
+   position:fixed (senão o .drawer se prende à barra e não cobre a tela no mobile). */
+.nav::before{
+  content:"";position:absolute;inset:0;z-index:-1;
   background:rgba(251,250,246,.82);
   backdrop-filter:saturate(150%) blur(14px);
   -webkit-backdrop-filter:saturate(150%) blur(14px);
-  border-bottom:1px solid transparent;
-  transition:border-color .3s,box-shadow .3s,background .3s;
+  transition:background .3s;
 }
-.nav.scrolled{border-color:var(--line);box-shadow:0 4px 24px rgba(20,32,31,.05);background:rgba(251,250,246,.95)}
+.nav.scrolled{border-color:var(--line);box-shadow:0 4px 24px rgba(20,32,31,.05)}
+.nav.scrolled::before{background:rgba(251,250,246,.95)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
 .brand{display:flex;align-items:center;gap:11px}
 .brand img{display:block}
