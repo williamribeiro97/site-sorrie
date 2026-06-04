@@ -17,3 +17,6 @@ dist/
 # Ambiente
 .env
 .env.local
+
+# Instruções do Claude Code (não versionar)
+CLAUDE.md
