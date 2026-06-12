@@ -70,6 +70,15 @@
   .authorbox img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:0 0 auto;background:var(--white)}
   .authorbox .nm{font-weight:700;color:var(--ink)}
   .authorbox .rl{font-size:.9rem;color:var(--muted)}
+
+  .author-card{display:flex;align-items:center;gap:18px;max-width:760px;margin-inline:auto;
+    background:var(--paper-cool);border:1px solid var(--line);border-radius:var(--radius);
+    padding-top:18px;padding-bottom:18px;padding-left:20px;padding-right:20px}
+  .author-card .author-photo{flex:0 0 auto;width:64px;height:64px;border-radius:50%;object-fit:cover}
+  .author-card .author-meta{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .author-card .author-name{color:var(--ink);font-weight:600;font-size:1.02rem}
+  .author-card .author-role{color:var(--muted);font-size:.92rem;line-height:1.5}
+  @media(max-width:520px){.author-card{align-items:flex-start;gap:14px}}
   @media (max-width:600px){ .post .cmp td:first-child{white-space:normal} }
 </style>
 
@@ -220,11 +229,11 @@
 
   <!-- Autoria (E-E-A-T) -->
   <div class="wrap">
-    <div class="authorbox">
-      <img src="/equipe/dra-karine-ribeiro.jpg" alt="Dra. Karine Marinho Ribeiro">
-      <div>
-        <div class="nm">Dra. Karine Marinho Ribeiro</div>
-        <div class="rl">Cirurgiã-dentista e responsável técnica da SORRIE+ · CRO-ES 10983. <a href="/dra-karine-marinho/" class="text-link" style="font-size:.9rem">Sobre a especialista →</a></div>
+    <div class="author-card reveal">
+      <img src="/equipe/dra-karine-ribeiro.jpg" alt="Dra. Karine Marinho Ribeiro" class="author-photo" width="64" height="64" loading="lazy">
+      <div class="author-meta">
+        <strong class="author-name">Dra. Karine Marinho Ribeiro</strong>
+        <span class="author-role">Cirurgiã-dentista e responsável técnica da SORRIE+ · CRO-ES 10983 · <a href="/dra-karine-marinho/" class="text-link">Sobre a especialista →</a></span>
       </div>
     </div>
   </div>

@@ -65,6 +65,21 @@
   .post .post-meta{font-size:.9rem;color:var(--muted);margin:18px 0 0}
   .post .callout{background:var(--paper-cool);border:1px solid var(--line);border-radius:var(--radius);
     padding:18px 20px;margin:24px 0;color:var(--ink-soft);font-size:.98rem}
+
+  .author-card{display:flex;align-items:center;gap:18px;max-width:760px;margin-inline:auto;
+    background:var(--paper-cool);border:1px solid var(--line);border-radius:var(--radius);
+    padding-top:18px;padding-bottom:18px;padding-left:20px;padding-right:20px}
+  .author-card .author-photo{flex:0 0 auto;width:64px;height:64px;border-radius:50%;object-fit:cover}
+  .author-card .author-meta{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .author-card .author-name{color:var(--ink);font-weight:600;font-size:1.02rem}
+  .author-card .author-role{color:var(--muted);font-size:.92rem;line-height:1.5}
+  @media(max-width:520px){.author-card{align-items:flex-start;gap:14px}}
+
+  .post .brand-note{background:var(--paper-cool);border:1px solid var(--line);
+    border-left:4px solid var(--teal);border-radius:var(--radius);
+    padding-top:18px;padding-bottom:18px;padding-left:20px;padding-right:20px;margin:26px 0}
+  .post .brand-note .brand-note-title{display:block;color:var(--ink);font-weight:600;margin-bottom:6px}
+  .post .brand-note p{margin:0;color:var(--ink-soft);font-size:.98rem;line-height:1.6}
 </style>
 
 <!-- ===================== DADOS ESTRUTURADOS (JSON-LD) ===================== -->
@@ -231,6 +246,7 @@
 
 <!-- ============================ CORPO DO ARTIGO ============================ -->
 <section class="section" style="padding-top:34px">
+  <div class="wrap">
   <div class="post reveal d1">
     <!--
       CORPO: 3 a 6 blocos <h2> que respondem, no texto corrido, às perguntas-dor do mapa.
@@ -261,6 +277,8 @@
 <p>De modo geral, os alinhadores funcionam bem para dentes apinhados, espaços entre os dentes, pequenos desalinhamentos da mordida e para quem usou aparelho e teve recidiva. Ainda assim, a indicação final vem sempre da avaliação. É ali que se confirma se o Invisalign® é o caminho mais indicado para os seus objetivos. Você pode ver o panorama completo na página de <a href="/alinhadores-invisiveis-vitoria/">alinhadores invisíveis em Vitória</a>.</p>
 <div class="callout">Atendemos pacientes de toda a Grande Vitória (Vila Velha, Serra e Cariacica) na unidade da Enseada do Suá, em Vitória-ES.</div>
 
+    <aside class="brand-note reveal"><strong class="brand-note-title">Na SORRIE+: o tratamento é planejado caso a caso</strong><p>A indicação do Invisalign depende da avaliação clínica da especialista. <a href="/alinhadores-invisiveis-vitoria/" class="text-link">Conheça os alinhadores invisíveis →</a></p></aside>
+  </div>
   </div>
 </section>
 
@@ -285,9 +303,12 @@
 <!-- ============================ AUTORIA (E-E-A-T) ============================ -->
 <section id="autoria" class="section">
   <div class="wrap">
-    <div class="formwrap reveal" style="text-align:center">
-      <p class="eyebrow">Conteúdo com responsabilidade técnica</p>
-      <p style="max-width:680px;margin:10px auto 0;color:var(--ink-soft)">Conteúdo sob responsabilidade técnica da <strong>Dra. Karine Marinho Ribeiro — CRO-ES 10983</strong>, responsável técnica da SORRIE+ Odontologia Especializada. <a href="/dra-karine-marinho/" class="text-link">Conheça a especialista →</a></p>
+    <div class="author-card reveal">
+      <img src="/equipe/dra-karine-ribeiro.jpg" alt="Dra. Karine Marinho Ribeiro" class="author-photo" width="64" height="64" loading="lazy">
+      <div class="author-meta">
+        <strong class="author-name">Dra. Karine Marinho Ribeiro</strong>
+        <span class="author-role">Cirurgiã-dentista e responsável técnica da SORRIE+ · CRO-ES 10983 · <a href="/dra-karine-marinho/" class="text-link">Sobre a especialista →</a></span>
+      </div>
     </div>
   </div>
 </section>
