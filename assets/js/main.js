@@ -132,6 +132,16 @@
         + 'Nome: ' + nome + '\n'
         + 'WhatsApp: ' + tel + '\n'
         + 'Interesse: ' + trat;
+
+      // GA4 — conversão: contato via WhatsApp (formulário). Antes do window.open (mesmo gesto de clique).
+      if (typeof gtag === 'function') {
+        gtag('event', 'contato_whatsapp', {
+          transport_type: 'beacon',
+          button_location: 'formulario',
+          tratamento: trat
+        });
+      }
+
       window.open('https://wa.me/5527999893314?text=' + encodeURIComponent(msg), '_blank');
     });
   }
@@ -146,4 +156,16 @@
     });
     v.addEventListener('ended', function () { card.classList.remove('playing'); });
   });
+
+  /* ---------- GA4 — evento de conversão: contato via WhatsApp ---------- */
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+    if (!link || typeof gtag !== 'function') return;
+    gtag('event', 'contato_whatsapp', {
+      transport_type: 'beacon',
+      link_url: link.href,
+      button_location: link.closest('footer') ? 'rodape'
+                     : (link.closest('header') ? 'topo' : 'corpo')
+    });
+  }, { passive: true });
 })();
