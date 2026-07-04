@@ -5,6 +5,8 @@ Referência em alinhadores invisíveis (ClearCorrect e Invisalign®) com claream
 
 🔗 **No ar:** [sorriemais.com](https://sorriemais.com)
 
+_Última atualização: 04/07/2026 — artigo "Facetas de porcelana: o que são" + links internos._
+
 ---
 
 ## Sobre o projeto
