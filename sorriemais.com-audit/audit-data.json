@@ -1,0 +1,145 @@
+{
+  "summary": {
+    "health_score": 84,
+    "business_type": "Local healthcare (dental clinic, brick-and-mortar) — Vitória-ES, Brazil",
+    "audited_at": "2026-07-14",
+    "methodology": "claude-seo v2.2.0 (seo-audit skill)",
+    "pages_audited": 16,
+    "limitations": "Live HTTP access to sorriemais.com blocked by session egress policy; audit performed on the exact GitHub Pages deploy source (commit d44358c). Live-only checks (redirect chains, response headers, field CWV) deferred to GSC/PageSpeed.",
+    "top_findings": [
+      "Self-serving aggregateRating in Dentist JSON-LD (Google review snippet policy risk)",
+      "Titles 75-95 chars and meta descriptions 187-276 chars on ~5 pages (SERP truncation)",
+      "Hero image 247.8 KB JPG without WebP/AVIF variant (LCP candidate)",
+      "4 homepage images missing loading=lazy and width/height (CLS risk)",
+      "Clareamento Dental offered in OfferCatalog and form but has no dedicated landing page"
+    ],
+    "quick_wins": [
+      "Shorten over-length titles/descriptions (5-6 pages)",
+      "Remove aggregateRating block from JSON-LD",
+      "Serve hero via <picture> with AVIF/WebP",
+      "Add lazy loading + dimensions to below-fold homepage images",
+      "Strip leftover authoring/template comments from 5 HTML files"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "weight": 0.22,
+      "score": 88,
+      "what_works": [
+        "Valid robots.txt (allow all) with sitemap reference",
+        "sitemap.xml: 15 URLs, real lastmod, 1:1 match with self-referencing canonicals",
+        "Custom 404 with noindex; single canonical host (apex, no www); zero http:// internal links",
+        "favicon.ico + PNG + apple-touch-icon + site.webmanifest present"
+      ],
+      "findings": [
+        {"title": "Custom headers (HSTS, Cache-Control) not configurable on GitHub Pages", "severity": "Info", "description": "Platform limitation; server, compression and charset are GitHub defaults.", "recommendation": "Acceptable at this scale; revisit if migrating to Netlify/Cloudflare Pages."},
+        {"title": "www/http redirect chains not verified live", "severity": "Info", "description": "Session network policy blocked live requests.", "recommendation": "Verify with curl -I or GSC outside this environment."},
+        {"title": "CSS cache busting via query string (?v=3)", "severity": "Low", "description": "Some CDNs ignore query-string variants.", "recommendation": "Prefer filename fingerprinting."}
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "weight": 0.23,
+      "score": 86,
+      "what_works": [
+        "Named, verifiable author (Dra. Karine Marinho Ribeiro, CRO-ES 10983) with ProfilePage; author+reviewedBy resolved via @id on all 9 posts",
+        "Posts 1,800-3,300 words, unique, FAQ text identical between page and schema",
+        "CFO compliance: TCLE cited on before/after, result-variance disclaimers, CNPJ/CRO/EPAO in footer",
+        "Coherent topic cluster: 3 service pillars + 9 supporting posts with internal links"
+      ],
+      "findings": [
+        {"title": "Clareamento Dental has no dedicated page", "severity": "Medium", "description": "Service listed in OfferCatalog (without url) and in the booking form, but no landing page targets 'clareamento dental vitória'.", "recommendation": "Create /clareamento-dental-vitoria/ pillar and add its url to the Offer."},
+        {"title": "Authoring/template comments left in HTML", "severity": "Low", "description": "Editorial instructions visible in view-source in blog/index.html:133, 4 posts, and dra-karine-marinho/index.html:217.", "recommendation": "Remove comments."},
+        {"title": "Missing graduation institution/year and hasCredential on Person", "severity": "Low", "description": "Internal note in the file acknowledges the gap.", "recommendation": "Collect data and add to copy + JSON-LD."}
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "weight": 0.20,
+      "score": 84,
+      "what_works": [
+        "16/16 unique titles, 15/15 unique descriptions, exactly one H1 per page, correct H2/H3 hierarchy",
+        "OG + Twitter Card complete on all indexable pages with sized og:image",
+        "92 internal links verified against filesystem — zero broken",
+        "Visible breadcrumbs + BreadcrumbList site-wide; descriptive anchors"
+      ],
+      "findings": [
+        {"title": "Titles exceed ~60 chars on 5 pages", "severity": "Medium", "description": "/dra-karine-marinho/ (95), /blog/ (77), clareamento-no-alinhador (77), alinhador-ou-aparelho (75), facetas-de-porcelana (71).", "recommendation": "Rewrite keeping keyword first, <= 60 chars."},
+        {"title": "Meta descriptions exceed ~160 chars on 6 pages", "severity": "Medium", "description": "Max 276 chars on /dra-karine-marinho/.", "recommendation": "Trim to 150-160 chars keeping CTA + locality."},
+        {"title": "meta keywords present on homepage", "severity": "Low", "description": "Ignored by Google.", "recommendation": "Optional removal."}
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "weight": 0.10,
+      "score": 82,
+      "what_works": [
+        "71 JSON-LD blocks across 15 pages, 100% parse-valid",
+        "Entity graph via @id: Dentist #clinica <-> Person #dentista; NAP identical in every block",
+        "Dentist complete: address, geo, openingHoursSpecification, priceRange, sameAs (Maps/Instagram/Doctoralia), areaServed (4 cities), hasMap, EPAO identifier",
+        "13 FAQPage (64 questions) all matching visible content; 9 BlogPosting with valid dates"
+      ],
+      "findings": [
+        {"title": "Self-serving aggregateRating in Dentist schema", "severity": "High", "description": "5.0/46 Google reviews self-published in the site's own LocalBusiness markup violates Google review snippet guidelines; markup is ignored and risks a structured-data manual action.", "recommendation": "Remove aggregateRating from JSON-LD; keep the rating visible in content linking to the Google profile."},
+        {"title": "FAQ rich results restricted since 2023", "severity": "Low", "description": "Google only shows FAQ rich results for high-authority gov/health sites; value is now mainly GEO/AI.", "recommendation": "Keep (zero cost), without rich-snippet expectations."},
+        {"title": "Clareamento Offer without url", "severity": "Info", "description": "Service in OfferCatalog lacks url.", "recommendation": "Fix when the landing page is created."}
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "weight": 0.10,
+      "score": 74,
+      "what_works": [
+        "Lean payload: home HTML 34.9 KB, CSS 25 KB, own JS 6.4 KB, no frameworks",
+        "preconnect to Google Fonts; hero has fetchpriority=high + declared dimensions",
+        "Videos (5.6 MB + 3.1 MB) with preload=none and posters; GA4 is the only third-party script"
+      ],
+      "findings": [
+        {"title": "Hero 247.8 KB JPG without modern format", "severity": "Medium", "description": "LCP candidate on every page using it; site already has the <picture> WebP pattern elsewhere.", "recommendation": "AVIF/WebP via <picture>, target < 90 KB."},
+        {"title": "4 homepage images without lazy/dimensions", "severity": "Medium", "description": "marca_topo.png 34 KB, antes_apos_1 102 KB, antes_apos_2 115 KB, marca_rodape.png 52 KB.", "recommendation": "Add width/height everywhere; lazy below the fold."},
+        {"title": "Google Fonts: 2 families / 9 weights external", "severity": "Low", "description": "Extra RTT on first load.", "recommendation": "Consider self-hosting subset with font-display: swap."},
+        {"title": "Field CWV unmeasured", "severity": "Info", "description": "No live access this session.", "recommendation": "Run PageSpeed Insights / check CrUX in GSC."}
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO)",
+      "weight": 0.10,
+      "score": 85,
+      "what_works": [
+        "robots.txt allows all AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot)",
+        "Highly citable content: 64 self-contained FAQ answers, direct first-paragraph definitions, concrete facts",
+        "Consistent entity + sameAs to Maps/Instagram/Doctoralia; transactional 'where to book' section with areaServed"
+      ],
+      "findings": [
+        {"title": "llms.txt absent", "severity": "Low", "description": "Per claude-seo evidence (Mueller/Illyes, SE Ranking 300k-domain study), llms.txt is not a citation lever today; presence reported without score weight.", "recommendation": "Create for zero-cost hygiene."},
+        {"title": "Thin entity graph beyond Doctoralia", "severity": "Low", "description": "No Wikidata/association/directory presence detected on-site.", "recommendation": "Expand authoritative citations and GBP activity."}
+      ]
+    },
+    {
+      "name": "Images",
+      "weight": 0.05,
+      "score": 82,
+      "what_works": [
+        "~98% of images have descriptive, localized alt text",
+        "All 26 referenced local images exist; valid og:image on every page; descriptive filenames"
+      ],
+      "findings": [
+        {"title": "Legacy formats dominate", "severity": "Medium", "description": "Hero JPG 248 KB, before/after JPEG 102+115 KB, PNG logos 34-52 KB.", "recommendation": "WebP/AVIF for photos; SVG for logos (logo.svg exists)."},
+        {"title": "~1 decorative image per page without explicit alt", "severity": "Low", "description": "Missing alt attribute rather than deliberate alt=\"\".", "recommendation": "Use empty alt on decorative images."}
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {"name": "Phase 1: Risk Fixes", "timeframe": "Week 1", "items": ["Remove aggregateRating from Dentist JSON-LD site-wide", "Shorten over-length titles (5 pages) and descriptions (6 pages)"]},
+      {"name": "Phase 2: High-Impact Improvements", "timeframe": "Weeks 2-3", "items": ["Hero to AVIF/WebP via <picture>", "Add lazy + dimensions to 4 homepage images", "Convert before/after and logos to modern formats", "Measure field CWV and verify redirect chains (GSC/PSI/curl outside this environment)"]},
+      {"name": "Phase 3: Content & Authority", "timeframe": "Month 2", "items": ["Create /clareamento-dental-vitoria/ pillar + Offer url", "Add graduation credentials + hasCredential", "Strip authoring comments from HTML", "Create llms.txt", "Expand entity citations and GBP activity"]},
+      {"name": "Phase 4: Monitoring & Iteration", "timeframe": "Ongoing", "items": ["Weekly blog cadence with real lastmod", "GSC: indexation of 15 URLs, CTR delta after Phase 1, local queries", "Respond to Google reviews", "Re-audit and compare via /seo drift"]}
+    ]
+  },
+  "artifacts": {
+    "findings_dir": null,
+    "screenshots_dir": null
+  }
+}
