@@ -18,10 +18,16 @@ dist/
 .env
 .env.local
 
-# Instruções do Claude Code (não versionar)
-CLAUDE.md
+# CLAUDE.md É VERSIONADO de propósito (decisão de 15/08/2026).
+# Ele é a fonte de verdade que os agentes de .claude/agents/ obedecem, e esses
+# agentes já estão no repo. Ignorá-lo guardava os executores e jogava fora as regras.
+# Não contém segredo: são regras públicas de compliance, SEO e marca.
 
 # Fotos originais (export WhatsApp) — nao versionar; usar versoes otimizadas (dra-karine-hero.*)
-# WA0103 contem paciente sem termo de imagem: NUNCA versionar.
-equipe/IMG-20260623-WA0103.jpg.jpeg
-equipe/IMG-20260623-WA0105.jpg.jpeg
+# WA0103 contem paciente sem termo de imagem: NUNCA versionar (CFO 196/2019).
+# Glob sem extensão de propósito: as regras antigas diziam ".jpg.jpeg" e NÃO pegavam
+# o nome real ".jpg" que os prompts usam — a proteção estava desarmada.
+equipe/IMG-20260623-WA0103*
+equipe/IMG-20260623-WA0105*
+equipe/IMG-*-WA*
+**/WhatsApp Image *
