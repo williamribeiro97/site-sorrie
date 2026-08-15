@@ -170,4 +170,19 @@
                      : (link.closest('header') ? 'topo' : 'corpo')
     });
   }, { passive: true });
+
+  // GA4 — conversão: contato por telefone. Sem isto, quem liga em vez de escrever
+  // não aparece em métrica nenhuma, e o telefone parece não converter quando na
+  // verdade não estava sendo medido. Espelha o listener de WhatsApp acima.
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="tel:"]');
+    if (!link || typeof gtag !== 'function') return;
+    gtag('event', 'contato_telefone', {
+      transport_type: 'beacon',
+      link_url: link.href,
+      button_location: link.closest('footer') ? 'rodape'
+                     : (link.closest('header') ? 'topo'
+                     : (link.closest('.drawer') ? 'menu' : 'corpo'))
+    });
+  }, { passive: true });
 })();
