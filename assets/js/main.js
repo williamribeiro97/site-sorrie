@@ -142,7 +142,9 @@
         });
       }
 
-      window.open('https://wa.me/5527999893314?text=' + encodeURIComponent(msg), '_blank');
+      // 99582-8585 = linha de LEADS (ManyChat). O 99989-3314 é a linha de pacientes e
+      // segue sendo o NAP do schema/GBP — não trocar por ele aqui. Ver CLAUDE.md.
+      window.open('https://wa.me/5527995828585?text=' + encodeURIComponent(msg), '_blank');
     });
   }
   /* ---------- Vídeos (toque para tocar) ---------- */
