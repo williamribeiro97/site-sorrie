@@ -5,13 +5,15 @@ Referência em alinhadores invisíveis (ClearCorrect e Invisalign®) com claream
 
 🔗 **No ar:** [sorriemais.com](https://sorriemais.com)
 
-_Última atualização: 04/07/2026 — artigo "Facetas de porcelana: o que são" + links internos._
+_Última atualização: 15/08/2026 — faxina: `wa.me` para a linha de leads, 404 corrigido, cache-bust no JS, paridade de menu._
 
 ---
 
 ## Sobre o projeto
 
-Site estático de página única (landing page), construído em **HTML, CSS e JavaScript puros** — sem frameworks ou dependências de build. A prioridade foi desempenho, SEO local e uma experiência elegante no celular, onde está a maior parte do público.
+Site estático **multi-página** (19 páginas indexáveis), construído em **HTML, CSS e JavaScript puros** — sem frameworks, sem build, sem dependências. A prioridade foi desempenho, SEO local e uma experiência elegante no celular, onde está a maior parte do público.
+
+A arquitetura é de páginas independentes: não há includes nem gerador de templates, então header, footer e o bloco JSON-LD da clínica existem em cópias manuais em cada página. Ao editar qualquer um dos três, **replique em todas** — ou o site diverge de si mesmo.
 
 ### Destaques
 
@@ -26,21 +28,26 @@ Site estático de página única (landing page), construído em **HTML, CSS e Ja
 
 ```
 site-sorrie/
-├── index.html            Página principal
-├── 404.html              Página de erro
-├── robots.txt            Orientações para buscadores
-├── sitemap.xml           Mapa do site
-├── site.webmanifest      Manifesto (ícones / nome do app)
-├── CNAME                 Domínio próprio (GitHub Pages)
+├── index.html                          Home
+├── 404.html                            Página de erro
+├── alinhadores-invisiveis-vitoria/     Pilar — carro-chefe
+├── facetas-lentes-de-contato-vitoria/  Pilar
+├── implante-dentario-vitoria/          Pilar
+├── dra-karine-marinho/                 Página da especialista (E-E-A-T)
+├── blog/                               Hub + 13 posts, um por pasta
+├── robots.txt                          Orientações para buscadores
+├── sitemap.xml                         Mapa do site (19 URLs)
+├── site.webmanifest                    Manifesto (ícones / nome do app)
+├── CNAME                               Domínio próprio (GitHub Pages)
 ├── assets/
-│   ├── css/styles.css    Estilos
-│   └── js/main.js        Interações (menu, slider, FAQ, reveal…)
-├── logos/                Logomarcas e selos de parceiros
-├── hero/                 Imagem principal
-├── clinica/              Fotos da clínica
-├── antes-depois/         Resultados
-├── equipe/               Fotos da equipe
-└── videos/               Vídeos + capas
+│   ├── css/styles.css                  Estilos
+│   └── js/main.js                      Interações (menu, slider, FAQ, reveal…)
+├── logos/                              Logomarcas e selos de parceiros
+├── hero/                               Imagem principal
+├── clinica/                            Fotos da clínica — também usadas nos posts do Google Perfil
+├── antes-depois/                       Resultados
+├── equipe/                             Fotos da equipe — `equipe_grupo.jpg` é hotlinkada por e-mails já enviados
+└── videos/                             Vídeos + capas
 ```
 
 ---
@@ -78,7 +85,7 @@ Hospedado no **GitHub Pages** com domínio próprio.
 
 - **Tipografia do site:** Fraunces (títulos) e Hanken Grotesk (texto).
 - **Logomarca:** "SORRIE" na fonte original da marca; versão escura no topo e versão clara (ícone + nome) no rodapé.
-- **Cores:** tons de teal e creme, com base escura para contraste.
+- **Cores:** tons de teal e creme, com base escura para contraste. **Atenção:** a identidade oficial da marca é _monocromática_ (manual Shine Arts, fonte Vito Wide Light); o teal é uma **camada web intencional**, desvio conhecido e aceito — não é erro a corrigir.
 
 ---
 
