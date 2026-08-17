@@ -147,11 +147,39 @@
       window.open('https://wa.me/5527995828585?text=' + encodeURIComponent(msg), '_blank');
     });
   }
+  /* ---------- Vídeos: poster adiado ----------
+     <video> não aceita loading="lazy", e o navegador baixa o poster no load
+     inicial mesmo com preload="none" — eram 171 KB disputando banda com o
+     hero, ~5 telas antes de qualquer um poder vê-los. Por isso o poster vem
+     em data-poster e só é aplicado quando o card se aproxima da viewport. */
+  var vidCards = document.querySelectorAll('[data-video]');
+  function aplicarPoster(card) {
+    var v = card.querySelector('video[data-poster]');
+    if (!v) return;
+    v.poster = v.dataset.poster;
+    v.removeAttribute('data-poster');
+  }
+  if ('IntersectionObserver' in window) {
+    var ioPoster = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        aplicarPoster(en.target);
+        ioPoster.unobserve(en.target);
+      });
+    }, { rootMargin: '200px 0px' });
+    vidCards.forEach(function (card) { ioPoster.observe(card); });
+  } else {
+    vidCards.forEach(aplicarPoster);
+  }
+
   /* ---------- Vídeos (toque para tocar) ---------- */
-  document.querySelectorAll('[data-video]').forEach(function (card) {
+  vidCards.forEach(function (card) {
     var v = card.querySelector('video');
     var btn = card.querySelector('.play');
     if (!v || !btn) return;
+    // Se o toque vier antes de o observer disparar, aplica o poster na hora —
+    // o vídeo nunca fica sem quadro de fundo enquanto carrega.
+    btn.addEventListener('click', function () { aplicarPoster(card); }, { once: true });
     btn.addEventListener('click', function () {
       card.classList.add('playing');
       v.play();
