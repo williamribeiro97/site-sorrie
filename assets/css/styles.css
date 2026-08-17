@@ -148,6 +148,9 @@ section{scroll-margin-top:78px}
    ============================================================ */
 .hero{position:relative;overflow:hidden;background:var(--paper)}
 .hero-bg{position:absolute;inset:0;z-index:0}
+/* <picture> e inline e sem altura propria: sem esta regra o height:100% do <img>
+   abaixo passa a resolver contra ele, vira auto, e o hero colapsa. */
+.hero-bg picture{display:block;width:100%;height:100%}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
 .hero-bg::after{
   content:"";position:absolute;inset:0;
