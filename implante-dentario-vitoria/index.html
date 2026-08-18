@@ -45,7 +45,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/styles.css?v=4">
+<link rel="stylesheet" href="/assets/css/styles.css?v=5">
 
 <style>
   .callout{background:var(--paper-cool);border:1px solid var(--line);border-radius:var(--radius);
@@ -57,6 +57,24 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sorriemais.com/dra-karine-marinho/#dentista",
+      "name": "Karine Marinho Ribeiro",
+      "honorificPrefix": "Dra.",
+      "jobTitle": "Cirurgiã-dentista · Responsável Técnica",
+      "identifier": { "@type": "PropertyValue", "propertyID": "CRO-ES", "value": "10983" },
+      "worksFor": { "@id": "https://sorriemais.com/#clinica" },
+      "url": "https://sorriemais.com/dra-karine-marinho/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sorriemais.com/#website",
+      "url": "https://sorriemais.com/",
+      "name": "SORRIE+ Odontologia Especializada",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://sorriemais.com/#clinica" }
+    },
     {
       "@type": "Dentist",
       "@id": "https://sorriemais.com/#clinica",
@@ -123,24 +141,18 @@
           "name": "Cariacica"
         }
       ],
-      "founder": {
-        "@type": "Person",
-        "@id": "https://sorriemais.com/dra-karine-marinho/#dentista",
-        "name": "Dra. Karine Marinho Ribeiro",
-        "jobTitle": "Cirurgiã-dentista · Responsável Técnica",
-        "identifier": "CRO-ES 10983"
-      },
+      "founder": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" },
       "sameAs": [
         "https://maps.app.goo.gl/VF1bJykzZp6itx7B7",
         "https://www.instagram.com/sorriemais.vix",
         "https://www.doctoralia.com.br/clinicas/sorrie-odontologia-especializada"
       ]
     },
-    { "@type": "WebPage", "@id": "https://sorriemais.com/implante-dentario-vitoria/#webpage", "url": "https://sorriemais.com/implante-dentario-vitoria/", "name": "Implante Dentário em Vitória-ES", "isPartOf": { "@id": "https://sorriemais.com/#clinica" }, "about": { "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico" }, "inLanguage": "pt-BR", "dateModified": "2026-08-18", "lastReviewed": "2026-06-03", "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" } },
+    { "@type": "MedicalWebPage", "@id": "https://sorriemais.com/implante-dentario-vitoria/#webpage", "specialty": "https://schema.org/Dentistry", "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" }, "url": "https://sorriemais.com/implante-dentario-vitoria/", "name": "Implante Dentário em Vitória-ES", "isPartOf": { "@id": "https://sorriemais.com/#website" }, "about": { "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico" }, "inLanguage": "pt-BR", "dateModified": "2026-08-18", "lastReviewed": "2026-06-03", "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" } },
     { "@type": "BreadcrumbList", "@id": "https://sorriemais.com/implante-dentario-vitoria/#breadcrumb", "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://sorriemais.com/" },
       { "@type": "ListItem", "position": 2, "name": "Implante Dentário em Vitória-ES", "item": "https://sorriemais.com/implante-dentario-vitoria/" } ] },
-    { "@type": "Service", "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico", "serviceType": "Implante dentário", "name": "Implante dentário", "description": "Reposição de dentes ausentes com implante de titânio e coroa personalizada, na Enseada do Suá, Vitória-ES.", "provider": { "@id": "https://sorriemais.com/#clinica" },
+    { "@type": ["SurgicalProcedure", "Service"], "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico", "bodyLocation": "Maxila e mandíbula", "howPerformed": "Avaliação com exame de imagem, instalação cirúrgica do pino de titânio no osso, período de integração óssea e, depois, instalação da coroa protética.", "relevantSpecialty": "https://schema.org/Dentistry", "serviceType": "Implante dentário", "name": "Implante dentário", "description": "Reposição de dentes ausentes com implante de titânio e coroa personalizada, na Enseada do Suá, Vitória-ES.", "provider": { "@id": "https://sorriemais.com/#clinica" },
       "areaServed": [ { "@type": "City", "name": "Vitória" }, { "@type": "City", "name": "Vila Velha" }, { "@type": "City", "name": "Serra" }, { "@type": "City", "name": "Cariacica" } ] },
     { "@type": "FAQPage", "@id": "https://sorriemais.com/implante-dentario-vitoria/#faq", "mainEntity": [
       { "@type": "Question", "name": "O que é um implante dentário?", "acceptedAnswer": { "@type": "Answer", "text": "É um pino de titânio instalado no osso para substituir a raiz de um dente perdido. Sobre ele é colocada uma coroa personalizada, devolvendo função e estética ao sorriso." } },
@@ -158,7 +170,7 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="/" class="brand" aria-label="SORRIE+ Odontologia — início"><img src="/logos/marca_topo.png" alt="SORRIE+ Odontologia" class="brand-wm"></a>
+    <a href="/" class="brand" aria-label="SORRIE+ Odontologia — início"><picture><source srcset="/logos/marca_topo.webp" type="image/webp"><img src="/logos/marca_topo.png" alt="SORRIE+ Odontologia" class="brand-wm"></picture></a>
     <nav class="nav-links" aria-label="Navegação principal">
       <a href="/alinhadores-invisiveis-vitoria/">Alinhadores</a>
       <a href="/facetas-lentes-de-contato-vitoria/">Facetas</a>
@@ -196,6 +208,12 @@
     <div class="hero-actions reveal d3">
       <a href="#avaliacao" class="btn btn-primary">Agende sua avaliação <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
     </div>
+  </div>
+</section>
+
+<section class="resposta-direta" data-resposta-direta>
+  <div class="wrap">
+    <p>O implante dentário repõe um dente ausente com um pino de titânio instalado no osso, que recebe uma coroa depois do período de integração óssea. O processo é feito em etapas e envolve exame de imagem, cirurgia e prótese. A indicação depende da avaliação do osso e da saúde da gengiva, feita na SORRIE+, na Enseada do Suá, Vitória-ES.</p>
   </div>
 </section>
 
@@ -304,7 +322,7 @@
 
 <footer class="footer">
   <div class="wrap footer-grid">
-    <div class="fbrand"><span class="fbrand-mark"><img src="/logos/marca_rodape.png" alt="SORRIE+ Odontologia" class="fbrand-wm"></span><div><div class="fsub">ClearCorrect™ · Invisalign® · Enseada do Suá, Vitória-ES</div></div></div>
+    <div class="fbrand"><span class="fbrand-mark"><picture><source srcset="/logos/marca_rodape.webp" type="image/webp"><img src="/logos/marca_rodape.png" alt="SORRIE+ Odontologia" class="fbrand-wm"></picture></span><div><div class="fsub">ClearCorrect™ · Invisalign® · Enseada do Suá, Vitória-ES</div></div></div>
     <nav class="footer-links" aria-label="Rodapé">
       <a href="/alinhadores-invisiveis-vitoria/">Alinhadores</a>
       <a href="/facetas-lentes-de-contato-vitoria/">Facetas</a>
@@ -321,6 +339,6 @@
   <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20SORRIE%2B." target="_blank" rel="noopener" class="wa"><svg fill="#fff" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>Agendar avaliação</a>
 </div>
 
-<script src="/assets/js/main.js?v=4" defer></script>
+<script src="/assets/js/main.js?v=5" defer></script>
 </body>
 </html>

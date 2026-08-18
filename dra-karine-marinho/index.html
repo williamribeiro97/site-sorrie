@@ -51,7 +51,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/assets/css/styles.css?v=4">
+<link rel="stylesheet" href="/assets/css/styles.css?v=5">
 
 <!-- ===================== DADOS ESTRUTURADOS (JSON-LD) ===================== -->
 <!--
@@ -64,6 +64,14 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://sorriemais.com/#website",
+      "url": "https://sorriemais.com/",
+      "name": "SORRIE+ Odontologia Especializada",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://sorriemais.com/#clinica" }
+    },
     {
       "@type": "Dentist",
       "@id": "https://sorriemais.com/#clinica",
@@ -153,10 +161,7 @@
       "image": "https://sorriemais.com/equipe/dra-karine-ribeiro.jpg",
       "url": "https://sorriemais.com/dra-karine-marinho/",
       "worksFor": { "@id": "https://sorriemais.com/#clinica" },
-      "founder": { "@id": "https://sorriemais.com/#clinica" },
-      "identifier": [
-        { "@type": "PropertyValue", "propertyID": "CRO-ES", "value": "10983" }
-      ],
+      "identifier": { "@type": "PropertyValue", "propertyID": "CRO-ES", "value": "10983" },
       "knowsAbout": [
         "Alinhadores invisíveis",
         "Ortodontia estética",
@@ -173,7 +178,7 @@
       "@id": "https://sorriemais.com/dra-karine-marinho/#webpage",
       "url": "https://sorriemais.com/dra-karine-marinho/",
       "name": "Dra. Karine Marinho Ribeiro — Cirurgiã-Dentista",
-      "isPartOf": { "@id": "https://sorriemais.com/#clinica" },
+      "isPartOf": { "@id": "https://sorriemais.com/#website" },
       "mainEntity": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" },
       "inLanguage": "pt-BR"
     },
@@ -196,7 +201,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a href="/" class="brand" aria-label="SORRIE+ Odontologia — início">
-      <img src="/logos/marca_topo.png" alt="SORRIE+ Odontologia" class="brand-wm">
+      <picture><source srcset="/logos/marca_topo.webp" type="image/webp"><img src="/logos/marca_topo.png" alt="SORRIE+ Odontologia" class="brand-wm"></picture>
     </a>
     <nav class="nav-links" aria-label="Navegação principal">
       <a href="/alinhadores-invisiveis-vitoria/">Alinhadores</a>
@@ -349,7 +354,7 @@
 <footer class="footer">
   <div class="wrap footer-grid">
     <div class="fbrand">
-      <span class="fbrand-mark"><img src="/logos/marca_rodape.png" alt="SORRIE+ Odontologia" class="fbrand-wm"></span>
+      <span class="fbrand-mark"><picture><source srcset="/logos/marca_rodape.webp" type="image/webp"><img src="/logos/marca_rodape.png" alt="SORRIE+ Odontologia" class="fbrand-wm"></picture></span>
       <div><div class="fsub">ClearCorrect™ · Invisalign® · Enseada do Suá, Vitória-ES</div></div>
     </div>
     <nav class="footer-links" aria-label="Rodapé">
@@ -381,6 +386,6 @@
   </a>
 </div>
 
-<script src="/assets/js/main.js?v=4" defer></script>
+<script src="/assets/js/main.js?v=5" defer></script>
 </body>
 </html>

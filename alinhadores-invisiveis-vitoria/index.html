@@ -53,7 +53,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/assets/css/styles.css?v=4">
+<link rel="stylesheet" href="/assets/css/styles.css?v=5">
 
 <!-- ===================== DADOS ESTRUTURADOS (JSON-LD) ===================== -->
 <!--
@@ -65,6 +65,24 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sorriemais.com/dra-karine-marinho/#dentista",
+      "name": "Karine Marinho Ribeiro",
+      "honorificPrefix": "Dra.",
+      "jobTitle": "Cirurgiã-dentista · Responsável Técnica",
+      "identifier": { "@type": "PropertyValue", "propertyID": "CRO-ES", "value": "10983" },
+      "worksFor": { "@id": "https://sorriemais.com/#clinica" },
+      "url": "https://sorriemais.com/dra-karine-marinho/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sorriemais.com/#website",
+      "url": "https://sorriemais.com/",
+      "name": "SORRIE+ Odontologia Especializada",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://sorriemais.com/#clinica" }
+    },
     {
       "@type": "Dentist",
       "@id": "https://sorriemais.com/#clinica",
@@ -98,13 +116,7 @@
         { "@type": "City", "name": "Serra" },
         { "@type": "City", "name": "Cariacica" }
       ],
-      "founder": {
-        "@type": "Person",
-        "@id": "https://sorriemais.com/dra-karine-marinho/#dentista",
-        "name": "Dra. Karine Marinho Ribeiro",
-        "jobTitle": "Cirurgiã-dentista · Responsável Técnica",
-        "identifier": "CRO-ES 10983"
-      },
+      "founder": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" },
       "sameAs": [
         "https://maps.app.goo.gl/VF1bJykzZp6itx7B7",
         "https://www.instagram.com/sorriemais.vix",
@@ -112,11 +124,13 @@
       ]
     },
     {
-      "@type": "WebPage",
+      "@type": "MedicalWebPage",
       "@id": "https://sorriemais.com/alinhadores-invisiveis-vitoria/#webpage",
+      "specialty": "https://schema.org/Dentistry",
+      "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" },
       "url": "https://sorriemais.com/alinhadores-invisiveis-vitoria/",
       "name": "Alinhadores Invisíveis em Vitória-ES",
-      "isPartOf": { "@id": "https://sorriemais.com/#clinica" },
+      "isPartOf": { "@id": "https://sorriemais.com/#website" },
       "about": { "@id": "https://sorriemais.com/alinhadores-invisiveis-vitoria/#servico" },
       "inLanguage": "pt-BR",
       "dateModified": "2026-08-18",
@@ -132,8 +146,12 @@
       ]
     },
     {
-      "@type": "Service",
+      "@type": ["MedicalProcedure", "Service"],
       "@id": "https://sorriemais.com/alinhadores-invisiveis-vitoria/#servico",
+      "procedureType": "https://schema.org/NoninvasiveProcedure",
+      "bodyLocation": "Arcadas dentárias",
+      "howPerformed": "Planejamento digital a partir de escaneamento da boca, seguido de trocas periódicas de alinhadores transparentes removíveis, com acompanhamento presencial da especialista ao longo do tratamento.",
+      "relevantSpecialty": "https://schema.org/Dentistry",
       "serviceType": "Tratamento ortodôntico com alinhadores invisíveis",
       "name": "Alinhadores invisíveis com clareamento incluso",
       "description": "Ortodontia estética com alinhadores transparentes ClearCorrect e Invisalign®, com o protocolo de clareamento aplicado dentro do próprio alinhador, na Enseada do Suá, Vitória-ES.",
@@ -170,7 +188,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a href="/" class="brand" aria-label="SORRIE+ Odontologia — início">
-      <img src="/logos/marca_topo.png" alt="SORRIE+ Odontologia" class="brand-wm">
+      <picture><source srcset="/logos/marca_topo.webp" type="image/webp"><img src="/logos/marca_topo.png" alt="SORRIE+ Odontologia" class="brand-wm"></picture>
     </a>
     <nav class="nav-links" aria-label="Navegação principal">
       <a href="/alinhadores-invisiveis-vitoria/">Alinhadores</a>
@@ -228,6 +246,12 @@
       </a>
       <a href="#o-que-sao" class="btn btn-ghost">Conheça o tratamento</a>
     </div>
+  </div>
+</section>
+
+<section class="resposta-direta" data-resposta-direta>
+  <div class="wrap">
+    <p>Alinhadores invisíveis são placas transparentes e removíveis que movem os dentes por etapas, trocadas a cada uma ou duas semanas conforme o planejamento. Na SORRIE+, em Vitória-ES, o tratamento usa ClearCorrect ou Invisalign® e pode incluir o clareamento aplicado dentro do próprio alinhador. A indicação e a duração dependem de avaliação da Dra. Karine Marinho Ribeiro, CRO-ES 10983.</p>
   </div>
 </section>
 
@@ -425,8 +449,8 @@
     </div>
     <div class="ba reveal d1">
       <div class="ba-slider" id="baSlider" role="slider" aria-label="Comparar antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
-        <img src="/antes-depois/antes_apos_1.jpeg" width="1200" height="879" alt="Sorriso de paciente antes do tratamento com alinhadores invisíveis na SORRIE+" class="ba-before" loading="lazy" decoding="async">
-        <img src="/antes-depois/antes_apos_2.jpeg" width="1200" height="947" alt="Sorriso do mesmo paciente após tratamento com alinhadores e clareamento na SORRIE+" class="ba-after" id="baAfter" loading="lazy" decoding="async">
+        <picture><source srcset="/antes-depois/antes_apos_1.webp" type="image/webp"><img src="/antes-depois/antes_apos_1.jpeg" width="1200" height="879" alt="Sorriso de paciente antes do tratamento com alinhadores invisíveis na SORRIE+" class="ba-before" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="/antes-depois/antes_apos_2.webp" type="image/webp"><img src="/antes-depois/antes_apos_2.jpeg" width="1200" height="947" alt="Sorriso do mesmo paciente após tratamento com alinhadores e clareamento na SORRIE+" class="ba-after" id="baAfter" loading="lazy" decoding="async"></picture>
         <span class="ba-tag l">Antes</span>
         <span class="ba-tag r">Depois</span>
         <div class="ba-line" id="baLine"><div class="ba-handle"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div></div>
@@ -531,7 +555,7 @@
 <footer class="footer">
   <div class="wrap footer-grid">
     <div class="fbrand">
-      <span class="fbrand-mark"><img src="/logos/marca_rodape.png" alt="SORRIE+ Odontologia" class="fbrand-wm"></span>
+      <span class="fbrand-mark"><picture><source srcset="/logos/marca_rodape.webp" type="image/webp"><img src="/logos/marca_rodape.png" alt="SORRIE+ Odontologia" class="fbrand-wm"></picture></span>
       <div><div class="fsub">ClearCorrect™ · Invisalign® · Enseada do Suá, Vitória-ES</div></div>
     </div>
     <nav class="footer-links" aria-label="Rodapé">
@@ -563,6 +587,6 @@
   </a>
 </div>
 
-<script src="/assets/js/main.js?v=4" defer></script>
+<script src="/assets/js/main.js?v=5" defer></script>
 </body>
 </html>

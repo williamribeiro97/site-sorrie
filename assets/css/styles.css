@@ -123,7 +123,12 @@ section{scroll-margin-top:78px}
 .nav-links{display:none}
 .nav-cta{display:flex;align-items:center;gap:12px}
 .nav-phone{display:none}
-.burger{display:flex;flex-direction:column;gap:5px;padding:10px;border-radius:12px}
+/* min-width/min-height, não width/height: o alvo sobe para o piso de 44x44 do
+   WCAG 2.2 (2.5.8, nível AA) sem mexer nas 3 barras, que continuam com 22px e
+   são centradas pelo align/justify. Media 42x36 — reprovava nos dois eixos, e
+   este é o único caminho de navegação no celular. */
+.burger{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;padding:10px;border-radius:12px;min-width:44px;min-height:44px}
 .burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease),opacity .2s}
 .nav-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nav-open .burger span:nth-child(2){opacity:0}
@@ -193,6 +198,32 @@ section{scroll-margin-top:78px}
 /* ============================================================
    SECTION HEADERS
    ============================================================ */
+/* Guarda, não correção — e desta vez está medido antes de escrito.
+   <picture> é display:inline por padrão, e eu esperava que envolver os <img>
+   das marcas (P6/P7) inserisse uma line box de alguns pixels no cabeçalho e
+   no rodapé. Testei desligando esta regra em runtime, em 18/08/2026: logo do
+   topo, cabeçalho, logo do rodapé, rodapé, hero, slider antes/depois e altura
+   do documento ficaram TODOS idênticos. A regra é inerte aqui, porque cada
+   <img> envolvido já traz display:block ou position:absolute, que anula o
+   wrapper. Fica porque <picture> não tem semântica de layout própria e não
+   deveria participar dele — mas não se atribua a ela nenhuma correção.
+   Especificidade menor que .hero-bg picture, que segue mandando no hero. */
+picture{display:contents}
+
+/* Resposta direta — o parágrafo autossuficiente logo depois do hero.
+   Existe para ser extraído: um modelo de linguagem que cita a página tende a
+   levar o primeiro bloco factual que encontra. Não é destaque decorativo, por
+   isso o contraste é sóbrio e o texto tem tamanho de leitura, não de manchete. */
+.resposta-direta{padding:26px 0 0}
+.resposta-direta p{
+  max-width:44em;margin:0;
+  font-size:1.12rem;line-height:1.7;color:var(--ink-soft);
+  border-left:3px solid var(--line-strong);padding-left:20px
+}
+@media (max-width:640px){
+  .resposta-direta p{font-size:1.05rem;padding-left:14px}
+}
+
 .shead{max-width:34em;margin-bottom:34px}
 .shead.is-center{margin-left:auto;margin-right:auto;text-align:center}
 .shead h2{font-size:clamp(1.85rem,6vw,2.7rem);margin:12px 0 12px}
