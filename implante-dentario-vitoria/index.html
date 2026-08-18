@@ -58,6 +58,14 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://sorriemais.com/#website",
+      "url": "https://sorriemais.com/",
+      "name": "SORRIE+ Odontologia Especializada",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://sorriemais.com/#clinica" }
+    },
+    {
       "@type": "Dentist",
       "@id": "https://sorriemais.com/#clinica",
       "name": "SORRIE+ Odontologia Especializada",
@@ -136,11 +144,11 @@
         "https://www.doctoralia.com.br/clinicas/sorrie-odontologia-especializada"
       ]
     },
-    { "@type": "WebPage", "@id": "https://sorriemais.com/implante-dentario-vitoria/#webpage", "url": "https://sorriemais.com/implante-dentario-vitoria/", "name": "Implante Dentário em Vitória-ES", "isPartOf": { "@id": "https://sorriemais.com/#clinica" }, "about": { "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico" }, "inLanguage": "pt-BR", "dateModified": "2026-08-18", "lastReviewed": "2026-06-03", "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" } },
+    { "@type": "MedicalWebPage", "@id": "https://sorriemais.com/implante-dentario-vitoria/#webpage", "specialty": "https://schema.org/Dentistry", "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" }, "url": "https://sorriemais.com/implante-dentario-vitoria/", "name": "Implante Dentário em Vitória-ES", "isPartOf": { "@id": "https://sorriemais.com/#website" }, "about": { "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico" }, "inLanguage": "pt-BR", "dateModified": "2026-08-18", "lastReviewed": "2026-06-03", "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" } },
     { "@type": "BreadcrumbList", "@id": "https://sorriemais.com/implante-dentario-vitoria/#breadcrumb", "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://sorriemais.com/" },
       { "@type": "ListItem", "position": 2, "name": "Implante Dentário em Vitória-ES", "item": "https://sorriemais.com/implante-dentario-vitoria/" } ] },
-    { "@type": "Service", "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico", "serviceType": "Implante dentário", "name": "Implante dentário", "description": "Reposição de dentes ausentes com implante de titânio e coroa personalizada, na Enseada do Suá, Vitória-ES.", "provider": { "@id": "https://sorriemais.com/#clinica" },
+    { "@type": ["SurgicalProcedure", "Service"], "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico", "bodyLocation": "Maxila e mandíbula", "howPerformed": "Avaliação com exame de imagem, instalação cirúrgica do pino de titânio no osso, período de integração óssea e, depois, instalação da coroa protética.", "relevantSpecialty": "https://schema.org/Dentistry", "serviceType": "Implante dentário", "name": "Implante dentário", "description": "Reposição de dentes ausentes com implante de titânio e coroa personalizada, na Enseada do Suá, Vitória-ES.", "provider": { "@id": "https://sorriemais.com/#clinica" },
       "areaServed": [ { "@type": "City", "name": "Vitória" }, { "@type": "City", "name": "Vila Velha" }, { "@type": "City", "name": "Serra" }, { "@type": "City", "name": "Cariacica" } ] },
     { "@type": "FAQPage", "@id": "https://sorriemais.com/implante-dentario-vitoria/#faq", "mainEntity": [
       { "@type": "Question", "name": "O que é um implante dentário?", "acceptedAnswer": { "@type": "Answer", "text": "É um pino de titânio instalado no osso para substituir a raiz de um dente perdido. Sobre ele é colocada uma coroa personalizada, devolvendo função e estética ao sorriso." } },

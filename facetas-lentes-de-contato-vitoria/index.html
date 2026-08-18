@@ -52,6 +52,14 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://sorriemais.com/#website",
+      "url": "https://sorriemais.com/",
+      "name": "SORRIE+ Odontologia Especializada",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://sorriemais.com/#clinica" }
+    },
+    {
       "@type": "Dentist",
       "@id": "https://sorriemais.com/#clinica",
       "name": "SORRIE+ Odontologia Especializada",
@@ -130,11 +138,11 @@
         "https://www.doctoralia.com.br/clinicas/sorrie-odontologia-especializada"
       ]
     },
-    { "@type": "WebPage", "@id": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/#webpage", "url": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/", "name": "Facetas e Lentes de Contato Dental em Vitória-ES", "isPartOf": { "@id": "https://sorriemais.com/#clinica" }, "about": { "@id": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/#servico" }, "inLanguage": "pt-BR", "dateModified": "2026-08-18", "lastReviewed": "2026-06-03", "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" } },
+    { "@type": "MedicalWebPage", "@id": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/#webpage", "specialty": "https://schema.org/Dentistry", "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" }, "url": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/", "name": "Facetas e Lentes de Contato Dental em Vitória-ES", "isPartOf": { "@id": "https://sorriemais.com/#website" }, "about": { "@id": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/#servico" }, "inLanguage": "pt-BR", "dateModified": "2026-08-18", "lastReviewed": "2026-06-03", "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" } },
     { "@type": "BreadcrumbList", "@id": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/#breadcrumb", "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://sorriemais.com/" },
       { "@type": "ListItem", "position": 2, "name": "Facetas e Lentes de Contato Dental em Vitória-ES", "item": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/" } ] },
-    { "@type": "Service", "@id": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/#servico", "serviceType": "Facetas e lentes de contato dental em porcelana", "name": "Facetas e lentes de contato dental", "description": "Lâminas de porcelana que ajustam cor, forma e espaços dos dentes, com planejamento individualizado, na Enseada do Suá, Vitória-ES.", "provider": { "@id": "https://sorriemais.com/#clinica" },
+    { "@type": ["MedicalProcedure", "Service"], "@id": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/#servico", "bodyLocation": "Dentes anteriores", "howPerformed": "Planejamento do desenho do sorriso, preparo do dente quando indicado e cimentação de lâminas de porcelana confeccionadas em laboratório para o caso.", "relevantSpecialty": "https://schema.org/Dentistry", "serviceType": "Facetas e lentes de contato dental em porcelana", "name": "Facetas e lentes de contato dental", "description": "Lâminas de porcelana que ajustam cor, forma e espaços dos dentes, com planejamento individualizado, na Enseada do Suá, Vitória-ES.", "provider": { "@id": "https://sorriemais.com/#clinica" },
       "areaServed": [ { "@type": "City", "name": "Vitória" }, { "@type": "City", "name": "Vila Velha" }, { "@type": "City", "name": "Serra" }, { "@type": "City", "name": "Cariacica" } ] },
     { "@type": "FAQPage", "@id": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/#faq", "mainEntity": [
       { "@type": "Question", "name": "Qual a diferença entre faceta e lente de contato dental?", "acceptedAnswer": { "@type": "Answer", "text": "Ambas são lâminas de porcelana aplicadas sobre os dentes. A lente de contato dental é, em geral, mais fina e indicada para ajustes mais sutis; a faceta tem um pouco mais de espessura e pode cobrir alterações maiores de cor e forma. A escolha depende do seu caso, definida na avaliação." } },

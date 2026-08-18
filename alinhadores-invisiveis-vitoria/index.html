@@ -66,6 +66,14 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://sorriemais.com/#website",
+      "url": "https://sorriemais.com/",
+      "name": "SORRIE+ Odontologia Especializada",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://sorriemais.com/#clinica" }
+    },
+    {
       "@type": "Dentist",
       "@id": "https://sorriemais.com/#clinica",
       "name": "SORRIE+ Odontologia Especializada",
@@ -112,11 +120,13 @@
       ]
     },
     {
-      "@type": "WebPage",
+      "@type": "MedicalWebPage",
       "@id": "https://sorriemais.com/alinhadores-invisiveis-vitoria/#webpage",
+      "specialty": "https://schema.org/Dentistry",
+      "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" },
       "url": "https://sorriemais.com/alinhadores-invisiveis-vitoria/",
       "name": "Alinhadores Invisíveis em Vitória-ES",
-      "isPartOf": { "@id": "https://sorriemais.com/#clinica" },
+      "isPartOf": { "@id": "https://sorriemais.com/#website" },
       "about": { "@id": "https://sorriemais.com/alinhadores-invisiveis-vitoria/#servico" },
       "inLanguage": "pt-BR",
       "dateModified": "2026-08-18",
@@ -132,8 +142,12 @@
       ]
     },
     {
-      "@type": "Service",
+      "@type": ["MedicalProcedure", "Service"],
       "@id": "https://sorriemais.com/alinhadores-invisiveis-vitoria/#servico",
+      "procedureType": "https://schema.org/NoninvasiveProcedure",
+      "bodyLocation": "Arcadas dentárias",
+      "howPerformed": "Planejamento digital a partir de escaneamento da boca, seguido de trocas periódicas de alinhadores transparentes removíveis, com acompanhamento presencial da especialista ao longo do tratamento.",
+      "relevantSpecialty": "https://schema.org/Dentistry",
       "serviceType": "Tratamento ortodôntico com alinhadores invisíveis",
       "name": "Alinhadores invisíveis com clareamento incluso",
       "description": "Ortodontia estética com alinhadores transparentes ClearCorrect e Invisalign®, com o protocolo de clareamento aplicado dentro do próprio alinhador, na Enseada do Suá, Vitória-ES.",
