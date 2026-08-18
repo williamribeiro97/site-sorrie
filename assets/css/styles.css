@@ -193,6 +193,20 @@ section{scroll-margin-top:78px}
 /* ============================================================
    SECTION HEADERS
    ============================================================ */
+/* Resposta direta — o parágrafo autossuficiente logo depois do hero.
+   Existe para ser extraído: um modelo de linguagem que cita a página tende a
+   levar o primeiro bloco factual que encontra. Não é destaque decorativo, por
+   isso o contraste é sóbrio e o texto tem tamanho de leitura, não de manchete. */
+.resposta-direta{padding:26px 0 0}
+.resposta-direta p{
+  max-width:44em;margin:0;
+  font-size:1.12rem;line-height:1.7;color:var(--ink-soft);
+  border-left:3px solid var(--line-strong);padding-left:20px
+}
+@media (max-width:640px){
+  .resposta-direta p{font-size:1.05rem;padding-left:14px}
+}
+
 .shead{max-width:34em;margin-bottom:34px}
 .shead.is-center{margin-left:auto;margin-right:auto;text-align:center}
 .shead h2{font-size:clamp(1.85rem,6vw,2.7rem);margin:12px 0 12px}
