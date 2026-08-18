@@ -53,9 +53,26 @@ jobs:
           node-version: '20'
 
       - name: Rodar Lighthouse contra as 4 páginas de maior tráfego
+        id: lhci
         run: |
+          set -o pipefail
           npm install -g @lhci/cli@0.14.x
-          lhci autorun --config=./lighthouserc.json
+          lhci autorun --config=./lighthouserc.json 2>&1 | tee lhci-saida.txt
+
+      # Em 18/08 este portão reprovou e o motivo ficou preso no log: o GitHub não
+      # expõe log de Actions a quem não está autenticado, nem em repositório
+      # público. Resultado prático — o e-mail avisa que falhou e não diz o quê, e
+      # portão que não se explica é portão que se aprende a ignorar.
+      #
+      # Anotação é diferente: aparece no e-mail, na tela do commit e na API
+      # pública. Estas linhas fazem a próxima falha chegar já explicada.
+      - name: Dizer NA ANOTAÇÃO qual asserção reprovou
+        if: failure() && steps.lhci.outcome == 'failure'
+        run: |
+          echo "::error title=Lighthouse reprovou::veja as anotações abaixo"
+          grep -aE 'expected|failure for|✘' lhci-saida.txt | head -40 | while read -r linha; do
+            echo "::error::${linha}"
+          done
 
       - name: Guardar o relatório mesmo quando reprova
         if: always()
