@@ -123,7 +123,12 @@ section{scroll-margin-top:78px}
 .nav-links{display:none}
 .nav-cta{display:flex;align-items:center;gap:12px}
 .nav-phone{display:none}
-.burger{display:flex;flex-direction:column;gap:5px;padding:10px;border-radius:12px}
+/* min-width/min-height, não width/height: o alvo sobe para o piso de 44x44 do
+   WCAG 2.2 (2.5.8, nível AA) sem mexer nas 3 barras, que continuam com 22px e
+   são centradas pelo align/justify. Media 42x36 — reprovava nos dois eixos, e
+   este é o único caminho de navegação no celular. */
+.burger{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;padding:10px;border-radius:12px;min-width:44px;min-height:44px}
 .burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease),opacity .2s}
 .nav-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nav-open .burger span:nth-child(2){opacity:0}
