@@ -199,6 +199,29 @@
     });
   }, { passive: true });
 
+  /* ---------- GA4 — micro-conversão: clique no CTA primário ----------
+     O CTA principal das páginas internas é uma âncora para #avaliacao, e âncora
+     não dispara evento nenhum. São 15 botões em 4 páginas que até aqui eram
+     invisíveis no GA4.
+
+     Isso importa porque o funil tem dois passos — clicar no CTA, depois clicar
+     no WhatsApp da seção — e só o segundo era medido. Sem o primeiro não dá para
+     distinguir "ninguém clica no CTA" de "clicam e desistem na seção", e as duas
+     causas pedem correções opostas.
+
+     É MICRO-CONVERSÃO: não marcar como evento principal no GA4. Marcar inflaria
+     a taxa de conversão contando rolagem de página como contato. */
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href="#avaliacao"]');
+    if (!link || typeof gtag !== 'function') return;
+    gtag('event', 'cta_avaliacao', {
+      transport_type: 'beacon',
+      button_location: link.closest('.hero') ? 'hero'
+                     : (link.closest('footer') ? 'rodape'
+                     : (link.closest('header') || link.closest('.drawer') ? 'topo' : 'corpo'))
+    });
+  }, { passive: true });
+
   // GA4 — conversão: contato por telefone. Sem isto, quem liga em vez de escrever
   // não aparece em métrica nenhuma, e o telefone parece não converter quando na
   // verdade não estava sendo medido. Espelha o listener de WhatsApp acima.
