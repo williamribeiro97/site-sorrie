@@ -56,7 +56,8 @@ A identidade oficial é **monocromática** (manual Shine Arts, fonte Vito Wide L
 1. `<title>` ≤60 chars — keyword primeiro, localidade, marca no fim (`… | SORRIE+` ou `· SORRIE+`).
 2. Meta description ≤155 chars — incluir "Nota 5,0 no Google", Enseada do Suá e CTA suave, quando couber. Sincronizar `og:`/`twitter:`.
 3. Canonical único e absoluto: `https://sorriemais.com/<path>/`.
-4. JSON-LD válido (validar com `node -e`, não python). Bloco **Dentist** consistente em todas as páginas: nome exato, endereço com Sala 901, telefone, `aggregateRating` 5.0/49, `sameAs` = [maps.app.goo.gl (GBP), instagram.com/sorriemais.vix, doctoralia.com.br/clinicas/sorrie-odontologia-especializada].
+4. JSON-LD válido (validar com `node -e`, não python). Bloco **Dentist** consistente em todas as páginas: nome exato, endereço com Sala 901, telefone, `aggregateRating` 5.0/50, `sameAs` = [maps.app.goo.gl (GBP), instagram.com/sorriemais.vix, doctoralia.com.br/clinicas/sorrie-odontologia-especializada].
+   **Paridade do número de avaliações — os 3 lugares mudam juntos ou nenhum muda:** `"reviewCount"` no JSON-LD, o selo `Google (N)` do hero (`index.html` **e** `alinhadores-invisiveis-vitoria/index.html`) e o texto `N avaliações` do bloco de avaliações. Um LLM que extrai fatos e encontra a fonte se contradizendo sobre si mesma na mesma página rebaixa a fonte — o custo não é só perder o rich result.
 5. Se houver FAQPage: paridade **EXATA** com o FAQ visível (mesmas perguntas, mesma ordem) — o `<summary>` termina com `<span class="pm"></span>`.
 6. Posts do blog: `BlogPosting` + `Person` (author/reviewedBy = Dra. Karine, CRO-ES 10983), datas coerentes; corpo linka o pilar correspondente e `/dra-karine-marinho/`; **recíprocas**: pilar linka o post, card em `/blog/`, URL no `sitemap.xml` com lastmod.
 7. Nav/header/footer idênticos ao padrão dos irmãos (link "Blog" presente).

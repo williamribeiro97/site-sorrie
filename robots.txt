@@ -1,4 +1,68 @@
+# robots.txt — sorriemais.com
+#
+# LEIA ANTES DE "LIMPAR" ESTE ARQUIVO.
+#
+# Os robôs de IA abaixo estão escritos um a um de propósito. O bloco
+# "User-agent: *" já liberaria todos eles, então a lista parece repetição
+# desnecessária — não é. Ela existe para que a liberação seja uma decisão
+# registrada, e não um silêncio. Apagar um nome daqui é uma escolha; deixar
+# de escrevê-lo era um acidente.
+#
+# Atenção à regra de precedência: um robô que encontra o próprio nome ignora
+# por completo o bloco "User-agent: *". Regra nova que precise valer para os
+# robôs de IA tem de ser repetida em cada bloco — pôr só no "*" não alcança
+# nenhum deles.
+#
+# Por isso os três agentes de visita a pedido do usuário (ChatGPT-User,
+# Claude-User e Perplexity-User) estão os três aqui. Declarar um e esquecer
+# os outros é a assimetria que faz uma restrição futura no bloco "*" atingir
+# justamente os que ficaram de fora.
+#
+# Regra da casa: este site não restringe caminho nenhum, para robô nenhum.
+# Antes de acrescentar qualquer restrição, fale com quem cuida do site.
+#
+# Mantenha as linhas "User-agent:" limpas, sem comentário ao lado — os
+# verificadores leem o nome do agente até o fim da linha.
+
 User-agent: *
+Allow: /
+
+# --- Robôs de IA: liberados por decisão, não por omissão ---
+
+# OpenAI — treinamento
+User-agent: GPTBot
+Allow: /
+
+# OpenAI — índice de busca do ChatGPT
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI — visita feita a pedido de um usuário no ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — treinamento
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic — busca do Claude
+User-agent: Claude-SearchBot
+Allow: /
+
+# Anthropic — visita feita a pedido de um usuário no Claude
+User-agent: Claude-User
+Allow: /
+
+# Perplexity — indexação
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity — visita feita a pedido de um usuário
+User-agent: Perplexity-User
+Allow: /
+
+# Google — controla o uso do conteúdo pelo Gemini e pelas respostas de IA
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://sorriemais.com/sitemap.xml

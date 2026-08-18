@@ -49,7 +49,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/assets/css/styles.css?v=3">
+<link rel="stylesheet" href="/assets/css/styles.css?v=4">
 
 <!-- ===================== DADOS ESTRUTURADOS: CLÍNICA ===================== -->
 <script type="application/ld+json">
@@ -126,6 +126,22 @@
   ]
 }
 </script>
+
+<!-- ===================== DADOS ESTRUTURADOS: PÁGINA ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://sorriemais.com/#webpage",
+  "url": "https://sorriemais.com/",
+  "name": "SORRIE+ Odontologia · Alinhadores e Facetas em Vitória ES",
+  "isPartOf": { "@id": "https://sorriemais.com/#clinica" },
+  "inLanguage": "pt-BR",
+  "dateModified": "2026-08-18",
+  "lastReviewed": "2026-05-31",
+  "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" }
+}
+</script>
 </head>
 
 <body>
@@ -134,7 +150,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a href="/" class="brand" aria-label="SORRIE+ Odontologia — início">
-      <img src="/logos/marca_topo.png" alt="SORRIE+ Odontologia" class="brand-wm">
+      <img src="/logos/marca_topo.png" width="743" height="139" alt="SORRIE+ Odontologia" class="brand-wm">
     </a>
     <nav class="nav-links" aria-label="Navegação principal">
       <a href="/alinhadores-invisiveis-vitoria/">Alinhadores</a>
@@ -171,13 +187,16 @@
 <!-- ============================ HERO ============================ -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="/hero/hero_reception_1920x960.jpg" alt="Recepção da clínica SORRIE+ Odontologia em Vitória-ES" fetchpriority="high" width="1920" height="960">
+    <picture>
+      <source srcset="/hero/hero_reception_1920x960.webp" type="image/webp">
+      <img src="/hero/hero_reception_1920x960.jpg" alt="Recepção da clínica SORRIE+ Odontologia em Vitória-ES" fetchpriority="high" width="1920" height="960">
+    </picture>
   </div>
   <div class="wrap hero-inner">
     <div class="badges reveal">
       <span class="badge"><img src="/logos/clearcorrect.jpeg" alt="ClearCorrect" width="16" height="16" style="border-radius:50%"> ClearCorrect™</span>
       <span class="badge" style="color:#1B4882"><img src="/logos/invisalign.png" alt="Invisalign" width="16" height="16" style="object-fit:contain"> Invisalign®</span>
-      <span class="badge"><span class="stars">★</span> 5,0 · Google (49)</span>
+      <span class="badge"><span class="stars">★</span> 5,0 · Google (50)</span>
     </div>
     <h1 class="reveal d1">Dentes alinhados<br>e mais brancos,<br><span class="hl">ao mesmo tempo.</span></h1>
     <p class="lead reveal d2">Odontologia especializada na <strong>Enseada do Suá, Vitória-ES</strong>. Alinhadores invisíveis com <strong>clareamento incluso</strong>, facetas e implante — sob responsabilidade técnica da Dra. Karine Marinho Ribeiro.</p>
@@ -278,8 +297,8 @@
     </div>
     <div class="ba reveal d1">
       <div class="ba-slider" id="baSlider" role="slider" aria-label="Comparar antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
-        <img src="/antes-depois/antes_apos_1.jpeg" alt="Sorriso de paciente antes do tratamento na SORRIE+" class="ba-before">
-        <img src="/antes-depois/antes_apos_2.jpeg" alt="Sorriso do mesmo paciente após alinhadores e clareamento na SORRIE+" class="ba-after" id="baAfter">
+        <img src="/antes-depois/antes_apos_1.jpeg" width="1200" height="879" alt="Sorriso de paciente antes do tratamento na SORRIE+" class="ba-before" loading="lazy" decoding="async">
+        <img src="/antes-depois/antes_apos_2.jpeg" width="1200" height="947" alt="Sorriso do mesmo paciente após alinhadores e clareamento na SORRIE+" class="ba-after" id="baAfter" loading="lazy" decoding="async">
         <span class="ba-tag l">Antes</span>
         <span class="ba-tag r">Depois</span>
         <div class="ba-line" id="baLine"><div class="ba-handle"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div></div>
@@ -299,12 +318,12 @@
     </div>
     <div class="vids reveal d1">
       <div class="vidcard" data-video>
-        <video preload="none" playsinline controls poster="/videos/tour_clinica_poster.jpg"><source src="/videos/tour_clinica.mp4" type="video/mp4"></video>
+        <video preload="none" playsinline controls data-poster="/videos/tour_clinica_poster.jpg"><source src="/videos/tour_clinica.mp4" type="video/mp4"></video>
         <button class="play" aria-label="Reproduzir tour pela clínica"><span class="circle"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
         <span class="vlabel">Tour pela clínica</span>
       </div>
       <div class="vidcard" data-video>
-        <video preload="none" playsinline controls poster="/videos/promessa_valor_poster.jpg"><source src="/videos/promessa_valor.mp4" type="video/mp4"></video>
+        <video preload="none" playsinline controls data-poster="/videos/promessa_valor_poster.jpg"><source src="/videos/promessa_valor.mp4" type="video/mp4"></video>
         <button class="play" aria-label="Reproduzir vídeo: nossa abordagem"><span class="circle"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
         <span class="vlabel">Nossa abordagem</span>
       </div>
@@ -490,7 +509,7 @@
 <footer class="footer">
   <div class="wrap footer-grid">
     <div class="fbrand">
-      <span class="fbrand-mark"><img src="/logos/marca_rodape.png" alt="SORRIE+ Odontologia" class="fbrand-wm"></span>
+      <span class="fbrand-mark"><img src="/logos/marca_rodape.png" width="754" height="359" alt="SORRIE+ Odontologia" class="fbrand-wm" loading="lazy" decoding="async"></span>
       <div><div class="fsub">ClearCorrect™ · Invisalign® · Enseada do Suá, Vitória-ES</div></div>
     </div>
     <nav class="footer-links" aria-label="Rodapé">
@@ -515,6 +534,6 @@
   <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20SORRIE%2B." target="_blank" rel="noopener" class="wa"><svg fill="#fff" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>Agendar avaliação</a>
 </div>
 
-<script src="/assets/js/main.js?v=3" defer></script>
+<script src="/assets/js/main.js?v=4" defer></script>
 </body>
 </html>
