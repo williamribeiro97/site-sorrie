@@ -193,6 +193,18 @@ section{scroll-margin-top:78px}
 /* ============================================================
    SECTION HEADERS
    ============================================================ */
+/* Guarda, não correção — e desta vez está medido antes de escrito.
+   <picture> é display:inline por padrão, e eu esperava que envolver os <img>
+   das marcas (P6/P7) inserisse uma line box de alguns pixels no cabeçalho e
+   no rodapé. Testei desligando esta regra em runtime, em 18/08/2026: logo do
+   topo, cabeçalho, logo do rodapé, rodapé, hero, slider antes/depois e altura
+   do documento ficaram TODOS idênticos. A regra é inerte aqui, porque cada
+   <img> envolvido já traz display:block ou position:absolute, que anula o
+   wrapper. Fica porque <picture> não tem semântica de layout própria e não
+   deveria participar dele — mas não se atribua a ela nenhuma correção.
+   Especificidade menor que .hero-bg picture, que segue mandando no hero. */
+picture{display:contents}
+
 /* Resposta direta — o parágrafo autossuficiente logo depois do hero.
    Existe para ser extraído: um modelo de linguagem que cita a página tende a
    levar o primeiro bloco factual que encontra. Não é destaque decorativo, por
