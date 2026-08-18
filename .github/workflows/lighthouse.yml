@@ -1,0 +1,67 @@
+# Orçamento de performance e acessibilidade (item M4 do plano de melhorias).
+#
+# Por que existe: entre junho e agosto de 2026 o LCP móvel deste site chegou a
+# 7,4 s e o peso de imagens a 714 KB. Duas ondas de correção trouxeram isso para
+# ~3,4 s e ~109 KB. Sem um portão, a próxima imagem grande colocada com pressa
+# desfaz o trabalho e ninguém percebe — regressão de performance não quebra nada
+# visivelmente, só afasta quem estava chegando.
+#
+# O que trava (error) e o que só avisa (warn), e a razão da divisão:
+#
+#   TRAVA o que é determinístico e não depende da máquina do runner — peso de
+#   imagem, formato moderno, dimensão declarada, alvo de toque, alt, título,
+#   meta description, lang. Esses valem o mesmo em qualquer CPU.
+#
+#   AVISA o que depende do ambiente — LCP, Speed Index, TBT, nota de
+#   performance. O runner do GitHub tem outra CPU e outra rede que o aparelho
+#   onde as medições do plano foram feitas; travar num número medido em outro
+#   lugar reprovaria por diferença de ambiente, não por regressão. Quando
+#   houver algumas execuções reais aqui, esses limites podem virar `error` com
+#   base na mediana observada — e aí serão comparáveis.
+#
+# Não interfere na publicação: o GitHub Pages deste repositório serve a branch
+# main diretamente, e este workflow só lê.
+
+name: Orçamento de performance
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'CNAME'
+  pull_request:
+    paths-ignore:
+      - '**.md'
+      - 'CNAME'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rodar Lighthouse contra as 4 páginas de maior tráfego
+        run: |
+          npm install -g @lhci/cli@0.14.x
+          lhci autorun --config=./lighthouserc.json
+
+      - name: Guardar o relatório mesmo quando reprova
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-${{ github.sha }}
+          path: .lighthouseci/
+          retention-days: 30
+          if-no-files-found: ignore

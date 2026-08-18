@@ -31,3 +31,7 @@ equipe/IMG-20260623-WA0103*
 equipe/IMG-20260623-WA0105*
 equipe/IMG-*-WA*
 **/WhatsApp Image *
+
+# Lighthouse CI (M4) — relatórios locais, nunca versionados
+.lighthouseci/
+.lhtmp/
