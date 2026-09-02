@@ -26,7 +26,7 @@ JSON-LD apontando para ela.
 
 ## Conteúdo explicativo
 
-- [Blog de saúde bucal](https://sorriemais.com/blog/): 13 artigos revisados pela responsável técnica, cobrindo dúvidas frequentes sobre alinhadores, facetas e implante — incluindo faixas de custo, duração e cuidados.
+- [Blog de saúde bucal](https://sorriemais.com/blog/): 15 artigos revisados pela responsável técnica, cobrindo dúvidas frequentes sobre alinhadores, facetas e implante — incluindo faixas de custo, duração, cuidados e a comparação ClearCorrect × Invisalign.
 
 ## Onde fica e como atende
 
@@ -71,4 +71,4 @@ de revisão e a atribuição à responsável técnica no dado estruturado.
 
 - Nome: SORRIE+ Odontologia Especializada
 - Site: https://sorriemais.com/
-- Última revisão deste arquivo: 2026-08-18
+- Última revisão deste arquivo: 2026-09-01

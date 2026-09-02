@@ -194,8 +194,11 @@
     gtag('event', 'contato_whatsapp', {
       transport_type: 'beacon',
       link_url: link.href,
-      button_location: link.closest('footer') ? 'rodape'
-                     : (link.closest('header') ? 'topo' : 'corpo')
+      // .mbar antes de footer/header: a barra fixa mobile caía em "corpo",
+      // e é o botão de maior exposição no celular — precisa de rótulo próprio.
+      button_location: link.closest('.mbar') ? 'barra_mobile'
+                     : (link.closest('footer') ? 'rodape'
+                     : (link.closest('header') ? 'topo' : 'corpo'))
     });
   }, { passive: true });
 
@@ -231,9 +234,10 @@
     gtag('event', 'contato_telefone', {
       transport_type: 'beacon',
       link_url: link.href,
-      button_location: link.closest('footer') ? 'rodape'
+      button_location: link.closest('.mbar') ? 'barra_mobile'
+                     : (link.closest('footer') ? 'rodape'
                      : (link.closest('header') ? 'topo'
-                     : (link.closest('.drawer') ? 'menu' : 'corpo'))
+                     : (link.closest('.drawer') ? 'menu' : 'corpo')))
     });
   }, { passive: true });
 })();
