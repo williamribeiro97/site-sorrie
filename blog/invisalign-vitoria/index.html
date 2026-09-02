@@ -2,21 +2,25 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JVL7BPFP1C"></script>
+<!-- Google Analytics 4 + Microsoft Clarity — só coletam em sorriemais.com.
+     Fora de produção (localhost, Lighthouse CI, previews) os scripts nem carregam;
+     o stub de gtag() continua definido para o main.js não quebrar. -->
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-JVL7BPFP1C');
-</script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "y4ibqk1v6o");
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JVL7BPFP1C');
+  if (location.hostname === 'sorriemais.com') {
+    var gaTag = document.createElement('script');
+    gaTag.async = true;
+    gaTag.src = 'https://www.googletagmanager.com/gtag/js?id=G-JVL7BPFP1C';
+    document.head.appendChild(gaTag);
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y4ibqk1v6o");
+  }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
@@ -273,7 +277,7 @@ gtag('config', 'G-JVL7BPFP1C');
     <h1 class="reveal d1" style="font-size:clamp(2rem,6vw,3rem);margin:10px 0 18px">Invisalign em Vitória: como funciona o tratamento</h1>
     <p class="reveal d2" style="font-size:1.12rem;color:var(--ink-soft);max-width:42em">O Invisalign® é um sistema de alinhadores invisíveis feito de placas transparentes e removíveis, que movem os dentes aos poucos até a posição definida no planejamento. Em Vitória-ES, o tratamento é conduzido na SORRIE+ Odontologia Especializada, na Enseada do Suá, com planejamento digital em 3D e acompanhamento da Dra. Karine Marinho Ribeiro (CRO-ES 10983). Cada etapa é ajustada em consultas periódicas, no ritmo que o seu caso pede.</p>
     <p class="reveal d2" style="font-size:.9rem;color:var(--muted);margin-top:16px">
-      Por <strong style="color:var(--ink-soft)">Dra. Karine Marinho Ribeiro</strong> · CRO-ES 10983 — Responsável Técnica · Atualizado em junho de 2026
+      Por <strong style="color:var(--ink-soft)">Dra. Karine Marinho Ribeiro</strong> · CRO-ES 10983 — Responsável Técnica · Atualizado em setembro de 2026
     </p>
   </div>
 </section>
@@ -417,6 +421,6 @@ gtag('config', 'G-JVL7BPFP1C');
   </a>
 </div>
 
-<script src="/assets/js/main.js?v=5" defer></script>
+<script src="/assets/js/main.js?v=6" defer></script>
 </body>
 </html>

@@ -2,21 +2,25 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JVL7BPFP1C"></script>
+<!-- Google Analytics 4 + Microsoft Clarity — só coletam em sorriemais.com.
+     Fora de produção (localhost, Lighthouse CI, previews) os scripts nem carregam;
+     o stub de gtag() continua definido para o main.js não quebrar. -->
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-JVL7BPFP1C');
-</script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "y4ibqk1v6o");
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JVL7BPFP1C');
+  if (location.hostname === 'sorriemais.com') {
+    var gaTag = document.createElement('script');
+    gaTag.async = true;
+    gaTag.src = 'https://www.googletagmanager.com/gtag/js?id=G-JVL7BPFP1C';
+    document.head.appendChild(gaTag);
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y4ibqk1v6o");
+  }
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -401,6 +405,6 @@ gtag('config', 'G-JVL7BPFP1C');
   </a>
 </div>
 
-<script src="/assets/js/main.js?v=5" defer></script>
+<script src="/assets/js/main.js?v=6" defer></script>
 </body>
 </html>

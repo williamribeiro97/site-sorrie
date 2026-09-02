@@ -203,9 +203,9 @@
   }, { passive: true });
 
   /* ---------- GA4 — micro-conversão: clique no CTA primário ----------
-     O CTA principal das páginas internas é uma âncora para #avaliacao, e âncora
-     não dispara evento nenhum. São 15 botões em 4 páginas que até aqui eram
-     invisíveis no GA4.
+     O CTA principal das páginas internas é uma âncora para #avaliacao; a home
+     usa #consulta (a seção dela chama id="consulta") — os dois seletores são
+     necessários, senão a página de maior tráfego real fica fora do funil.
 
      Isso importa porque o funil tem dois passos — clicar no CTA, depois clicar
      no WhatsApp da seção — e só o segundo era medido. Sem o primeiro não dá para
@@ -215,7 +215,7 @@
      É MICRO-CONVERSÃO: não marcar como evento principal no GA4. Marcar inflaria
      a taxa de conversão contando rolagem de página como contato. */
   document.addEventListener('click', function (e) {
-    var link = e.target.closest('a[href="#avaliacao"]');
+    var link = e.target.closest('a[href="#avaliacao"], a[href="#consulta"]');
     if (!link || typeof gtag !== 'function') return;
     gtag('event', 'cta_avaliacao', {
       transport_type: 'beacon',
