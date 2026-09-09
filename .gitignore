@@ -35,3 +35,18 @@ equipe/IMG-*-WA*
 # Lighthouse CI (M4) — relatórios locais, nunca versionados
 .lighthouseci/
 .lhtmp/
+
+# Artefatos de ferramentas do Claude Code (estado local, nunca versionar)
+.claude-flow/
+.playwright-mcp/
+.claude/proven-config.json
+.claude/.proven-config-version
+
+# Sobra de npx (o site não tem package.json)
+package-lock.json
+
+# Clone de terceiro (github.com/soumatheusgomes/agentville) que caiu dentro da pasta do site; nao pertence ao repo
+agentville/
+
+# Clone de terceiro (github.com/soumatheusgomes/agentville) que caiu dentro da pasta do site; nao pertence ao repo
+agentville/
