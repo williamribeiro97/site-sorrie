@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sorriemais.com/</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://sorriemais.com/alinhadores-invisiveis-vitoria/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://sorriemais.com/facetas-lentes-de-contato-vitoria/</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url><loc>https://sorriemais.com/</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
+    <video:video><video:thumbnail_loc>https://sorriemais.com/videos/tour_clinica_poster.jpg</video:thumbnail_loc><video:title>Tour pela clínica SORRIE+ na Enseada do Suá</video:title><video:description>Um tour pela estrutura da SORRIE+ Odontologia Especializada, no Ed. London Office Tower, Enseada do Suá, Vitória-ES.</video:description><video:content_loc>https://sorriemais.com/videos/tour_clinica.mp4</video:content_loc><video:duration>35</video:duration><video:publication_date>2026-07-01</video:publication_date></video:video>
+    <video:video><video:thumbnail_loc>https://sorriemais.com/videos/promessa_valor_poster.jpg</video:thumbnail_loc><video:title>Nossa abordagem: como a SORRIE+ conduz a avaliação</video:title><video:description>A Dra. Karine Marinho Ribeiro explica como a clínica conduz a avaliação e o plano de tratamento personalizado.</video:description><video:content_loc>https://sorriemais.com/videos/promessa_valor.mp4</video:content_loc><video:duration>25</video:duration><video:publication_date>2026-07-01</video:publication_date></video:video>
+  </url>
+  <url><loc>https://sorriemais.com/alinhadores-invisiveis-vitoria/</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://sorriemais.com/facetas-lentes-de-contato-vitoria/</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <video:video><video:thumbnail_loc>https://sorriemais.com/videos/lentes-de-contato_poster.jpg</video:thumbnail_loc><video:title>Prova de lentes de contato dental na SORRIE+</video:title><video:description>Momento da prova de lentes de contato dental em porcelana, com autorização da paciente por TCLE. Os resultados variam conforme cada caso.</video:description><video:content_loc>https://sorriemais.com/videos/lentes-de-contato.mp4</video:content_loc><video:duration>15</video:duration><video:publication_date>2026-07-01</video:publication_date></video:video>
+  </url>
   <url><loc>https://sorriemais.com/implante-dentario-vitoria/</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://sorriemais.com/dra-karine-marinho/</loc><lastmod>2026-07-27</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://sorriemais.com/blog/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sorriemais.com/blog/</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/clareamento-no-alinhador-invisivel/</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/alinhador-invisivel-ou-aparelho-fixo/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/quanto-custa-alinhador-invisivel/</loc><lastmod>2026-09-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -22,4 +27,12 @@
   <url><loc>https://sorriemais.com/blog/quanto-tempo-dura-tratamento-alinhador-invisivel/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/clearcorrect-ou-invisalign/</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/alinhador-invisivel-doi/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sorriemais.com/blog/mounjaro-mau-halito/</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <video:video><video:thumbnail_loc>https://sorriemais.com/videos/mounjaro-mau-halito_poster.jpg</video:thumbnail_loc><video:title>Mounjaro dá mau hálito? A Dra. Karine explica</video:title><video:description>Por que o uso de Mounjaro (tirzepatida) pode vir acompanhado de mau hálito e o que fazer para reduzir o problema.</video:description><video:content_loc>https://sorriemais.com/videos/mounjaro-mau-halito.mp4</video:content_loc><video:duration>76</video:duration><video:publication_date>2026-09-04</video:publication_date></video:video>
+  </url>
+  <url><loc>https://sorriemais.com/blog/escova-de-dente-macia-ou-dura/</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <video:video><video:thumbnail_loc>https://sorriemais.com/videos/escova-de-dente-macia-ou-dura_poster.jpg</video:thumbnail_loc><video:title>Escova de dente macia ou dura? A Dra. Karine explica</video:title><video:description>Por que a escova extra macia limpa tão bem quanto a dura, sem desgastar o esmalte nem retrair a gengiva, e quando trocar a escova.</video:description><video:content_loc>https://sorriemais.com/videos/escova-de-dente-macia-ou-dura.mp4</video:content_loc><video:duration>56</video:duration><video:publication_date>2026-08-04</video:publication_date></video:video>
+  </url>
+  <url><loc>https://sorriemais.com/blog/trocar-aparelho-fixo-por-alinhador-invisivel/</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sorriemais.com/videos/</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

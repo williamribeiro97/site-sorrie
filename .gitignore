@@ -48,5 +48,4 @@ package-lock.json
 # Clone de terceiro (github.com/soumatheusgomes/agentville) que caiu dentro da pasta do site; nao pertence ao repo
 agentville/
 
-# Clone de terceiro (github.com/soumatheusgomes/agentville) que caiu dentro da pasta do site; nao pertence ao repo
-agentville/
+videos/raw/
