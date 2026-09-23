@@ -4,6 +4,20 @@
 (function () {
   'use strict';
 
+  /* ---------- Meta Pixel 4429371950709360 ---------- */
+  if (!window.fbq) {
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4429371950709360');
+    fbq('track', 'PageView');
+  }
+
   /* ---------- Ano no rodapé ---------- */
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
@@ -190,16 +204,20 @@
   /* ---------- GA4 — evento de conversão: contato via WhatsApp ---------- */
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
-    if (!link || typeof gtag !== 'function') return;
-    gtag('event', 'contato_whatsapp', {
-      transport_type: 'beacon',
-      link_url: link.href,
-      // .mbar antes de footer/header: a barra fixa mobile caía em "corpo",
-      // e é o botão de maior exposição no celular — precisa de rótulo próprio.
-      button_location: link.closest('.mbar') ? 'barra_mobile'
-                     : (link.closest('footer') ? 'rodape'
-                     : (link.closest('header') ? 'topo' : 'corpo'))
-    });
+    if (!link) return;
+    if (typeof gtag === 'function') {
+      gtag('event', 'contato_whatsapp', {
+        transport_type: 'beacon',
+        link_url: link.href,
+        // .mbar antes de footer/header: a barra fixa mobile caía em "corpo",
+        // e é o botão de maior exposição no celular — precisa de rótulo próprio.
+        button_location: link.closest('.mbar') ? 'barra_mobile'
+                       : (link.closest('footer') ? 'rodape'
+                       : (link.closest('header') ? 'topo' : 'corpo'))
+      });
+    }
+    // Meta Pixel — evento padrão 'Contact' no mesmo clique do WhatsApp.
+    if (window.fbq) fbq('track', 'Contact');
   }, { passive: true });
 
   /* ---------- GA4 — micro-conversão: clique no CTA primário ----------
