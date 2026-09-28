@@ -4,6 +4,16 @@
 (function () {
   'use strict';
 
+  /* ---------- UTM de campanha: guarda para reatribuir o clique de WhatsApp ----------
+     A etiqueta "[c:site|v:<posição>]" nos links wa.me nasce estática no HTML;
+     se a sessão chegou com utm_campaign, o clique (abaixo) troca "site" pelo
+     valor real antes de abrir o WhatsApp. Sem isto, todo clique ficaria
+     atribuído a "site" mesmo vindo de campanha paga. */
+  try {
+    var utmCampanha = new URLSearchParams(location.search).get('utm_campaign');
+    if (utmCampanha) sessionStorage.setItem('utm_campaign', utmCampanha);
+  } catch (eUtm) {}
+
   /* ---------- Meta Pixel 4429371950709360 ---------- */
   if (!window.fbq) {
     !function(f,b,e,v,n,t,s)
@@ -205,6 +215,15 @@
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
     if (!link) return;
+    // Reatribuição de campanha: o texto da mensagem carrega "[c:site|v:...]"
+    // percent-encoded no href ("%5Bc%3Asite%7C..."), por isso o teste é pela
+    // forma escapada. Com utm_campaign salvo, "c:site" vira "c:<utm_campaign>".
+    try {
+      var campanhaSalva = sessionStorage.getItem('utm_campaign');
+      if (campanhaSalva && link.href.indexOf('%5Bc%3Asite%7C') !== -1) {
+        link.href = link.href.replace('c%3Asite', 'c%3A' + encodeURIComponent(campanhaSalva));
+      }
+    } catch (eTag) {}
     if (typeof gtag === 'function') {
       gtag('event', 'contato_whatsapp', {
         transport_type: 'beacon',
@@ -218,6 +237,8 @@
     }
     // Meta Pixel — evento padrão 'Contact' no mesmo clique do WhatsApp.
     if (window.fbq) fbq('track', 'Contact');
+    // Clarity — mesmo evento, para cruzar clique de WhatsApp com heatmap/gravação.
+    if (window.clarity) clarity('event', 'contato_whatsapp');
   }, { passive: true });
 
   /* ---------- GA4 — micro-conversão: clique no CTA primário ----------
