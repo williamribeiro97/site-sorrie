@@ -4,13 +4,13 @@
     <video:video><video:thumbnail_loc>https://sorriemais.com/videos/tour_clinica_poster.jpg</video:thumbnail_loc><video:title>Tour pela clínica SORRIE+ na Enseada do Suá</video:title><video:description>Um tour pela estrutura da SORRIE+ Odontologia Especializada, no Ed. London Office Tower, Enseada do Suá, Vitória-ES.</video:description><video:content_loc>https://sorriemais.com/videos/tour_clinica.mp4</video:content_loc><video:duration>35</video:duration><video:publication_date>2026-07-01</video:publication_date></video:video>
     <video:video><video:thumbnail_loc>https://sorriemais.com/videos/promessa_valor_poster.jpg</video:thumbnail_loc><video:title>Nossa abordagem: como a SORRIE+ conduz a avaliação</video:title><video:description>A Dra. Karine Marinho Ribeiro explica como a clínica conduz a avaliação e o plano de tratamento personalizado.</video:description><video:content_loc>https://sorriemais.com/videos/promessa_valor.mp4</video:content_loc><video:duration>25</video:duration><video:publication_date>2026-07-01</video:publication_date></video:video>
   </url>
-  <url><loc>https://sorriemais.com/alinhadores-invisiveis-vitoria/</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://sorriemais.com/alinhadores-invisiveis-vitoria/</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://sorriemais.com/facetas-lentes-de-contato-vitoria/</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
     <video:video><video:thumbnail_loc>https://sorriemais.com/videos/lentes-de-contato_poster.jpg</video:thumbnail_loc><video:title>Prova de lentes de contato dental na SORRIE+</video:title><video:description>Momento da prova de lentes de contato dental em porcelana, com autorização da paciente por TCLE. Os resultados variam conforme cada caso.</video:description><video:content_loc>https://sorriemais.com/videos/lentes-de-contato.mp4</video:content_loc><video:duration>15</video:duration><video:publication_date>2026-07-01</video:publication_date></video:video>
   </url>
   <url><loc>https://sorriemais.com/implante-dentario-vitoria/</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://sorriemais.com/dra-karine-marinho/</loc><lastmod>2026-07-27</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://sorriemais.com/blog/</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sorriemais.com/blog/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/clareamento-no-alinhador-invisivel/</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/alinhador-invisivel-ou-aparelho-fixo/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/quanto-custa-alinhador-invisivel/</loc><lastmod>2026-09-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -36,5 +36,7 @@
   <url><loc>https://sorriemais.com/blog/trocar-aparelho-fixo-por-alinhador-invisivel/</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/boca-seca-mounjaro-ozempic/</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/blog/gengiva-sangrando-ao-escovar/</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sorriemais.com/blog/alinhador-invisivel-com-implante-ou-faceta/</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sorriemais.com/blog/alinhador-invisivel-para-adultos/</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sorriemais.com/videos/</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
