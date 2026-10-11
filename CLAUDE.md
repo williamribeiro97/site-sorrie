@@ -15,7 +15,7 @@ Não leia arquivos inteiros se o auditor puder resumir. **Nunca faça commit/pus
 - **SORRIE+ Odontologia Especializada** — clínica premium em Vitória-ES.
 - Endereço: R. José Alexandre Buaiz, 160, Ed. London Office Tower, **Sala 901**, Enseada do Suá, Vitória-ES, 29050-545. Tel: +55 27 99989-3314.
 - Responsável técnica: **Dra. Karine Marinho Ribeiro, CRO-ES 10983**.
-- Google (GBP): nota **5,0 com 50 avaliações** (conferido no GBP em 15/08/2026 — conferir número atual antes de citar; atualizar texto E schema juntos). Andou de 49 para 50 em 19 dias: trate como dado volátil, nunca como constante.
+- Google (GBP): nota **5,0 com 54 avaliações** (conferido no GBP em 11/10/2026 — conferir número atual antes de citar; atualizar texto E schema juntos). Andou de 50 para 54 entre 15/08 e 11/10/2026: trate como dado volátil, nunca como constante.
 - Fontes: Fraunces (títulos) + Hanken Grotesk (corpo). GA4: G-JVL7BPFP1C. Português brasileiro.
 - Arquitetura: home · 3 pilares (`/alinhadores-invisiveis-vitoria/` carro-chefe ClearCorrect/Invisalign com clareamento, `/facetas-lentes-de-contato-vitoria/`, `/implante-dentario-vitoria/`) · `/dra-karine-marinho/` · `/blog/` + posts.
 - **Objetivo**: Top 1 orgânico na Grande Vitória (Vitória, Vila Velha, Serra, Cariacica) e ser citado por IAs.
@@ -56,7 +56,7 @@ A identidade oficial é **monocromática** (manual Shine Arts, fonte Vito Wide L
 1. `<title>` ≤60 chars — keyword primeiro, localidade, marca no fim (`… | SORRIE+` ou `· SORRIE+`).
 2. Meta description ≤155 chars — incluir "Nota 5,0 no Google", Enseada do Suá e CTA suave, quando couber. Sincronizar `og:`/`twitter:`.
 3. Canonical único e absoluto: `https://sorriemais.com/<path>/`.
-4. JSON-LD válido (validar com `node -e`, não python). Bloco **Dentist** consistente em todas as páginas: nome exato, endereço com Sala 901, telefone, `aggregateRating` 5.0/50, `sameAs` = [maps.app.goo.gl (GBP), instagram.com/sorriemais.vix, doctoralia.com.br/clinicas/sorrie-odontologia-especializada].
+4. JSON-LD válido (validar com `node -e`, não python). Bloco **Dentist** consistente em todas as páginas: nome exato, endereço com Sala 901, telefone, `aggregateRating` 5.0/54, `sameAs` = [maps.app.goo.gl (GBP), instagram.com/sorriemais.vix, doctoralia.com.br/clinicas/sorrie-odontologia-especializada].
    **Paridade do número de avaliações — os 3 lugares mudam juntos ou nenhum muda:** `"reviewCount"` no JSON-LD, o selo `Google (N)` do hero (`index.html` **e** `alinhadores-invisiveis-vitoria/index.html`) e o texto `N avaliações` do bloco de avaliações. Um LLM que extrai fatos e encontra a fonte se contradizendo sobre si mesma na mesma página rebaixa a fonte — o custo não é só perder o rich result.
 5. Se houver FAQPage: paridade **EXATA** com o FAQ visível (mesmas perguntas, mesma ordem) — o `<summary>` termina com `<span class="pm"></span>`.
 6. Posts do blog: `BlogPosting` + `Person` (author/reviewedBy = Dra. Karine, CRO-ES 10983), datas coerentes **nas 3 fontes juntas**: byline visível ("Atualizado em <mês> de <ano>") == mês/ano do `dateModified` do JSON-LD == `lastmod` do sitemap — quem atualiza uma atualiza as três. A regra vale para **toda página com `dateModified`** (home e pilares incluídos; sem byline visível, são 2 fontes: JSON-LD == sitemap). Corpo linka o pilar correspondente e `/dra-karine-marinho/`; **recíprocas**: pilar linka o post, card em `/blog/`, URL no `sitemap.xml` com lastmod.
