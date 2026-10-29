@@ -51,6 +51,7 @@ body.ds{background:var(--ink)}
 .cx-ph::before{content:"";position:absolute;inset:0;background:var(--metal);opacity:.16}
 .cx-ph span{position:relative}
 .cx-dk .cx-ph{color:var(--cx-dk-txt)}
+.cx-media:has(> .cx-ph){display:none} /* mídia ainda não produzida não aparece para o visitante */
 .cx-pp{position:absolute;right:12px;bottom:12px;width:44px;height:44px;border:0;border-radius:50%;cursor:pointer;
   background:rgba(20,20,20,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:grid;place-items:center}
 .cx-pp::before{content:"";width:4px;height:16px;border-inline:4px solid #fff}
