@@ -40,6 +40,13 @@ body.ds{background:var(--ink)}
 .cx-media video:not([src]):not([poster]){display:none}
 .cx-media--p{aspect-ratio:3/4}
 .cx-media--v{aspect-ratio:9/16;max-width:420px;margin-inline:auto}
+/* hero com mídia + CTA na 1ª tela do celular */
+.cx-scene--hero .cx-t{margin-bottom:18px}
+.cx-scene--hero .cx-cta{margin:18px 0 28px}
+.cx-rate{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;font-size:15px;color:var(--cx-dk-txt);text-decoration:none}
+.cx-rate:hover{text-decoration:underline}
+.cx-media--card{width:calc(100% - 40px);border-radius:18px;margin-bottom:56px}
+.cx-media--hero{width:auto;height:min(40svh,118vw);max-width:100%;margin-inline:auto;border-radius:18px}
 .cx-ph{position:absolute;inset:0;display:grid;place-items:center;padding:20px;font-size:14px;color:var(--graphite)}
 .cx-ph::before{content:"";position:absolute;inset:0;background:var(--metal);opacity:.16}
 .cx-ph span{position:relative}
@@ -98,6 +105,7 @@ body.ds{background:var(--ink)}
   .cx-media--p img{object-position:50% 25%}
   .cx-media--v{aspect-ratio:9/16;max-width:360px;max-height:none}
   .cx-media--q{aspect-ratio:4/5;max-width:min(520px,62svh);max-height:none;margin-inline:auto}
+  .cx-media--hero{aspect-ratio:4/5;height:min(50svh,560px);max-height:none;margin-top:0}
   .cx-nums{grid-template-columns:1fr 1fr;max-width:900px;margin-inline:auto}
 }
 
