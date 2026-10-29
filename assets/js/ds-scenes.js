@@ -16,7 +16,7 @@
     O(function (e, o) {
       if (!e[0].isIntersecting) return;
       o.disconnect(); v.src = s; v.load();
-      var t = setTimeout(function () { if (v.readyState < 3) { off = 1; v.removeAttribute('src'); v.load(); } }, 3000);
+      var t = setTimeout(function () { if (v.readyState < (sc ? 1 : 3)) { /* scrub nunca toca: basta ter metadados */ off = 1; v.removeAttribute('src'); v.load(); } }, 3000);
       v.oncanplay = function () { clearTimeout(t); };
       if (sc) { addEventListener('scroll', function () { var q = sc.getBoundingClientRect(), p = (innerHeight - q.top) / (innerHeight + q.height); if (v.duration) v.currentTime = Math.min(1, Math.max(0, p)) * v.duration; }, { passive: true }); }
       else if (v.loop) {

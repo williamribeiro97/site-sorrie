@@ -97,6 +97,7 @@ body.ds{background:var(--ink)}
   .cx-media--p{aspect-ratio:16/9}
   .cx-media--p img{object-position:50% 25%}
   .cx-media--v{aspect-ratio:9/16;max-width:360px;max-height:none}
+  .cx-media--q{aspect-ratio:4/5;max-width:min(520px,62svh);max-height:none;margin-inline:auto}
   .cx-nums{grid-template-columns:1fr 1fr;max-width:900px;margin-inline:auto}
 }
 
