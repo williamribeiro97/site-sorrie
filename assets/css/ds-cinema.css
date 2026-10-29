@@ -1,0 +1,105 @@
+/* SORRIE+ ds-cinema.css — camada "uma ideia por tela" sobre ds.css (classes cx-). Carregar depois de ds.css. */
+
+:root{--cx-dk-txt:#B9BCBE}
+body.ds{background:var(--ink)}
+
+/* ---------- Barra local fina ---------- */
+.cx-bar{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--bar-h);background:rgba(11,12,12,.72);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid rgba(255,255,255,.1);color:#fff}
+.cx-bar .ds-wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cx-bar b{font:500 15px/1 var(--f-body)}
+.cx-bar .ds-pill{min-height:44px;padding:0 16px;font-size:14px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.cx-bar{background:var(--ink)}}
+@media (prefers-reduced-transparency:reduce){.cx-bar{background:var(--ink);-webkit-backdrop-filter:none;backdrop-filter:none}}
+
+/* ---------- Cena ---------- */
+.cx-scene{display:flex;flex-direction:column;align-items:center;text-align:center;padding:72px 0 0;
+  scroll-margin-top:var(--bar-h)}
+.cx-scene--hero{padding-top:44px}
+.cx-dk{background:var(--ink);color:#fff}
+.cx-lt{background:var(--porcelain);color:var(--ink)}
+.cx-wh{background:#fff;color:var(--ink)}
+.cx-t{width:100%;max-width:880px;padding-inline:20px;margin-bottom:40px}
+.cx-h{font:500 clamp(44px,12vw,56px)/1.02 var(--f-display);font-stretch:125%;letter-spacing:-.01em;overflow-wrap:break-word}
+.cx-h--s{font-size:clamp(32px,9vw,44px)}
+.cx-sub{font-size:17px;line-height:1.5;color:var(--graphite);max-width:34ch;margin:16px auto 0}
+.cx-dk .cx-sub{color:var(--cx-dk-txt)}
+.cx-sub a{color:inherit}
+.cx-tl{display:inline-flex;align-items:center;min-height:44px;margin-top:10px;font-weight:600;text-decoration:none;color:var(--action)}
+.cx-dk .cx-tl{color:#fff}
+.cx-tl:hover{text-decoration:underline}
+.cx-cta{margin-top:26px}
+.cx-cta .ds-btn{margin-inline:auto}
+.cx-fine{font-size:14px;line-height:1.5;color:var(--graphite);margin-top:14px}
+.cx-dk .cx-fine{color:var(--cx-dk-txt)}
+
+/* ---------- Mídia sangrando ---------- */
+.cx-media{position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;max-width:100%}
+.cx-media img,.cx-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cx-media video:not([src]):not([poster]){display:none}
+.cx-media--p{aspect-ratio:3/4}
+.cx-media--v{aspect-ratio:9/16;max-width:420px;margin-inline:auto}
+.cx-ph{position:absolute;inset:0;display:grid;place-items:center;padding:20px;font-size:14px;color:var(--graphite)}
+.cx-ph::before{content:"";position:absolute;inset:0;background:var(--metal);opacity:.16}
+.cx-ph span{position:relative}
+.cx-dk .cx-ph{color:var(--cx-dk-txt)}
+.cx-pp{position:absolute;right:12px;bottom:12px;width:44px;height:44px;border:0;border-radius:50%;cursor:pointer;
+  background:rgba(20,20,20,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:grid;place-items:center}
+.cx-pp::before{content:"";width:4px;height:16px;border-inline:4px solid #fff}
+.cx-pp[data-p="1"]::before{width:0;height:0;border-inline:0;border-left:14px solid #fff;border-block:8px solid transparent;margin-left:4px}
+
+/* ---------- Números de prova ---------- */
+.cx-nums{display:grid;gap:40px;margin:8px 0 28px}
+.cx-num{font:500 clamp(96px,32vw,150px)/.95 var(--f-display);font-stretch:125%;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.cx-cap{font-size:17px;color:var(--graphite);margin-top:8px}
+.cx-sc6{justify-content:center;padding-bottom:72px}
+
+/* ---------- FAQ ---------- */
+.cx-faq{width:100%;max-width:760px;padding-inline:20px;margin:0 auto;text-align:left}
+.cx-faq details{border-top:1px solid var(--line)}
+.cx-faq details:last-child{border-bottom:1px solid var(--line)}
+.cx-faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px;padding:14px 0;cursor:pointer;font:500 18px/1.3 var(--f-body)}
+.cx-faq summary::-webkit-details-marker{display:none}
+.cx-faq .pm{width:22px;height:22px;flex:none;position:relative}
+.cx-faq .pm::before,.cx-faq .pm::after{content:"";position:absolute;top:50%;left:50%;background:var(--ink);transform:translate(-50%,-50%)}
+.cx-faq .pm::before{width:14px;height:1.5px}
+.cx-faq .pm::after{width:1.5px;height:14px}
+.cx-faq details[open] .pm::after{opacity:0}
+.cx-faq p{padding:0 0 22px;color:var(--graphite)}
+.cx-scene--faq{min-height:0;padding-block:72px}
+.cx-scene--faq .cx-t{margin-bottom:28px}
+
+/* ---------- Final e notas ---------- */
+.cx-scene--end{justify-content:center;padding:88px 0}
+.cx-scene--end .cx-t{margin-bottom:0}
+.cx-notes{background:var(--ink);color:var(--cx-dk-txt);padding:8px 0 40px;font-size:13px;line-height:1.5;border-top:1px solid rgba(255,255,255,.1)}
+.cx-notes ol{list-style:none;margin:0;padding:24px 0 0;display:grid;gap:10px;max-width:760px}
+.cx-notes a{color:#fff}
+.cx-fn{text-decoration:none;font-size:.8em;padding:0 2px}
+.cx-foot{padding-top:32px}
+
+/* ---------- Revelar títulos (classe via ds-scenes.js; sem JS tudo aparece) ---------- */
+.cx-js .cx-rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.cx-js .cx-rv.is-in{opacity:1;transform:none}
+.cx-js .cx-sub.cx-rv{transition-delay:.12s}
+@media (prefers-reduced-motion:reduce){.cx-js .cx-rv{opacity:1;transform:none}}
+
+/* ---------- >= 1024 ---------- */
+@media (min-width:768px){.cx-bar .ds-wrap{padding-inline:32px}}
+@media (min-width:1024px){
+  .cx-scene{min-height:100svh;padding-top:96px}
+  .cx-media{margin-top:auto}
+  .cx-h{font-size:clamp(64px,6.5vw,96px)}
+  .cx-h--s{font-size:clamp(40px,4vw,56px)}
+  .cx-sub{font-size:21px;max-width:40ch}
+  .cx-media{aspect-ratio:16/9;max-height:78svh}
+  .cx-media--p{aspect-ratio:16/9}
+  .cx-media--p img{object-position:50% 25%}
+  .cx-media--v{aspect-ratio:9/16;max-width:360px;max-height:none}
+  .cx-nums{grid-template-columns:1fr 1fr;max-width:900px;margin-inline:auto}
+}
+
+/* Cena emendada na anterior (mesmo fundo, sem respiro de cor) — acrescentado */
+.cx-scene.cx-join{padding-top:48px;min-height:0}
+.cx-join .cx-t .ds-btn{margin-top:20px}
