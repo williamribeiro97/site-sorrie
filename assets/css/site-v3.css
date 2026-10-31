@@ -123,6 +123,31 @@ strong{color:var(--ink);font-weight:600}
 .badge img{width:16px;height:16px;flex:none;object-fit:contain}
 .badge .stars,.stars{color:var(--ink);letter-spacing:1px}
 .hero .badges+.badges{margin-top:13px}
+.hero-servicos{display:none}
+/* Celular: foto menor e, na primeira tela, o que a clínica faz e o botão. Selos vão para depois. */
+@media (max-width:959px){
+  .hero-bg{height:min(30svh,240px);min-height:170px}
+  .hero-bg img{object-position:50% 34%}
+  .hero-bg::after{height:22%}
+  .hero-inner{display:flex;flex-direction:column;margin-top:-8px;padding-bottom:34px}
+  .hero-inner>h1{order:1;margin-top:0}
+  .hero-inner>.lead{order:2;margin-top:13px;font-size:16px;line-height:1.45}
+  .hero-inner>.hero-actions{order:3;margin-top:21px}
+  .hero-actions .btn-primary{width:100%}
+  .hero:has(.hero-servicos) .btn-ghost{display:none}
+  .hero-servicos{order:4;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:13px}
+  .hero-servicos a{min-height:44px;padding:0 6px;border:1px solid var(--line-2);border-radius:13px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:600;line-height:1.2;color:var(--ink)}
+  .hero-inner>.form-foot{order:5}
+  .hero-inner>.badges{order:6;margin-top:21px}
+  .hero-inner>.badges+.badges{margin-top:13px}
+}
+@media (max-width:959px){
+  .hero-bg img[src*="dra-karine-hero"]{object-position:50% 9%}
+  .hero-bg img[src*="retrato-blazer"]{object-position:50% 22%}
+}
+@media (max-width:959px) and (prefers-color-scheme:dark){
+  .hero-bg img[src]{object-position:50% 20%}
+}
 
 /* ---------- Números ---------- */
 .stats{padding-block:55px;border-block:1px solid var(--line)}
