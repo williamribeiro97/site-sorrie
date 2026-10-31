@@ -84,7 +84,7 @@ strong{color:var(--ink);font-weight:600}
 .btn-block{width:100%}
 
 /* ---------- Navegação ---------- */
-.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid transparent;transition:border-color .3s}
 .nav.scrolled{border-bottom-color:var(--line)}
 .nav::before,.nav.scrolled::before{content:none}
 .nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between;gap:21px}
@@ -127,8 +127,8 @@ strong{color:var(--ink);font-weight:600}
 /* ---------- Números ---------- */
 .stats{padding-block:55px;border-block:1px solid var(--line)}
 .stats .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 21px}
-.stat{text-align:center;min-width:0;overflow-wrap:anywhere}
-.stat .num{font-family:var(--wide);font-stretch:125%;font-weight:600;font-size:clamp(24px,7.4vw,34px);line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.stat{text-align:center;min-width:0}
+.stat .num{font-family:var(--wide);font-stretch:125%;font-weight:600;font-size:clamp(20px,6.2vw,34px);line-height:1;letter-spacing:-.03em;color:var(--ink);white-space:nowrap}
 .stat .num .pls{color:var(--mut)}
 .stat .lbl{margin-top:8px;font-size:14px;color:var(--mut)}
 
@@ -246,7 +246,10 @@ strong{color:var(--ink);font-weight:600}
 /* ---------- Vídeos (toque para tocar; nenhum inicia sozinho) ---------- */
 .vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;max-width:760px;margin-inline:auto}
 .vidcard{position:relative;aspect-ratio:9/16;border-radius:var(--radius-lg);overflow:hidden;background:#0B0C0C}
+.vids--wide{grid-template-columns:minmax(0,1fr)}
+.vids--wide .vidcard{aspect-ratio:16/9}
 .vidcard video{width:100%;height:100%;object-fit:cover;display:block}
+.vidcard:not(.playing) video::-webkit-media-controls{display:none!important}
 .vidcard .play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(to top,rgba(11,12,12,.55),transparent 45%)}
 .vidcard .play .circle{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.94);color:#0B0C0C;display:grid;place-items:center;transition:transform .2s}
 .vidcard .play:hover .circle{transform:scale(1.05)}
@@ -276,12 +279,8 @@ strong{color:var(--ink);font-weight:600}
 .fab{display:none}
 
 /* ---------- Entrada ---------- */
-/* O conteúdo nunca nasce invisível: .reveal só suaviza quem já passou do primeiro quadro. */
+/* O conteúdo entra visível: sem fade no scroll, que fazia a tela piscar. */
 .reveal{opacity:1}
-@media (prefers-reduced-motion:no-preference){
-  .reveal.in{animation:v3-fade .5s ease both}
-  @keyframes v3-fade{from{opacity:.001}to{opacity:1}}
-}
 
 /* ---------- Página da especialista: no celular, a foto abre a página ---------- */
 @media (max-width:959px){
@@ -303,6 +302,7 @@ strong{color:var(--ink);font-weight:600}
   .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rev-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stats .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stat .num{font-size:clamp(20px,3.4vw,27px)}
   .formcard{padding:44px}
 }
 
@@ -329,7 +329,7 @@ strong{color:var(--ink);font-weight:600}
   .hero-inner>*{max-width:560px}
   .hero p.lead,.hero .lead{font-size:20px}
 
-  .stats .num,.stat .num{font-size:55px}
+  .stats .num,.stat .num{font-size:clamp(34px,3.2vw,44px)}
   .resposta-direta p{font-size:22px}
   .shead{margin-bottom:89px}
   .shead p{font-size:20px}

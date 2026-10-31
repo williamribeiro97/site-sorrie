@@ -59,19 +59,20 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/archivo-wide-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site-v3.css?v=20261101h">
+<link rel="stylesheet" href="/assets/css/site-v3.css?v=20261101i">
 
 <style>
   .reel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   @media (max-width:720px){.reel-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
   .reel{position:relative;display:block;aspect-ratio:9/16;border-radius:var(--radius-lg);overflow:hidden;background:#111;color:#fff;text-decoration:none}
+  .reel picture{display:block;height:100%}
   .reel img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
   .reel:hover img{transform:scale(1.04)}
   .reel .reel-cap{position:absolute;inset:auto 0 0 0;padding:14px;background:linear-gradient(transparent,rgba(0,0,0,.72))}
   .reel h2{font-size:1rem;line-height:1.3;margin:0 0 4px;color:#fff}
   .reel .reel-dur{font-size:.78rem;opacity:.85}
   .reel .reel-play{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center}
-  .reel .reel-play svg{width:14px;height:14px;color:var(--teal-deep);margin-left:2px}
+  .reel .reel-play svg{width:14px;height:14px;color:#0B0C0C;margin-left:2px}
 </style>
 
 <script type="application/ld+json">
@@ -105,7 +106,9 @@
       { "@type": "ListItem", "position": 1, "url": "https://sorriemais.com/blog/mounjaro-mau-halito/", "name": "Mounjaro dá mau hálito? Por que acontece e o que fazer" },
       { "@type": "ListItem", "position": 2, "url": "https://sorriemais.com/blog/escova-de-dente-macia-ou-dura/", "name": "Escova de dente macia ou dura: qual usar e por quê" },
       { "@type": "ListItem", "position": 3, "url": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/", "name": "Prova de lentes de contato dental na SORRIE+" },
-      { "@type": "ListItem", "position": 4, "url": "https://sorriemais.com/", "name": "Tour pela clínica SORRIE+ na Enseada do Suá" } ] }
+      { "@type": "ListItem", "position": 4, "url": "https://sorriemais.com/", "name": "Conheça a SORRIE+ com a Dra. Karine, na Enseada do Suá" },
+      { "@type": "ListItem", "position": 5, "url": "https://sorriemais.com/facetas-lentes-de-contato-vitoria/", "name": "Faceta ou lente de contato?" },
+      { "@type": "ListItem", "position": 6, "url": "https://sorriemais.com/implante-dentario-vitoria/", "name": "Escaneamento e simulação 3D" } ] }
   ]
 }
 </script>
@@ -170,9 +173,19 @@
         <span class="reel-cap"><h2>Prova de lentes de contato</h2><span class="reel-dur">0:15 · Facetas</span></span>
       </a>
       <a class="reel" href="/#clinica-video">
-        <picture><source srcset="/videos/tour_clinica_poster.webp" type="image/webp"><img src="/videos/tour_clinica_poster.jpg" alt="Tour pela clínica SORRIE+ na Enseada do Suá" width="720" height="1280" loading="lazy"></picture>
+        <picture><source srcset="/videos/conheca-a-sorrie_poster.webp" type="image/webp"><img src="/videos/conheca-a-sorrie_poster.jpg" alt="Conheça a SORRIE+ com a Dra. Karine, na Enseada do Suá" width="720" height="1280" loading="lazy"></picture>
         <span class="reel-play" aria-hidden="true"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <span class="reel-cap"><h2>Tour pela clínica</h2><span class="reel-dur">0:35 · A clínica</span></span>
+        <span class="reel-cap"><h2>Conheça a SORRIE+</h2><span class="reel-dur">0:32 · A clínica</span></span>
+      </a>
+      <a class="reel" href="/facetas-lentes-de-contato-vitoria/">
+        <picture><source srcset="/videos/faceta-x-lente_poster.webp" type="image/webp"><img src="/videos/faceta-x-lente_poster.webp" alt="A Dra. Karine explica a diferença entre faceta e lente de contato" width="720" height="1280" loading="lazy"></picture>
+        <span class="reel-play" aria-hidden="true"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="reel-cap"><h2>Faceta ou lente de contato?</h2><span class="reel-dur">0:44 · Facetas</span></span>
+      </a>
+      <a class="reel" href="/implante-dentario-vitoria/">
+        <picture><source srcset="/videos/escaneamento-simulacao-3d_poster.webp" type="image/webp"><img src="/videos/escaneamento-simulacao-3d_poster.webp" alt="A Dra. Karine explica o escaneamento digital e a simulação 3D" width="720" height="1280" loading="lazy"></picture>
+        <span class="reel-play" aria-hidden="true"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="reel-cap"><h2>Escaneamento e simulação 3D</h2><span class="reel-dur">0:56 · Planejamento</span></span>
       </a>
       </div>
     <p class="center reveal d2" style="margin-top:28px"><a href="https://www.instagram.com/sorriemais.vix" target="_blank" rel="noopener" class="text-link">Seguir @sorriemais.vix no Instagram →</a></p>
@@ -214,7 +227,7 @@
   <small>Dra. Karine Marinho Ribeiro · CRO-ES 10983</small>
 </div>
 
-<script src="/assets/js/site-v3.js?v=20261101h" defer></script>
+<script src="/assets/js/site-v3.js?v=20261101i" defer></script>
 <script src="/assets/js/main.js?v=6" defer></script>
 </body>
 </html>
