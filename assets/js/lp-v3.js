@@ -1,7 +1,38 @@
 /* SORRIE+ · LP v3 — vídeos, som, entrada suave e barra superior. Sem dependências. */
 (function () {
   var rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // Vídeo com versão clara e escura: data-src-light / data-src-dark (e data-poster-light / data-poster-dark).
+  // Só o arquivo do tema atual recebe src, então o navegador baixa uma versão por acesso.
+  var mqDark = window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark() {
+    var t = document.documentElement.getAttribute('data-tema');
+    return t ? t === 'escuro' : mqDark.matches;
+  }
+  function themeVideos() {
+    var dark = isDark();
+    [].forEach.call(document.querySelectorAll('video[data-src-light][data-src-dark]'), function (v) {
+      var src = dark ? v.dataset.srcDark : v.dataset.srcLight;
+      var poster = dark ? v.dataset.posterDark : v.dataset.posterLight;
+      if (poster && v.getAttribute('poster') !== poster) v.poster = poster;
+      if (v.getAttribute('src') === src) return;
+      var playing = !v.paused;
+      v.setAttribute('src', src);
+      if (playing) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    });
+  }
+  themeVideos();
+  mqDark.addEventListener && mqDark.addEventListener('change', themeVideos);
+
   var videos = [].slice.call(document.querySelectorAll('video[data-lp]'));
+  // Arquivo pesado (data-heavy) não inicia sozinho no celular nem com economia de dados: espera o toque.
+  var small = window.matchMedia('(max-width: 959px)');
+  var saveData = !!(navigator.connection && navigator.connection.saveData);
+  function auto(v) {
+    if (rm.matches) return false;
+    if (v.dataset.heavy && (small.matches || saveData) && !v.dataset.userPlayed) return false;
+    return true;
+  }
 
   function still(v) {
     v.pause();
@@ -34,7 +65,7 @@
     var vio = new IntersectionObserver(function (es) {
       es.forEach(function (en) {
         var v = en.target;
-        if (rm.matches || v.dataset.userPaused) return;
+        if (!auto(v) || v.dataset.userPaused) return;
         if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
         else v.pause();
       });
@@ -45,11 +76,14 @@
 
   // Pausar: todo vídeo em loop precisa de controle (WCAG 2.2.2)
   videos.forEach(function (v) {
-    if (rm.matches || v.dataset.tap) return; // vídeo da Dra.: tem botão de som e controles próprios
+    if (rm.matches) return; // movimento reduzido: nada inicia sozinho; o vídeo com fala ganha controles nativos
     var b = document.createElement('button');
-    b.type = 'button'; b.className = 'lp-pp'; b.setAttribute('aria-label', 'Pausar vídeo');
+    b.type = 'button'; b.className = 'lp-pp';
+    var start = auto(v);
+    b.dataset.p = start ? '' : 1;
+    b.setAttribute('aria-label', start ? 'Pausar vídeo' : 'Reproduzir vídeo');
     b.onclick = function () {
-      if (v.paused) { delete v.dataset.userPaused; v.play(); }
+      if (v.paused) { delete v.dataset.userPaused; v.dataset.userPlayed = 1; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
       else { v.dataset.userPaused = 1; v.pause(); }
       b.dataset.p = v.paused ? 1 : '';
       b.setAttribute('aria-label', v.paused ? 'Reproduzir vídeo' : 'Pausar vídeo');

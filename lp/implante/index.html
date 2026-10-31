@@ -21,6 +21,11 @@
   }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F5F5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0C0C">
+<script>/* Revisão: ?tema=claro|escuro força o tema. Sem o parâmetro, vale o tema do aparelho. */
+(function(){var t=new URLSearchParams(location.search).get('tema');if(t==='claro'||t==='escuro')document.documentElement.setAttribute('data-tema',t);})();</script>
 
 <title>Implante Dentário em Vitória-ES · SORRIE+</title>
 <meta name="description" content="Implante dentário em Vitória-ES, com planejamento digital. Nota 5,0 no Google. Agende sua avaliação.">
@@ -43,14 +48,11 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/logos/favicon_96.png">
 <link rel="apple-touch-icon" href="/logos/logo_180.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0B0C0C">
-
-<link rel="preload" href="/assets/fonts/archivo-wide-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/ds.css">
-<link rel="stylesheet" href="/assets/css/ds-cinema.css">
-<script src="/assets/js/ds.js" defer></script>
-<script src="/assets/js/ds-scenes.js" defer></script>
+<link rel="preload" href="../../assets/fonts/archivo-wide-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/lp-v3.css?v=20261101f">
+<script src="../../assets/js/lp-v3.js?v=20261101f" defer></script>
+<script src="../../assets/js/main.js?v=6" defer></script>
 
 <script type="application/ld+json">
 {
@@ -122,169 +124,165 @@
 </script>
 </head>
 
-<body class="ds" data-tema="implante">
+<body>
 
-<!-- Barra local fina: "Implante dentário · Agendar" -->
-<header class="cx-bar">
-  <div class="ds-wrap">
-    <b>Implante dentário</b>
-    <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="ds-pill">Agendar</a>
+<header class="lp-bar">
+  <div class="lp-bar__in">
+    <picture><source srcset="../../logos/marca_topo.webp" type="image/webp"><img class="lp-bar__logo" src="../../logos/marca_topo.png" alt="SORRIE+ Odontologia" width="740" height="132"></picture>
+    <div class="lp-bar__right">
+      <span class="lp-bar__label">Implante dentário</span>
+      <a class="lp-btn lp-bar__cta" href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende sua avaliação</a>
+    </div>
   </div>
 </header>
 
 <main>
 
-<!-- CENA 1 · Hero preto (sem animação de entrada) -->
-<section class="cx-scene cx-scene--hero cx-dk">
-  <div class="cx-t">
-    <h1 class="cx-h">Implante dentário.</h1>
-    <p class="cx-sub">Um dente novo, fixo, planejado no digital.</p>
-    <div class="cx-cta">
-      <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="ds-btn ds-btn--light">Agende sua avaliação</a>
-      <a href="#como-funciona" class="cx-tl">Ver como funciona ›</a>
+<!-- HERO · Dra. Karine. Sem 3D de implante: o hero fica sem o quadro de vídeo. -->
+<section class="lp-hero">
+  <picture class="lp-hero__photo">
+    <source media="(prefers-color-scheme: dark)" srcset="../../equipe/dra-karine-estudio-escuro.webp" width="900" height="1374">
+    <img src="../../equipe/dra-karine-retrato-blazer.webp" width="900" height="1336" alt="Dra. Karine Marinho Ribeiro, responsável técnica da SORRIE+ Odontologia" fetchpriority="high">
+  </picture>
+  <div class="lp-hero__fade" aria-hidden="true"></div>
+  <!-- VIDEO: implante-hero -->
+  <div class="lp-hero__inner">
+    <div class="lp-hero__copy">
+      <div class="lp-hero__eyebrow">SORRIE+ · Enseada do Suá, Vitória-ES</div>
+      <h1>Implante dentário.</h1>
+      <p class="lp-hero__sub">Um dente novo, fixo, planejado no digital.</p>
+      <div class="lp-hero__cta"><a class="lp-btn" href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende sua avaliação</a></div>
+      <!-- Nota do Google: atualizar aqui, na cena de números e no aggregateRating do schema. -->
+      <a class="lp-rate" href="https://maps.app.goo.gl/VF1bJykzZp6itx7B7" target="_blank" rel="noopener"><span class="lp-rate__stars" aria-hidden="true">★★★★★</span><span><b>5,0</b> · 54 avaliações no Google</span></a>
+      <div class="lp-partners"><span><img src="../../logos/neodent-simbolo.svg" width="43" height="40" alt="" loading="lazy" style="border-radius:0;background:none">Neodent®</span></div>
     </div>
   </div>
-  <!-- RESERVADO 3D: implante cena 1, arquivo esperado /videos/3d/implante_cena1_mobile.mp4 + _desktop.mp4 + _start.jpg + _end.jpg -->
-  <div class="cx-media">
-    <div class="cx-ph"><span>CENA 1 — implante e coroa girando (3D)</span></div>
-    <video data-scene loop muted playsinline preload="none" aria-hidden="true"></video>
-  </div>
 </section>
 
-<!-- CENA 2 · Porcelana: raiz de titânio / osseointegração (scrub no desktop) -->
-<section class="cx-scene cx-lt" id="como-funciona">
-  <div class="cx-t">
-    <h2 class="cx-h cx-rv">Raiz de titânio.</h2>
-    <p class="cx-sub cx-rv">O pino é instalado no osso e, com o tempo, o osso se integra a ele. Esse processo, a osseointegração, forma a base firme para a coroa.<a href="#n1" class="cx-fn" aria-label="Ver nota 1">¹</a></p>
-  </div>
-  <!-- RESERVADO 3D: implante cena 2, arquivo esperado /videos/3d/implante_cena2_mobile.mp4 + _desktop.mp4 + _start.jpg + _end.jpg -->
-  <div class="cx-media" data-scrub>
-    <div class="cx-ph"><span>CENA 2 — pino entrando no osso e coroa assentando (3D, scrub no desktop)</span></div>
-    <video data-scene muted playsinline preload="none" aria-hidden="true"></video>
-  </div>
-</section>
-
-<!-- CENA 3 · Preto: corte -->
-<section class="cx-scene cx-dk">
-  <div class="cx-t">
-    <h2 class="cx-h cx-rv">Por dentro do osso.</h2>
-    <p class="cx-sub cx-rv">Pino de titânio no osso, coroa sobre ele. Quando há perda óssea, um enxerto pode ser indicado, avaliado caso a caso.</p>
-  </div>
-  <!-- RESERVADO 3D: implante cena 3, arquivo esperado /videos/3d/implante_cena3_mobile.mp4 + _desktop.mp4 + _start.jpg + _end.jpg -->
-  <div class="cx-media">
-    <div class="cx-ph"><span>CENA 3 — corte mostrando osso, pino e coroa (3D)</span></div>
-    <video data-scene muted playsinline preload="none" aria-hidden="true"></video>
-  </div>
-</section>
-
-<!-- CENA 4 · Porcelana: implante x ponte x removível -->
-<section class="cx-scene cx-lt">
-  <div class="cx-t">
-    <h2 class="cx-h cx-rv">Fixo. Como um dente.</h2>
-    <p class="cx-sub cx-rv" style="border-top:1px solid currentColor;padding-top:14px"><b>Implante:</b> substitui a raiz e a coroa, sem apoiar nos dentes vizinhos.</p>
-    <p class="cx-sub cx-rv" style="border-top:1px solid currentColor;padding-top:14px"><b>Ponte:</b> fixa, mas apoiada nos dentes ao lado, que precisam de preparo.</p>
-    <p class="cx-sub cx-rv" style="border-top:1px solid currentColor;padding-top:14px"><b>Prótese removível:</b> retirada para higienizar e sustentada pela gengiva e pelos dentes restantes.</p>
-    <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="cx-tl">Agende sua avaliação ›</a>
-  </div>
-</section>
-
-<!-- CENA 5 · Preto: conforto + vídeo real -->
-<section class="cx-scene cx-dk">
-  <div class="cx-t">
-    <h2 class="cx-h cx-rv">Conforto do começo ao fim.</h2>
-    <p class="cx-sub cx-rv">A cirurgia é feita com anestesia adequada. O pós-operatório costuma envolver algum desconforto, acompanhado pela especialista.<a href="#n2" class="cx-fn" aria-label="Ver nota 2">²</a></p>
-  </div>
-  <!-- RESERVADO: VÍDEO REAL — depoimento de paciente de implante (com TCLE). Arquivo esperado /videos/implante-depoimento.mp4 + _poster.webp -->
-  <div class="cx-media cx-media--v">
-    <div class="cx-ph"><span>VÍDEO REAL — depoimento de paciente de implante (com TCLE)</span></div>
-  </div>
-</section>
-
-<!-- CENA 6 · Mesma faixa preta: planejamento digital + Dra. Karine -->
-<section class="cx-scene cx-dk cx-join">
-  <div class="cx-t">
-    <h2 class="cx-h cx-rv">Planejado na tela antes da cirurgia.</h2>
-    <p class="cx-sub cx-rv">Escaneamento digital, exames de imagem quando indicados e plano individual, conduzidos pela Dra. Karine.</p>
-    <div class="cx-cta">
-      <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="ds-btn ds-btn--light">Agende sua avaliação com a Dra. Karine</a>
+<!-- CENA · Duas ideias sem mídia própria (3D de implante ainda não produzido) -->
+<section class="lp-scene lp-scene--a" id="como-funciona">
+  <div class="lp-duo">
+    <div data-rv>
+      <!-- VIDEO: implante-raiz-de-titanio -->
+      <h2 class="lp-h2">Raiz de titânio.</h2>
+      <p class="lp-sub">O pino é instalado no osso e, com o tempo, o osso se integra a ele. Esse processo, a osseointegração, forma a base firme para a coroa.<a href="#n1" class="lp-fn" aria-label="Ver nota 1">¹</a></p>
+    </div>
+    <div data-rv>
+      <!-- VIDEO: implante-por-dentro-do-osso -->
+      <h2 class="lp-h2">Por dentro do osso.</h2>
+      <p class="lp-sub">Pino de titânio no osso, coroa sobre ele. Quando há perda óssea, um enxerto pode ser indicado, avaliado caso a caso.</p>
     </div>
   </div>
-  <div class="cx-media cx-media--p">
-    <img src="/equipe/dra-karine-retrato-blazer.webp" width="900" height="1336" alt="Dra. Karine Marinho Ribeiro, responsável técnica da SORRIE+ Odontologia" loading="lazy" decoding="async">
-  </div>
-  <p class="cx-fine" style="margin:0;padding:18px 20px 40px">Dra. Karine Marinho Ribeiro · CRO-ES 10983</p>
 </section>
 
-<!-- CENA 7 · Porcelana: prova (texto e schema iguais: 5,0 / 54) -->
-<section class="cx-scene cx-sc6 cx-lt" aria-label="Avaliações no Google">
-  <div class="cx-t">
-    <div class="cx-nums">
-      <div><p class="cx-num cx-rv">5,0</p><p class="cx-cap">no Google</p></div>
-      <div><p class="cx-num cx-rv">54</p><p class="cx-cap">avaliações</p></div>
+<!-- CENA · Dra. Karine -->
+<section class="lp-scene lp-scene--b">
+  <div class="lp-scene__in lp-scene__in--rev">
+    <div class="lp-scene__txt" data-rv>
+      <div class="lp-eyebrow">Dra. Karine Marinho Ribeiro · CRO-ES 10983</div>
+      <h2 class="lp-h2">Planejado na tela antes da cirurgia.</h2>
+      <p class="lp-sub">Escaneamento digital, exames de imagem quando indicados e plano individual, conduzidos pela Dra. Karine.</p>
+      <a class="lp-link lp-link--lg" href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende sua avaliação com a Dra. Karine ›</a>
     </div>
-    <a href="https://maps.app.goo.gl/VF1bJykzZp6itx7B7" target="_blank" rel="noopener" class="cx-tl">Ver avaliações no Google ›</a>
+    <figure class="lp-media lp-media--tall">
+      <video src="../../videos/escaneamento-simulacao-3d.mp4" poster="../../videos/escaneamento-simulacao-3d_poster.webp" controls playsinline preload="none" width="608" height="1080" aria-label="Vídeo da Dra. Karine explicando o escaneamento digital e a simulação 3D"></video>
+      <figcaption class="lp-media__note" style="top:12px;bottom:auto;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6)">Paciente real<a href="#n2" class="lp-fn" aria-label="Ver nota">²</a></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- CENA 8 · Porcelana: estrutura -->
-<section class="cx-scene cx-lt">
-  <div class="cx-t">
-    <h2 class="cx-h cx-rv">Enseada do Suá. Sala 901.</h2>
-    <p class="cx-sub cx-rv">R. José Alexandre Buaiz, 160, Ed. London Office Tower, Vitória-ES.</p>
-    <a href="https://maps.app.goo.gl/VF1bJykzZp6itx7B7" target="_blank" rel="noopener" class="cx-tl">Como chegar ›</a>
-  </div>
-  <div class="cx-media cx-media--p">
-    <img src="/equipe/dra-karine-consultorio.webp" width="900" height="1362" alt="Dra. Karine Marinho Ribeiro no consultório da SORRIE+ Odontologia, na Enseada do Suá" loading="lazy" decoding="async">
-  </div>
-</section>
-
-<!-- CENA 9 · FAQ (paridade exata com o FAQPage) -->
-<section class="cx-scene cx-scene--faq cx-wh" aria-labelledby="faq-t">
-  <div class="cx-t">
-    <h2 class="cx-h cx-h--s cx-rv" id="faq-t">Perguntas frequentes.</h2>
-  </div>
-  <div class="cx-faq">
-    <details open><summary>O que é um implante dentário?<span class="pm"></span></summary><p>É um pino de titânio instalado no osso para substituir a raiz de um dente perdido. Sobre ele é colocada uma coroa personalizada, devolvendo função e estética ao sorriso.</p></details>
-    <details><summary>Como sei se posso fazer implante?<span class="pm"></span></summary><p>A indicação depende de uma avaliação clínica que considera a saúde bucal, a condição do osso e o seu histórico. Esse diagnóstico é feito na consulta com a especialista.</p></details>
-    <details><summary>Quanto tempo dura um implante dentário?<span class="pm"></span></summary><p>Não existe um prazo fixo: a durabilidade depende de fatores como a saúde bucal, os hábitos do dia a dia e o acompanhamento periódico com a especialista. Boa higiene e manutenção contínua favorecem a estabilidade do implante ao longo do tempo.</p></details>
-    <details><summary>Colocar implante dói?<span class="pm"></span></summary><p>A cirurgia é realizada com anestesia adequada, e o planejamento cuidadoso contribui para o conforto durante o procedimento. O pós-operatório costuma envolver algum desconforto, orientado e acompanhado de perto pela especialista.</p></details>
-    <details><summary>Quanto tempo leva a cicatrização e a osseointegração?<span class="pm"></span></summary><p>Em média, a osseointegração leva alguns meses, podendo variar conforme a região tratada, a condição óssea e as características de cada paciente. Esse prazo é acompanhado individualmente ao longo do tratamento.</p></details>
+<!-- CENA · Implante x ponte x prótese -->
+<section class="lp-scene lp-scene--a">
+  <div class="lp-cmp" data-rv>
+    <!-- VIDEO: implante-fixo-como-um-dente -->
+    <h2 class="lp-h2">Fixo. Como um dente.</h2>
+    <ul class="lp-cmp__list">
+      <li><b>Implante:</b> substitui a raiz e a coroa, sem apoiar nos dentes vizinhos.</li>
+      <li><b>Ponte:</b> fixa, mas apoiada nos dentes ao lado, que precisam de preparo.</li>
+      <li><b>Prótese removível:</b> retirada para higienizar e sustentada pela gengiva e pelos dentes restantes.</li>
+    </ul>
+    <a class="lp-link" href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende sua avaliação ›</a>
   </div>
 </section>
 
-<!-- CENA 10 · Preto final -->
-<section class="cx-scene cx-scene--end cx-dk">
-  <div class="cx-t">
-    <h2 class="cx-h cx-rv">Agende sua avaliação.</h2>
-    <div class="cx-cta">
-      <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="ds-btn ds-btn--light">Agende pelo WhatsApp</a>
+<!-- CENA · Conforto (o vídeo de depoimento previsto não existe; a cena fica só com o texto) -->
+<section class="lp-scene lp-scene--b">
+  <div class="lp-center" data-rv>
+    <h2 class="lp-h2">Conforto do começo ao fim.</h2>
+    <p class="lp-sub">A cirurgia é feita com anestesia adequada. O pós-operatório costuma envolver algum desconforto, acompanhado pela especialista.</p>
+  </div>
+</section>
+
+<section class="lp-scene lp-scene--a" aria-label="Avaliações no Google">
+  <div class="lp-nums" data-rv>
+    <div class="lp-nums__row">
+      <div><p class="lp-num">5,0</p><p class="lp-cap">no Google</p></div>
+      <div><p class="lp-num">54</p><p class="lp-cap">avaliações</p></div>
     </div>
-    <p class="cx-fine">Seg–Sex 9h–20h · Sáb 8h–14h</p>
+    <a class="lp-link" href="https://maps.app.goo.gl/VF1bJykzZp6itx7B7" target="_blank" rel="noopener">Ver avaliações no Google ›</a>
+  </div>
+</section>
+
+<section class="lp-scene lp-scene--b">
+  <div class="lp-scene__in lp-scene__in--rev">
+    <div class="lp-scene__txt" data-rv>
+      <div class="lp-eyebrow">A clínica</div>
+      <h2 class="lp-h2">Enseada do Suá. Sala 901.</h2>
+      <p class="lp-sub">R. José Alexandre Buaiz, 160, Ed. London Office Tower, Vitória-ES.</p>
+      <a class="lp-link" href="https://maps.app.goo.gl/VF1bJykzZp6itx7B7" target="_blank" rel="noopener">Como chegar ›</a>
+    </div>
+    <figure class="lp-media">
+      <img src="../../equipe/dra-karine-consultorio.webp" width="900" height="1362" loading="lazy" decoding="async" alt="Dra. Karine Marinho Ribeiro no consultório da SORRIE+ Odontologia, na Enseada do Suá">
+    </figure>
+  </div>
+</section>
+
+<!-- CENA · FAQ (paridade exata com o FAQPage) -->
+<section class="lp-scene lp-scene--a" aria-labelledby="faq-t">
+  <div class="lp-faq">
+    <h2 class="lp-h2" id="faq-t" data-rv>Perguntas frequentes.</h2>
+    <div class="lp-faq__list">
+      <details open><summary>O que é um implante dentário?</summary><p>É um pino de titânio instalado no osso para substituir a raiz de um dente perdido. Sobre ele é colocada uma coroa personalizada, devolvendo função e estética ao sorriso.</p></details>
+    <details><summary>Como sei se posso fazer implante?</summary><p>A indicação depende de uma avaliação clínica que considera a saúde bucal, a condição do osso e o seu histórico. Esse diagnóstico é feito na consulta com a especialista.</p></details>
+    <details><summary>Quanto tempo dura um implante dentário?</summary><p>Não existe um prazo fixo: a durabilidade depende de fatores como a saúde bucal, os hábitos do dia a dia e o acompanhamento periódico com a especialista. Boa higiene e manutenção contínua favorecem a estabilidade do implante ao longo do tempo.</p></details>
+    <details><summary>Colocar implante dói?</summary><p>A cirurgia é realizada com anestesia adequada, e o planejamento cuidadoso contribui para o conforto durante o procedimento. O pós-operatório costuma envolver algum desconforto, orientado e acompanhado de perto pela especialista.</p></details>
+    <details><summary>Quanto tempo leva a cicatrização e a osseointegração?</summary><p>Em média, a osseointegração leva alguns meses, podendo variar conforme a região tratada, a condição óssea e as características de cada paciente. Esse prazo é acompanhado individualmente ao longo do tratamento.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="lp-scene lp-scene--b">
+  <div class="lp-end" data-rv>
+    <h2 class="lp-h2 lp-h2--big">Agende sua avaliação.</h2>
+    <a class="lp-btn" href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende pelo WhatsApp</a>
+    <p>Seg–Sex 9h–20h · Sáb 8h–14h</p>
   </div>
 </section>
 
 </main>
 
-<!-- Notas de rodapé -->
-<aside class="cx-notes" aria-label="Notas">
-  <div class="ds-wrap">
-    <ol>
-      <li id="n1">¹ O tempo de osseointegração varia conforme a região tratada, a condição óssea e cada paciente. Em média, leva alguns meses e é acompanhado individualmente.</li>
-      <li id="n2">² Depoimento de paciente real, divulgado com autorização por meio de Termo de Consentimento Livre e Esclarecido (TCLE). As experiências e os resultados variam conforme cada caso.</li>
+<aside class="lp-notes" aria-label="Notas">
+  <ol>
+    <li id="n1">¹ O tempo de osseointegração varia conforme a região tratada, a condição óssea e cada paciente. Em média, leva alguns meses e é acompanhado individualmente.</li>
+      <li id="n2">² Vídeo com paciente real, divulgado com autorização por meio de Termo de Consentimento Livre e Esclarecido (TCLE). Os resultados variam conforme cada caso.</li>
       <!-- PENDENTE D5: texto da garantia (cobertura, prazo, condições). Remover hidden quando definido. -->
       <li id="n3" hidden>* Condições, prazo e cobertura da garantia: texto provisório, a definir.</li>
-    </ol>
-  </div>
+  </ol>
 </aside>
 
-<footer class="ds-foot cx-foot">
-  <div class="ds-wrap">
-    <picture><source srcset="/logos/marca_rodape.webp" type="image/webp"><img src="/logos/marca_rodape.png" width="754" height="359" alt="SORRIE+ Odontologia" loading="lazy" decoding="async"></picture>
+<footer class="lp-foot">
+  <div class="lp-foot__in">
+    <picture><source srcset="../../logos/marca_rodape.webp" type="image/webp"><img class="lp-foot__logo" src="../../logos/marca_rodape.png" width="754" height="359" alt="SORRIE+ Odontologia" loading="lazy" decoding="async"></picture>
     <p>SORRIE+ Odontologia Especializada · Responsável Técnica: Dra. Karine Marinho Ribeiro, CRO-ES 10983.</p>
     <p>R. José Alexandre Buaiz, 160, Ed. London Office Tower, Sala 901, Enseada do Suá, Vitória-ES · CEP 29050-545.</p>
-    <p><a href="tel:+5527999893314">(27) 99989-3314</a></p>
+    <a href="tel:+5527999893314">(27) 99989-3314</a>
   </div>
 </footer>
+
+<div class="lp-dock">
+  <a class="lp-btn" href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20implante%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende sua avaliação</a>
+  <small>Dra. Karine Marinho Ribeiro · CRO-ES 10983</small>
+</div>
 
 </body>
 </html>
