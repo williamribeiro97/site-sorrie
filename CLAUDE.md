@@ -16,7 +16,7 @@ Não leia arquivos inteiros se o auditor puder resumir. **Nunca faça commit/pus
 - Endereço: R. José Alexandre Buaiz, 160, Ed. London Office Tower, **Sala 901**, Enseada do Suá, Vitória-ES, 29050-545. Tel: +55 27 99989-3314.
 - Responsável técnica: **Dra. Karine Marinho Ribeiro, CRO-ES 10983**.
 - Google (GBP): nota **5,0 com 54 avaliações** (conferido no GBP em 11/10/2026 — conferir número atual antes de citar; atualizar texto E schema juntos). Andou de 50 para 54 entre 15/08 e 11/10/2026: trate como dado volátil, nunca como constante.
-- Fontes: Fraunces (títulos) + Hanken Grotesk (corpo). GA4: G-JVL7BPFP1C. Português brasileiro.
+- Fontes: Archivo Wide (títulos) + Hanken Grotesk (corpo). GA4: G-JVL7BPFP1C. Português brasileiro.
 - Arquitetura: home · 3 pilares (`/alinhadores-invisiveis-vitoria/` carro-chefe ClearCorrect/Invisalign com clareamento, `/facetas-lentes-de-contato-vitoria/`, `/implante-dentario-vitoria/`) · `/dra-karine-marinho/` · `/blog/` + posts.
 - **Objetivo**: Top 1 orgânico na Grande Vitória (Vitória, Vila Velha, Serra, Cariacica) e ser citado por IAs.
 
