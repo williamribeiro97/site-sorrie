@@ -23,6 +23,11 @@
   }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F5F5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0C0C">
+<script>/* Revisão: ?tema=claro|escuro força o tema. Sem o parâmetro, vale o tema do aparelho. */
+(function(){var t=new URLSearchParams(location.search).get('tema');if(t==='claro'||t==='escuro')document.documentElement.setAttribute('data-tema',t);})();</script>
 
 <title>Clínica de Implante Dentário em Vitória ES · SORRIE+</title>
 <meta name="description" content="Clínica e dentista de implante dentário na Enseada do Suá, Vitória-ES: dos exames de imagem à coroa. Nota 5,0 no Google. Agende sua avaliação.">
@@ -52,11 +57,9 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/logos/favicon_96.png">
 <link rel="apple-touch-icon" href="/logos/logo_180.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0d8a85">
-
 <link rel="preload" href="/assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=7">
+<link rel="preload" href="/assets/fonts/archivo-wide-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site-v3.css?v=20261101h">
 
 <style>
   .callout{background:var(--paper-cool);border:1px solid var(--line);border-radius:var(--radius);
@@ -159,7 +162,7 @@
         "https://www.doctoralia.com.br/clinicas/sorrie-odontologia-especializada"
       ]
     },
-    { "@type": "MedicalWebPage", "@id": "https://sorriemais.com/implante-dentario-vitoria/#webpage", "specialty": "https://schema.org/Dentistry", "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" }, "url": "https://sorriemais.com/implante-dentario-vitoria/", "name": "Implante Dentário em Vitória-ES", "isPartOf": { "@id": "https://sorriemais.com/#website" }, "about": { "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico" }, "inLanguage": "pt-BR", "dateModified": "2026-08-18", "lastReviewed": "2026-08-18", "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" } },
+    { "@type": "MedicalWebPage", "@id": "https://sorriemais.com/implante-dentario-vitoria/#webpage", "specialty": "https://schema.org/Dentistry", "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" }, "url": "https://sorriemais.com/implante-dentario-vitoria/", "name": "Implante Dentário em Vitória-ES", "isPartOf": { "@id": "https://sorriemais.com/#website" }, "about": { "@id": "https://sorriemais.com/implante-dentario-vitoria/#servico" }, "inLanguage": "pt-BR", "dateModified": "2026-10-19", "lastReviewed": "2026-10-19", "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" } },
     { "@type": "BreadcrumbList", "@id": "https://sorriemais.com/implante-dentario-vitoria/#breadcrumb", "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://sorriemais.com/" },
       { "@type": "ListItem", "position": 2, "name": "Implante Dentário em Vitória-ES", "item": "https://sorriemais.com/implante-dentario-vitoria/" } ] },
@@ -208,13 +211,15 @@
 <main id="topo">
 
 <section class="hero">
-  <div class="hero-bg"><picture>
-  <source srcset="/hero/hero_reception_1920x960.webp" type="image/webp">
-  <img src="/hero/hero_reception_1920x960.jpg" alt="Clínica SORRIE+ Odontologia, na Enseada do Suá, Vitória-ES" fetchpriority="high" width="1920" height="960">
-</picture></div>
+  <div class="hero-bg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="/equipe/dra-karine-estudio-escuro-2.webp" width="900" height="1350">
+      <img src="/equipe/dra-karine-retrato-blazer.webp" width="900" height="1336" alt="Dra. Karine Marinho Ribeiro, responsável técnica da SORRIE+ Odontologia, em Vitória-ES" fetchpriority="high">
+    </picture></div>
   <div class="wrap hero-inner">
     <nav class="badges reveal" aria-label="Trilha de navegação" style="font-size:.8rem;opacity:.9"><a href="/" style="opacity:.8">Início</a> &nbsp;›&nbsp; <span>Implante dentário</span></nav>
-    <h1>Implante dentário<br>em <span class="hl">Vitória-ES</span></h1>
+    <div class="badges"><span class="badge"><img src="/logos/neodent-simbolo.svg" alt="Neodent" width="16" height="16"> Neodent®</span></div>
+      <h1>Implante dentário<br>em <span class="hl">Vitória-ES</span></h1>
     <p class="lead reveal d2">Reposição de dentes ausentes com <strong>raiz de titânio e coroa personalizada</strong>, devolvendo função e estética — na Enseada do Suá.</p>
     <div class="hero-actions reveal d3">
       <a href="#avaliacao" class="btn btn-primary">Agende sua avaliação <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
@@ -257,7 +262,16 @@
       <li class="step reveal"><div class="n">4</div><div><h3>Instalação da coroa protética</h3><p>Concluída a osseointegração, a coroa personalizada é confeccionada sob medida e fixada sobre o implante, devolvendo forma e função à mordida.</p></div></li>
     </ol>
     <div class="center reveal" style="margin-top:34px"><a href="/blog/implante-dentario-como-funciona/" class="text-link">Veja o processo completo, em detalhe →</a></div>
-  </div>
+  
+      <div class="vids" style="grid-template-columns:1fr;max-width:420px;margin-top:55px">
+        <div class="vidcard" data-video>
+          <video preload="none" playsinline controls data-poster="/videos/escaneamento-simulacao-3d_poster.webp" style="aspect-ratio:9/16"><source src="/videos/escaneamento-simulacao-3d.mp4" type="video/mp4"></video>
+          <button class="play" aria-label="Reproduzir vídeo do escaneamento digital e da simulação 3D"><span class="circle"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
+          <span class="vlabel">Escaneamento e simulação 3D</span>
+        </div>
+      </div>
+      <p class="ba-note" style="max-width:560px;margin:14px auto 0">Vídeo com paciente real, divulgado com autorização por meio de Termo de Consentimento Livre e Esclarecido (TCLE). Os resultados variam conforme cada caso.</p>
+    </div>
 </section>
 
 <section id="tecnologia-seguranca" class="section">
@@ -301,7 +315,7 @@
     <div class="shead is-center reveal"><span class="eyebrow">Dúvidas frequentes</span><h2>Perguntas que recebemos</h2></div>
     <div class="faq">
       <details class="qa reveal"><summary>O que é um implante dentário?<span class="pm"></span></summary><div class="ans">É um pino de titânio instalado no osso para substituir a raiz de um dente perdido. Sobre ele é colocada uma coroa personalizada, devolvendo função e estética ao sorriso. Em dúvida entre as alternativas? Veja <a href="/blog/implante-ponte-ou-protese/" class="text-link">implante, ponte ou prótese: qual escolher</a>.</div></details>
-      <details class="qa reveal"><summary>Como sei se posso fazer implante?<span class="pm"></span></summary><div class="ans">A indicação depende de uma avaliação clínica que considera a saúde bucal, a condição do osso e o seu histórico. Esse diagnóstico é feito na consulta com a especialista. Se quiser entender as etapas antes da consulta, veja <a href="/blog/implante-dentario-como-funciona/" class="text-link">como funciona o implante dentário, passo a passo</a>.</div></details>
+      <details class="qa reveal"><summary>Como sei se posso fazer implante?<span class="pm"></span></summary><div class="ans">A indicação depende de uma avaliação clínica que considera a saúde bucal, a condição do osso e o seu histórico. Esse diagnóstico é feito na consulta com a especialista. Se quiser entender as etapas antes da consulta, veja <a href="/blog/implante-dentario-como-funciona/" class="text-link">como funciona o implante dentário, passo a passo</a>. Se a dúvida for a falta de osso, veja <a href="/blog/enxerto-osseo-antes-do-implante/" class="text-link">enxerto ósseo antes do implante: quando é necessário</a>.</div></details>
       <details class="qa reveal"><summary>Quanto tempo dura um implante dentário?<span class="pm"></span></summary><div class="ans">Não existe um prazo fixo: a durabilidade depende de fatores como a saúde bucal, os hábitos do dia a dia e o acompanhamento periódico com a especialista. Boa higiene e manutenção contínua favorecem a estabilidade do implante ao longo do tempo.</div></details>
       <details class="qa reveal"><summary>Colocar implante dói?<span class="pm"></span></summary><div class="ans">A cirurgia é realizada com anestesia adequada, e o planejamento cuidadoso contribui para o conforto durante o procedimento. O pós-operatório costuma envolver algum desconforto, orientado e acompanhado de perto pela especialista.</div></details>
       <details class="qa reveal"><summary>Quem pode fazer implante?<span class="pm"></span></summary><div class="ans">Em geral, o implante é indicado para quem perdeu um ou mais dentes e reúne condições de saúde bucal e óssea compatíveis com o procedimento. Essa indicação é confirmada individualmente na avaliação com a especialista. Para entender o que compõe o investimento, veja <a href="/blog/quanto-custa-implante-dentario/" class="text-link">quanto custa um implante dentário em Vitória</a>.</div></details>
@@ -346,10 +360,11 @@
 </footer>
 
 <div class="mbar">
-  <a href="tel:+5527999893314" class="call"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>Ligar</a>
-  <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20SORRIE%2B." target="_blank" rel="noopener" class="wa"><svg fill="#fff" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>Agendar avaliação</a>
+  <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20SORRIE%2B." target="_blank" rel="noopener" class="wa">Agende sua avaliação</a>
+  <small>Dra. Karine Marinho Ribeiro · CRO-ES 10983</small>
 </div>
 
+<script src="/assets/js/site-v3.js?v=20261101h" defer></script>
 <script src="/assets/js/main.js?v=6" defer></script>
 </body>
 </html>

@@ -23,6 +23,11 @@
   }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F5F5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0C0C">
+<script>/* Revisão: ?tema=claro|escuro força o tema. Sem o parâmetro, vale o tema do aparelho. */
+(function(){var t=new URLSearchParams(location.search).get('tema');if(t==='claro'||t==='escuro')document.documentElement.setAttribute('data-tema',t);})();</script>
 
 <!-- ===================== SEO PRIMÁRIO ===================== -->
 <title>SORRIE+ Odontologia · Alinhadores e Facetas em Vitória ES</title>
@@ -55,12 +60,10 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/logos/favicon_96.png">
 <link rel="apple-touch-icon" href="/logos/logo_180.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0d8a85">
-
 <link rel="preload" href="/assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/archivo-wide-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="/assets/css/styles.css?v=7">
+<link rel="stylesheet" href="/assets/css/site-v3.css?v=20261101h">
 
 <!-- ===================== DADOS ESTRUTURADOS: CLÍNICA ===================== -->
 <script type="application/ld+json">
@@ -236,14 +239,14 @@
 <section class="hero">
   <div class="hero-bg">
     <picture>
-      <source srcset="/hero/hero_reception_1920x960.webp" type="image/webp">
-      <img src="/hero/hero_reception_1920x960.jpg" alt="Recepção da clínica SORRIE+ Odontologia em Vitória-ES" fetchpriority="high" width="1920" height="960">
+      <source media="(prefers-color-scheme: dark)" srcset="/equipe/dra-karine-estudio-escuro.webp" width="900" height="1374">
+      <img src="/equipe/dra-karine-clinica-logo.webp" width="900" height="1368" alt="Dra. Karine Marinho Ribeiro, responsável técnica da SORRIE+ Odontologia, em Vitória-ES" fetchpriority="high">
     </picture>
   </div>
   <div class="wrap hero-inner">
     <div class="badges reveal">
       <span class="badge"><img src="/logos/clearcorrect.jpeg" alt="ClearCorrect" width="16" height="16" style="border-radius:50%"> ClearCorrect™</span>
-      <span class="badge" style="color:#1B4882"><img src="/logos/invisalign.png" alt="Invisalign" width="16" height="16" style="object-fit:contain"> Invisalign®</span>
+      <span class="badge" style="color:#1B4882"><img src="/logos/invisalign.png" alt="Invisalign" width="16" height="16" style="object-fit:contain"> Invisalign®</span> <span class="badge"><img src="/logos/neodent-simbolo.svg" alt="Neodent" width="16" height="16"> Neodent®</span>
       <span class="badge"><span class="stars">★</span> 5,0 · Google (54)</span>
     </div>
     <h1>Dentes alinhados<br>e mais brancos,<br><span class="hl">ao mesmo tempo.</span></h1>
@@ -368,6 +371,8 @@
   </div>
 </section>
 
+
+
 <!-- ============================ VÍDEOS ============================ -->
 <section id="clinica-video" class="section" style="background:var(--paper-cool);border-block:1px solid var(--line)">
   <div class="wrap">
@@ -439,8 +444,7 @@
         <p>Cirurgiã-dentista e responsável técnica da SORRIE+ (CRO-ES 10983). Atuação em cirurgia, periodontia, reabilitação oral e ortodontia estética com alinhadores invisíveis. <a href="/dra-karine-marinho/" class="text-link">Conheça a especialista →</a></p>
       </div>
       <picture class="reveal d1" style="display:block;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);aspect-ratio:3/4;max-width:400px;width:100%;margin-inline:auto">
-        <source srcset="/equipe/dra-karine-scanner.webp" type="image/webp">
-        <img src="/equipe/dra-karine-scanner.jpg" alt="Dra. Karine Marinho Ribeiro realizando escaneamento digital 3D na SORRIE+, em Vitória-ES" width="750" height="1000" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+        <source srcset="/equipe/dra-karine-consultorio-janela.webp" type="image/webp"> <img src="/equipe/dra-karine-consultorio-janela.jpg" alt="Dra. Karine Marinho Ribeiro no consultório da SORRIE+, em Vitória-ES" width="900" height="1200" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
       </picture>
     </div>
   </div>
@@ -591,10 +595,11 @@
 </footer>
 
 <div class="mbar">
-  <a href="tel:+5527999893314" class="call"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>Ligar</a>
-  <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20SORRIE%2B." target="_blank" rel="noopener" class="wa"><svg fill="#fff" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>Agendar avaliação</a>
+  <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20SORRIE%2B." target="_blank" rel="noopener" class="wa">Agende sua avaliação</a>
+  <small>Dra. Karine Marinho Ribeiro · CRO-ES 10983</small>
 </div>
 
+<script src="/assets/js/site-v3.js?v=20261101h" defer></script>
 <script src="/assets/js/main.js?v=6" defer></script>
 </body>
 </html>

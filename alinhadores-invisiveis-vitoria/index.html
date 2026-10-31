@@ -23,6 +23,11 @@
   }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F5F5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0C0C">
+<script>/* Revisão: ?tema=claro|escuro força o tema. Sem o parâmetro, vale o tema do aparelho. */
+(function(){var t=new URLSearchParams(location.search).get('tema');if(t==='claro'||t==='escuro')document.documentElement.setAttribute('data-tema',t);})();</script>
 
 <!-- ===================== SEO PRIMÁRIO ===================== -->
 <title>Alinhadores Invisíveis em Vitória · ClearCorrect · SORRIE+</title>
@@ -58,13 +63,11 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/logos/favicon_96.png">
 <link rel="apple-touch-icon" href="/logos/logo_180.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0d8a85">
-
 <!-- ===================== FONTES ===================== -->
 <link rel="preload" href="/assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/archivo-wide-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="/assets/css/styles.css?v=7">
+<link rel="stylesheet" href="/assets/css/site-v3.css?v=20261101h">
 
 <!-- ===================== DADOS ESTRUTURADOS (JSON-LD) ===================== -->
 <!--
@@ -144,7 +147,7 @@
       "isPartOf": { "@id": "https://sorriemais.com/#website" },
       "about": { "@id": "https://sorriemais.com/alinhadores-invisiveis-vitoria/#servico" },
       "inLanguage": "pt-BR",
-      "dateModified": "2026-10-05",
+      "dateModified": "2026-10-12",
       "lastReviewed": "2026-08-18",
       "reviewedBy": { "@id": "https://sorriemais.com/dra-karine-marinho/#dentista" }
     },
@@ -181,7 +184,7 @@
         { "@type": "Question", "name": "Os alinhadores invisíveis doem?", "acceptedAnswer": { "@type": "Answer", "text": "Não costumam causar dor. Nos primeiros dias após cada troca é comum sentir uma leve pressão — sinal de que os dentes estão se movendo. A maioria dos pacientes descreve a experiência como mais confortável que a do aparelho fixo tradicional. Veja o que esperar na adaptação e a cada troca de placa." } },
         { "@type": "Question", "name": "Qual a diferença entre ClearCorrect e Invisalign?", "acceptedAnswer": { "@type": "Answer", "text": "São os dois sistemas de alinhadores invisíveis mais reconhecidos do mundo, com materiais e protocolos próprios. Somos certificados nos dois. Na avaliação, a Dra. Karine analisa seu caso e indica qual se encaixa melhor nos seus objetivos. Veja a comparação em detalhe entre os dois sistemas." } },
         { "@type": "Question", "name": "O clareamento está mesmo incluso no tratamento?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Na SORRIE+, o protocolo de clareamento é aplicado dentro do próprio alinhador ClearCorrect durante o tratamento, sem custo adicional. Você alinha e clareia ao mesmo tempo, com acompanhamento profissional." } },
-        { "@type": "Question", "name": "Quanto tempo dura o tratamento com alinhadores invisíveis?", "acceptedAnswer": { "@type": "Answer", "text": "Varia conforme cada caso, normalmente entre 6 e 18 meses. Na consulta de avaliação, o escaneamento 3D permite visualizar uma previsão do resultado antes de iniciar. Entenda em detalhe o que define esse prazo." } },
+        { "@type": "Question", "name": "Quanto tempo dura o tratamento com alinhadores invisíveis?", "acceptedAnswer": { "@type": "Answer", "text": "Varia conforme cada caso, normalmente entre 6 e 18 meses. Na consulta de avaliação, o escaneamento 3D permite visualizar uma previsão do resultado antes de iniciar. Entenda em detalhe o que define esse prazo. Veja como funciona a contenção depois do alinhamento." } },
         { "@type": "Question", "name": "Tenho implante ou faceta, posso usar alinhador?", "acceptedAnswer": { "@type": "Answer", "text": "Na maior parte dos casos sim. O implante não se move, porque está osseointegrado ao osso, e entra no plano como referência fixa. Já o dente com faceta se move normalmente, porque quem recebe a força é o dente, e não a porcelana colada sobre ele. A avaliação identifica cada elemento da arcada antes de definir a mecânica. Entenda o que muda no planejamento em cada situação." } },
         { "@type": "Question", "name": "Alinhador invisível funciona para adultos?", "acceptedAnswer": { "@type": "Answer", "text": "Funciona, e o adulto é hoje o principal público do tratamento. O dente se move pela remodelação do osso ao redor da raiz, um processo que não depende de crescimento e segue ativo na vida adulta. Não há idade máxima: o que pesa é a saúde da gengiva e do osso que sustentam cada dente, avaliada antes de definir a mecânica. Veja o que muda no tratamento do adulto." } },
         { "@type": "Question", "name": "Atendem pacientes de fora de Vitória?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Atendemos pacientes de toda a Grande Vitória — Vila Velha, Serra e Cariacica — na unidade da Enseada do Suá, em Vitória-ES." } },
@@ -234,8 +237,8 @@
 <section class="hero">
   <div class="hero-bg">
     <picture>
-      <source srcset="/hero/hero_reception_1920x960.webp" type="image/webp">
-      <img src="/hero/hero_reception_1920x960.jpg" alt="Recepção da clínica SORRIE+ Odontologia, na Enseada do Suá, Vitória-ES" fetchpriority="high" width="1920" height="960">
+      <source media="(prefers-color-scheme: dark)" srcset="/equipe/dra-karine-estudio-escuro-2.webp" width="900" height="1350">
+      <img src="/equipe/dra-karine-hero.webp" width="900" height="1358" alt="Dra. Karine Marinho Ribeiro, responsável técnica da SORRIE+ Odontologia, em Vitória-ES" fetchpriority="high">
     </picture>
   </div>
   <div class="wrap hero-inner">
@@ -405,33 +408,42 @@
           <p>A especialista analisa sua mordida, sua saúde bucal e seus objetivos estéticos. Você sai com um plano de tratamento completo e orçamento.</p>
           <span class="pill">Avaliação dedicada e exclusiva, mediante agendamento</span>
         </div>
-      </div>
+      </li>
       <li class="step reveal">
         <div class="n">2</div>
         <div>
           <h3>Escaneamento digital 3D</h3>
           <p>Sem moldagens desconfortáveis. O scanner intraoral captura o mapa preciso dos seus dentes e você visualiza a previsão do resultado antes de iniciar.</p>
         </div>
-      </div>
+      </li>
       <li class="step reveal">
         <div class="n">3</div>
         <div>
           <h3>Alinhadores personalizados + clareamento</h3>
           <p>Seus alinhadores chegam feitos sob medida, já com o protocolo de clareamento para uso noturno (ClearCorrect). Dois objetivos no mesmo tratamento.</p>
         </div>
-      </div>
+      </li>
       <li class="step reveal">
         <div class="n">4</div>
         <div>
           <h3>Acompanhamento e resultado</h3>
           <p>Consultas periódicas para acompanhar a evolução. Ao final, dentes alinhados — com o aspecto definido junto à especialista no plano inicial.</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ol>
     <div class="center reveal" style="margin-top:34px">
       <a href="#avaliacao" class="btn btn-primary">Agende sua avaliação →</a>
     </div>
-  </div>
+  
+      <div class="vids" style="grid-template-columns:1fr;max-width:420px;margin-top:55px">
+        <div class="vidcard" data-video>
+          <video preload="none" playsinline controls data-poster="/videos/escaneamento-simulacao-3d_poster.webp" style="aspect-ratio:9/16"><source src="/videos/escaneamento-simulacao-3d.mp4" type="video/mp4"></video>
+          <button class="play" aria-label="Reproduzir vídeo do escaneamento digital e da simulação 3D"><span class="circle"><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
+          <span class="vlabel">Escaneamento e simulação 3D</span>
+        </div>
+      </div>
+      <p class="ba-note" style="max-width:560px;margin:14px auto 0">Vídeo com paciente real, divulgado com autorização por meio de Termo de Consentimento Livre e Esclarecido (TCLE). Os resultados variam conforme cada caso.</p>
+    </div>
 </section>
 
 <!-- ============================ DURAÇÃO ============================ -->
@@ -466,8 +478,8 @@
         <picture><source srcset="/antes-depois/antes_apos_2.webp" type="image/webp"><img src="/antes-depois/antes_apos_2.jpeg" width="1200" height="947" alt="Sorriso do mesmo paciente após tratamento com alinhadores e clareamento na SORRIE+" class="ba-after" id="baAfter" loading="lazy" decoding="async"></picture>
         <span class="ba-tag l">Antes</span>
         <span class="ba-tag r">Depois</span>
-        <div class="ba-line" id="baLine"><div class="ba-handle"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div></li>
-      </ol>
+        <div class="ba-line" id="baLine"><div class="ba-handle"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div></div>
+      </div>
       <p class="ba-note">Imagem de paciente real, divulgada com autorização por meio de Termo de Consentimento Livre e Esclarecido (TCLE). Técnica: alinhadores invisíveis com protocolo de clareamento. Os resultados variam conforme cada caso.</p>
     </div>
   </div>
@@ -484,7 +496,7 @@
       <details class="qa reveal"><summary>Os alinhadores invisíveis doem?<span class="pm"></span></summary><div class="ans">Não costumam causar dor. Nos primeiros dias após cada troca é comum sentir uma leve pressão — sinal de que os dentes estão se movendo. A maioria dos pacientes descreve a experiência como mais confortável que a do aparelho fixo tradicional. <a href="/blog/alinhador-invisivel-o-que-e-como-funciona/" class="text-link">Entenda como funciona o alinhador invisível do início ao fim.</a> <a href="/blog/alinhador-invisivel-doi/" class="text-link">Veja o que esperar na adaptação e a cada troca de placa.</a></div></details>
       <details class="qa reveal"><summary>Qual a diferença entre ClearCorrect e Invisalign?<span class="pm"></span></summary><div class="ans">São os dois sistemas de alinhadores invisíveis mais reconhecidos do mundo, com materiais e protocolos próprios. Somos certificados nos dois. Na avaliação, a Dra. Karine analisa seu caso e indica qual se encaixa melhor nos seus objetivos. <a href="/blog/clearcorrect-ou-invisalign/" class="text-link">Veja a comparação em detalhe entre os dois sistemas.</a></div></details>
       <details class="qa reveal"><summary>O clareamento está mesmo incluso no tratamento?<span class="pm"></span></summary><div class="ans">Sim. Na SORRIE+, o protocolo de clareamento é aplicado dentro do próprio alinhador ClearCorrect durante o tratamento, sem custo adicional. Você alinha e clareia ao mesmo tempo, com acompanhamento profissional.</div></details>
-      <details class="qa reveal"><summary>Quanto tempo dura o tratamento com alinhadores invisíveis?<span class="pm"></span></summary><div class="ans">Varia conforme cada caso, normalmente entre 6 e 18 meses. Na consulta de avaliação, o escaneamento 3D permite visualizar uma previsão do resultado antes de iniciar. <a href="/blog/quanto-tempo-dura-tratamento-alinhador-invisivel/" class="text-link">Entenda em detalhe o que define esse prazo.</a></div></details>
+      <details class="qa reveal"><summary>Quanto tempo dura o tratamento com alinhadores invisíveis?<span class="pm"></span></summary><div class="ans">Varia conforme cada caso, normalmente entre 6 e 18 meses. Na consulta de avaliação, o escaneamento 3D permite visualizar uma previsão do resultado antes de iniciar. <a href="/blog/quanto-tempo-dura-tratamento-alinhador-invisivel/" class="text-link">Entenda em detalhe o que define esse prazo.</a> <a href="/blog/contencao-apos-alinhador-invisivel/" class="text-link">Veja como funciona a contenção depois do alinhamento.</a></div></details>
       <details class="qa reveal"><summary>Tenho implante ou faceta, posso usar alinhador?<span class="pm"></span></summary><div class="ans">Na maior parte dos casos sim. O implante não se move, porque está osseointegrado ao osso, e entra no plano como referência fixa. Já o dente com faceta se move normalmente, porque quem recebe a força é o dente, e não a porcelana colada sobre ele. A avaliação identifica cada elemento da arcada antes de definir a mecânica. <a href="/blog/alinhador-invisivel-com-implante-ou-faceta/" class="text-link">Entenda o que muda no planejamento em cada situação.</a></div></details>
       <details class="qa reveal"><summary>Alinhador invisível funciona para adultos?<span class="pm"></span></summary><div class="ans">Funciona, e o adulto é hoje o principal público do tratamento. O dente se move pela remodelação do osso ao redor da raiz, um processo que não depende de crescimento e segue ativo na vida adulta. Não há idade máxima: o que pesa é a saúde da gengiva e do osso que sustentam cada dente, avaliada antes de definir a mecânica. <a href="/blog/alinhador-invisivel-para-adultos/" class="text-link">Veja o que muda no tratamento do adulto.</a></div></details>
       <details class="qa reveal"><summary>Atendem pacientes de fora de Vitória?<span class="pm"></span></summary><div class="ans">Sim. Atendemos pacientes de toda a Grande Vitória — Vila Velha, Serra e Cariacica — na unidade da Enseada do Suá, em Vitória-ES.</div></details>
@@ -616,16 +628,11 @@
 
 <!-- AÇÕES FIXAS MOBILE (igual ao index.html) -->
 <div class="mbar">
-  <a href="tel:+5527999893314" class="call">
-    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-    Ligar
-  </a>
-  <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20SORRIE%2B." target="_blank" rel="noopener" class="wa">
-    <svg fill="#fff" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-    Agendar avaliação
-  </a>
+  <a href="https://wa.me/5527995828585?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20SORRIE%2B." target="_blank" rel="noopener" class="wa">Agende sua avaliação</a>
+  <small>Dra. Karine Marinho Ribeiro · CRO-ES 10983</small>
 </div>
 
+<script src="/assets/js/site-v3.js?v=20261101h" defer></script>
 <script src="/assets/js/main.js?v=6" defer></script>
 </body>
 </html>

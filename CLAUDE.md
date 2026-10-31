@@ -44,7 +44,7 @@ Os dois são hotlinkados por templates de e-mail **já disparados** (só o Recal
 O site é aeroporto de leads: **todo `wa.me` aponta para o 8585, todo `tel:` e o schema para o 3314**. Convivem de propósito. Não "corrigir" para um número só — isso quebraria a segmentação ou o NAP.
 
 ## Identidade visual
-A identidade oficial é **monocromática** (manual Shine Arts, fonte Vito Wide Light); o mídia-kit canônico vive no projeto de estratégia. O **teal do site é camada web intencional** — desvio aceito e documentado, não erro a corrigir. `favicon.ico` e `logos/favicon_96.png` são teal e estão **congelados** até o Google reindexar (recrawl aberto desde 13/07).
+A identidade oficial é **monocromática** (manual Shine Arts, fonte Vito Wide Light); o mídia-kit canônico vive no projeto de estratégia. O site segue a marca: botões **pretos no tema claro e brancos no escuro**, com o tema acompanhando o aparelho (`prefers-color-scheme`). `favicon.ico` e `logos/favicon_96.png` são teal e estão **congelados** até o Google reindexar (recrawl aberto desde 13/07).
 
 ## Compliance CFO 196/2019 e 271/2025 — INEGOCIÁVEL
 - **Proibido**: resultado garantido, "sem dor"/indolor, preço promocional/desconto/promoção, superlativo sensacionalista ("o melhor", "único").
