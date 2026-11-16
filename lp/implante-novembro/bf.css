@@ -1,0 +1,64 @@
+/* Black Friday de Implantes (16–30/11). Só as LPs de /lp/implante-novembro/ usam este arquivo.
+   Base: lp-v3.css (cores, fontes, .lp-btn, .lp-dock, .lp-foot). Em 01/12 a pasta toda sai e vira 301. */
+
+.bf-top{height:48px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.bf-top img{height:14px;width:auto;filter:var(--logo)}
+.bf-top .lp-btn{display:none}
+
+.bf-selo{display:inline-flex;align-items:center;align-self:flex-start;justify-self:start;min-height:24px;padding:0 10px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:12px;font-weight:500}
+.bf-h1{margin:8px 0 0;font-family:var(--wide);font-stretch:125%;font-weight:600;font-size:24px;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+.bf-pay{margin:8px 0 0;font-size:15px;line-height:1.35;color:var(--mut)}
+.bf-pay strong{color:var(--ink);font-weight:600}
+.bf-lead{margin:0;font-size:16px;line-height:1.5;color:var(--mut);text-wrap:pretty}
+.bf-lead strong{color:var(--ink);font-weight:600}
+.bf-btns{display:flex;flex-direction:column;gap:13px}
+.bf-btns .lp-btn{width:100%}
+.bf-ghost{height:54px;padding:0 28px;border-radius:999px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;color:var(--ink)}
+.bf-rt{margin:0;font-size:12px;line-height:1.5;color:var(--mut)}
+
+/* LP por tema: no celular, selo + título + boleto + vídeo inteiro cabem na 1ª tela, com a barra fixa de WhatsApp. */
+.bf-tema{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "video" "more";padding:12px 16px 0}
+.bf-copy{grid-area:copy;display:flex;flex-direction:column}
+.bf-video{grid-area:video;justify-self:center;position:relative;margin:12px 0 0;height:clamp(220px,calc(100svh - 330px),480px);aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:#0B0C0C}
+.bf-video video{width:100%;height:100%;object-fit:cover}
+.bf-more{grid-area:more;display:flex;flex-direction:column;gap:21px;padding:55px 0 34px}
+
+.bf-passos{margin:0;padding:0;list-style:none;display:grid;gap:13px;counter-reset:p}
+.bf-passos li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--mut);counter-increment:p}
+.bf-passos li::before{content:counter(p);flex:none;width:28px;height:28px;margin-top:-2px;border-radius:999px;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font:600 13px var(--wide);font-stretch:125%}
+
+/* LP geral */
+.bf-hero{padding:21px 16px 55px;display:flex;flex-direction:column;gap:21px}
+.bf-hero .bf-h1{font-size:31px}
+.bf-hero img{width:100%;height:auto;border-radius:20px;object-fit:cover}
+.bf-casos{display:grid;grid-template-columns:minmax(0,1fr);gap:21px;max-width:1152px;margin:34px auto 0;padding:0 16px}
+.bf-caso{background:var(--bg);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:13px}
+.bf-caso img{width:100%;height:200px;object-fit:contain;border-radius:16px;background:#fff}
+.bf-caso h3{margin:0;font-size:20px;font-weight:600;line-height:1.3}
+.bf-caso p{margin:0;font-size:16px;line-height:1.5;color:var(--mut)}
+.bf-caso .lp-btn{margin-top:8px}
+
+@media (min-width:960px){
+  .bf-top{height:72px;max-width:1152px;margin:0 auto;padding:0 55px;border-bottom:0}
+  .bf-top img{height:16px}
+  .bf-top .lp-btn{display:inline-flex;height:44px;padding:0 21px;font-size:15px}
+  .bf-h1{font-size:52px;line-height:1.02}
+  .bf-pay{font-size:19px;margin-top:13px}
+  .bf-lead{font-size:19px}
+  .bf-btns{flex-direction:row;flex-wrap:wrap}
+  .bf-btns .lp-btn{width:auto}
+  .bf-rt{font-size:13px}
+
+  .bf-tema{max-width:1152px;margin:0 auto;padding:34px 55px 89px;grid-template-columns:360px minmax(0,1fr);grid-template-areas:"video copy" "video more";column-gap:89px;align-content:start}
+  .bf-video{margin:0;height:640px;align-self:start}
+  .bf-copy{align-self:end}
+  .bf-more{padding:34px 0 0}
+  .bf-passos li{font-size:17px}
+
+  .bf-hero{max-width:1152px;margin:0 auto;padding:55px 55px 89px;display:grid;grid-template-columns:minmax(0,1fr) 460px;align-items:center;column-gap:89px}
+  .bf-hero .bf-h1{font-size:64px}
+  .bf-hero img{grid-column:2;grid-row:1 / span 6;height:560px;border-radius:28px}
+  .bf-casos{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 55px}
+  .bf-caso{padding:34px}
+  .bf-caso img{height:240px}
+}
