@@ -223,48 +223,45 @@
 
 <main id="topo">
 
-<!-- ============================ HERO ============================ -->
+<!-- bf-implantes-nov26:start · Hero da Black Friday de Implantes (16–30/11). Em 01/12, reverter o commit que criou este bloco: volta o hero da clínica. -->
+<style>
+.bf-selo{display:inline-flex;align-items:center;align-self:flex-start;min-height:28px;padding:0 12px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:12px;font-weight:500;margin-bottom:13px}
+.bf-atalhos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:21px}
+.bf-atalhos a{min-height:52px;padding:8px 14px;border:1px solid var(--line-2);border-radius:13px;display:flex;flex-direction:column;justify-content:center;line-height:1.25;color:var(--ink)}
+.bf-atalhos small{font-size:12px;color:var(--mut)}
+.bf-atalhos b{font-size:14px;font-weight:600}
+.bf-rt{margin:21px 0 0;font-size:13px;color:var(--mut)}
+.hero .bf-badges{margin-bottom:13px}
+@media (max-width:959px){
+  .hero-inner>.bf-atalhos{order:4;margin-top:13px}
+  .hero-inner>.bf-rt{order:5;margin-top:13px;font-size:12px}
+  .hero:has(.bf-atalhos) .btn-ghost{display:none}
+}
+</style>
 <section class="hero">
   <div class="hero-bg">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="/equipe/dra-karine-estudio-escuro.webp" width="900" height="1374">
-      <img src="/equipe/dra-karine-clinica-logo.webp" width="900" height="1368" alt="Dra. Karine Marinho Ribeiro, responsável técnica da SORRIE+ Odontologia, em Vitória-ES" fetchpriority="high">
-    </picture>
+    <img src="/lp/implante-novembro/midia/karine-3363-medio.webp" width="1000" height="704" alt="Dra. Karine Marinho Ribeiro, responsável técnica da SORRIE+ Odontologia, em Vitória-ES" fetchpriority="high">
   </div>
   <div class="wrap hero-inner">
-    <div class="badges reveal">
-      <span class="badge"><img src="/logos/clearcorrect.jpeg" alt="ClearCorrect" width="16" height="16" style="border-radius:50%"> ClearCorrect™</span>
-      <span class="badge" style="color:#1B4882"><img src="/logos/invisalign.png" alt="Invisalign" width="16" height="16" style="object-fit:contain"> Invisalign®</span> <span class="badge"><img src="/logos/neodent-simbolo.svg" alt="Neodent" width="16" height="16"> Neodent®</span>
+    <span class="bf-selo">Black Friday de Implantes · novembro</span>
+    <div class="badges bf-badges reveal">
+      <span class="badge"><img src="/logos/neodent-simbolo.svg" alt="Neodent" width="16" height="16"> Neodent®</span>
       <span class="badge"><span class="stars">★</span> 5,0 · Google (54)</span>
     </div>
-    <h1>Dentes alinhados<br>e mais brancos,<br><span class="hl">ao mesmo tempo.</span></h1>
-    <p class="lead reveal d2">Odontologia especializada na <strong>Enseada do Suá, Vitória-ES</strong>. Alinhadores invisíveis com <strong>clareamento incluso</strong>, facetas e implante — sob responsabilidade técnica da Dra. Karine Marinho Ribeiro.</p>
+    <h1>Novembro é o mês de decidir.</h1>
+    <p class="lead reveal d2">Avaliação de implante cortesia com a <strong>Dra. Karine</strong>, para o dente que falta ou para quem usa dentadura. <strong>Dividimos no boleto sem juros.</strong></p>
     <div class="hero-actions reveal d3">
-      <a href="#consulta" class="btn btn-primary">
-        Agende sua avaliação
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-      <a href="/alinhadores-invisiveis-vitoria/" class="btn btn-ghost">Conheça os alinhadores</a>
+      <a href="https://wa.me/5527995828585?text=Oi!%20Vi%20a%20campanha%20de%20novembro%20no%20site%20e%20quero%20agendar%20a%20avalia%C3%A7%C3%A3o%20cortesia.%20%5Bc%3Abf-implantes-nov26%7Cv%3Ahome-hero%5D" class="btn btn-primary" target="_blank" rel="noopener">Agendar avaliação cortesia</a>
+      <a href="/lp/implante-novembro/?utm_source=site&amp;utm_medium=hero-home&amp;utm_campaign=bf-implantes-nov26" class="btn btn-ghost">Ver a campanha</a>
     </div>
-    <nav class="hero-servicos" aria-label="Tratamentos">
-      <a href="/alinhadores-invisiveis-vitoria/">Alinhadores</a>
-      <a href="/facetas-lentes-de-contato-vitoria/">Facetas e lentes</a>
-      <a href="/implante-dentario-vitoria/">Implante</a>
+    <nav class="bf-atalhos" aria-label="Qual é o seu caso">
+      <a href="/lp/implante-novembro/unitario/?utm_source=site&amp;utm_medium=hero-home&amp;utm_campaign=bf-implantes-nov26&amp;utm_content=atalho-unitario"><small>Falta um dente?</small><b>Implante unitário ›</b></a>
+      <a href="/lp/implante-novembro/protocolo/?utm_source=site&amp;utm_medium=hero-home&amp;utm_campaign=bf-implantes-nov26&amp;utm_content=atalho-protocolo"><small>Usa dentadura?</small><b>Dentes fixos (protocolo) ›</b></a>
     </nav>
+    <p class="bf-rt">Responsável técnica: Dra. Karine Marinho Ribeiro, CRO-ES 10983</p>
   </div>
 </section>
-
-<!-- facetas-set26:start -->
-<section class="section" style="padding-block:36px">
-  <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:var(--paper-cool);border:1px solid var(--line);border-radius:16px;padding:28px 32px">
-    <div>
-      <span class="eyebrow">Facetas e lentes de contato</span>
-      <p style="margin:6px 0 0;color:var(--ink-soft);max-width:520px">Lâminas de porcelana com planejamento individual, para harmonizar cor e forma do sorriso com naturalidade.</p>
-    </div>
-    <a href="/facetas-lentes-de-contato-vitoria/" class="btn btn-primary">Conheça as facetas</a>
-  </div>
-</section>
-<!-- facetas-set26:end -->
+<!-- bf-implantes-nov26:end -->
 
 <!-- ============================ STATS ============================ -->
 <section class="stats">
