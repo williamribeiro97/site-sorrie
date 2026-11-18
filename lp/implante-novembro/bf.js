@@ -16,4 +16,20 @@
     });
     v.addEventListener('ended', function () { if (!fim) { fim = true; ev('video_complete', v, 100); } });
   });
+
+  /* Tenta tocar com som (é a Dra. Karine falando o CTA). O navegador bloqueia som sem toque
+     da pessoa; nesse caso o vídeo segue sem som e aparece o botão para ouvir. */
+  [].forEach.call(document.querySelectorAll('video[data-titulo][autoplay]'), function (v) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'bf-som';
+    b.textContent = '🔊 Toque para ouvir a Dra. Karine';
+    b.hidden = true;
+    b.addEventListener('click', function () { v.muted = false; v.play(); b.hidden = true; });
+    v.addEventListener('volumechange', function () { if (!v.muted) b.hidden = true; });
+    v.parentNode.appendChild(b);
+    v.muted = false;
+    var p = v.play();
+    if (p && p.catch) p.catch(function () { v.muted = true; v.play(); b.hidden = false; });
+  });
 })();

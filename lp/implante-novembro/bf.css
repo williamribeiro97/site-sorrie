@@ -62,3 +62,8 @@
   .bf-caso{padding:34px}
   .bf-caso img{height:240px}
 }
+
+/* Botão para ligar o som do vídeo quando o navegador bloqueia som no autoplay (bf.js). */
+.bf-video{position:relative}
+.bf-som{position:absolute;left:50%;bottom:64px;transform:translateX(-50%);z-index:2;padding:12px 18px;border:0;border-radius:999px;background:#fff;color:#000;font:600 15px/1.2 inherit;box-shadow:0 4px 16px rgba(0,0,0,.35);white-space:nowrap;cursor:pointer}
+.bf-som[hidden]{display:none}
