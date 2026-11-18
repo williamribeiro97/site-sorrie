@@ -6,7 +6,9 @@
         "http://localhost/index.html",
         "http://localhost/alinhadores-invisiveis-vitoria/index.html",
         "http://localhost/facetas-lentes-de-contato-vitoria/index.html",
-        "http://localhost/implante-dentario-vitoria/index.html"
+        "http://localhost/implante-dentario-vitoria/index.html",
+        "http://localhost/blog/mounjaro-mau-halito/index.html",
+        "http://localhost/lp/implante-novembro/index.html"
       ],
       "numberOfRuns": 3,
       "settings": {
@@ -23,6 +25,8 @@
       }
     },
     "assert": {
+      "assertMatrix": [{
+      "matchingUrlPattern": ".*",
       "assertions": {
         "resource-summary:image:size": ["error", { "maxNumericValue": 256000 }],
         "resource-summary:total:size": ["error", { "maxNumericValue": 1200000 }],
@@ -38,7 +42,6 @@
         "total-blocking-time": ["warn", { "maxNumericValue": 300 }],
 
         "categories:accessibility": ["error", { "minScore": 0.9 }],
-        "categories:seo": ["error", { "minScore": 0.9 }],
         "categories:performance": ["warn", { "minScore": 0.7 }],
 
         "target-size": ["error", { "maxLength": 0 }],
@@ -54,6 +57,12 @@
         "canonical": "off",
         "is-crawlable": "off"
       }
+      }, {
+      "matchingUrlPattern": "^(?!.*/lp/).*$",
+      "assertions": {
+        "categories:seo": ["error", { "minScore": 0.9 }]
+      }
+      }]
     },
     "upload": {
       "target": "filesystem",

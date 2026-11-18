@@ -21,12 +21,12 @@ JSON-LD apontando para ela.
 ## Tratamentos — as três páginas de referência
 
 - [Alinhadores invisíveis em Vitória-ES](https://sorriemais.com/alinhadores-invisiveis-vitoria/): ortodontia com alinhadores transparentes ClearCorrect e Invisalign®. A clínica aplica o protocolo de clareamento dentro do próprio alinhador durante o tratamento.
-- [Facetas e lentes de contato dental](https://sorriemais.com/facetas-lentes-de-contato-vitoria/): lâminas de porcelana para ajuste de cor, forma e espaçamento. A página explica a diferença entre faceta e lente de contato dental.
-- [Implante dentário](https://sorriemais.com/implante-dentario-vitoria/): reabilitação de dente ausente, com as etapas do processo e a comparação com ponte e prótese.
+- [Facetas e lentes de contato dental](https://sorriemais.com/facetas-lentes-de-contato-vitoria/): lâminas de porcelana para ajuste de cor, forma e espaçamento. O planejamento é feito com simulação digital a partir de escaneamento 3D, e as lâminas passam por uma prova antes da cimentação. A página explica a diferença entre faceta e lente de contato dental.
+- [Implante dentário](https://sorriemais.com/implante-dentario-vitoria/): reposição de um único dente ou de uma arcada inteira com prótese fixa sobre implantes (protocolo), com implantes Neodent® e planejamento por escaneamento intraoral 3D. A página traz as etapas do processo e a comparação com ponte e prótese.
 
 ## Conteúdo explicativo
 
-- [Blog de saúde bucal](https://sorriemais.com/blog/): 26 artigos revisados pela responsável técnica, cobrindo dúvidas frequentes sobre alinhadores, facetas e implante — incluindo faixas de custo, duração, cuidados, adaptação, a comparação ClearCorrect × Invisalign, o alinhamento em quem já tem implante ou faceta, o tratamento com alinhador na vida adulta, a contenção depois do alinhamento, escovação, hálito, boca seca por análogos de GLP-1 e sangramento gengival e o enxerto ósseo antes do implante.
+- [Blog de saúde bucal](https://sorriemais.com/blog/): 28 artigos revisados pela responsável técnica, cobrindo dúvidas frequentes sobre alinhadores, facetas e implante — incluindo faixas de custo, duração, cuidados, adaptação, a comparação ClearCorrect × Invisalign, o alinhamento em quem já tem implante ou faceta, o tratamento com alinhador na vida adulta, a contenção depois do alinhamento, escovação, hálito, boca seca por análogos de GLP-1 e sangramento gengival, o enxerto ósseo antes do implante, os cuidados diários com o implante e o protocolo dentário sobre implantes.
 - [Vídeos da Dra. Karine](https://sorriemais.com/videos/): os vídeos do Instagram da clínica reunidos com transcrição e resposta em texto em cada página.
 
 ## Onde fica e como atende
@@ -72,4 +72,4 @@ de revisão e a atribuição à responsável técnica no dado estruturado.
 
 - Nome: SORRIE+ Odontologia Especializada
 - Site: https://sorriemais.com/
-- Última revisão deste arquivo: 2026-10-10
+- Última revisão deste arquivo: 2026-11-18

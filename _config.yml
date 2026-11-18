@@ -1,0 +1,8 @@
+# Único papel deste arquivo: dizer ao GitHub Pages o que NÃO publicar.
+# São arquivos internos que continuam versionados, mas não fazem parte do site.
+# Não acrescente tema, plugin nem outra opção aqui — o site é HTML puro.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - docs
+  - lighthouserc.json
